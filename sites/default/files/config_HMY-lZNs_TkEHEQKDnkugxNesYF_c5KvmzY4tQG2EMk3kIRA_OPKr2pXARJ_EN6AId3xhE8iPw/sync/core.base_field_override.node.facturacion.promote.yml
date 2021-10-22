@@ -1,0 +1,22 @@
+uuid: d14505bc-c05f-4365-8925-d7e5c1970924
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.facturacion
+id: node.facturacion.promote
+field_name: promote
+entity_type: node
+bundle: facturacion
+label: 'Promocionado a la página principal'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

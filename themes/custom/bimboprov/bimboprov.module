@@ -1,0 +1,34 @@
+<?php
+
+use Drupal\node\Entity\Node;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function bm_simpleblock_theme($existing, $type, $theme, $path) {
+  return [
+    'basic_template' => [
+      'variables' => [
+        'test' => [],
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+
+function bimboprov_node_presave(EntityInterface $entity) {
+echo "sss";
+die;
+ $entity->field_subtitulo->value = 'Some value';
+ $entity->save();
+return;
+  
+}
+
+
+

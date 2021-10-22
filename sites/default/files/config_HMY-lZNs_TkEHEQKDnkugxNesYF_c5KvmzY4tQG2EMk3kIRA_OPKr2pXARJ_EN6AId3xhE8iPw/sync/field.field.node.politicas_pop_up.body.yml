@@ -1,0 +1,23 @@
+uuid: d1d5ea5d-3d52-47a3-b18c-c7e70d79b084
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.politicas_pop_up
+  module:
+    - text
+id: node.politicas_pop_up.body
+field_name: body
+entity_type: node
+bundle: politicas_pop_up
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

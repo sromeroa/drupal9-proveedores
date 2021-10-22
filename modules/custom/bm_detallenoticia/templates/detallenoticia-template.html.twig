@@ -1,0 +1,39 @@
+  <div class="c-breadcrumbs">
+    <ul class="c-breadcrumbs__menu">
+      {% for breadcrumb in breadcrumbs %}
+        {% if breadcrumb.title %}
+          {% if breadcrumb.url %}
+              <li class="c-breadcrumbs__menu-item">
+              <a class="c-breadcrumbs__menu-item-link" href="{{breadcrumb.url}}" title="{{breadcrumb.title}}">
+              {{breadcrumb.title}}
+              </a>
+            </li>
+          {% else %}
+            <li class="c-breadcrumbs__menu-item">
+            <span>{{breadcrumb.title}}</span>
+            </li>
+          {% endif %}
+        {% endif %}
+      {% endfor %} 
+    </ul>
+</div>
+  {% for noticia in detallenoticia %}
+    {% if noticia.titulo %}
+      <a class="o-btn__enlace-link o-btn__enlace-link-regresar" id="js-regresar-noticias" href="../novedad-y-comunicacion" title="Regresar">
+        <span class="o-btn__enlace-icon icon leer-mas"></span>Regresar
+      </a>
+      <div class="c-title">
+        <div class="c-title__head">
+          <h1 class="c-title__head-titulo">{{ noticia.titulo}}</h1>
+        </div>
+      </div>
+      <div class="c-title">
+        <div class="c-title__fecha">
+          <p class="c-title__fecha-texto">{{ noticia.fecha}}</p>
+        </div>
+      </div>
+      <div class="c-sub-noticia__container"><img class="c-sub-noticia__container-image lazy" src="#!" data-src="{{ noticia.imagen}}" alt="imagen prueba">
+        {{ noticia.descripcion|raw}}
+      </div>
+    {% endif %}
+  {% endfor %}

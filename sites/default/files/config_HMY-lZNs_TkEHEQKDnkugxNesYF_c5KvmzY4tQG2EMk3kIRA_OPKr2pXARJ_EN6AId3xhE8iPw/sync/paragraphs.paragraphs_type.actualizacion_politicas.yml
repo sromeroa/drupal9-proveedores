@@ -1,0 +1,10 @@
+uuid: c55a58f0-d414-471b-a083-2455797e673a
+langcode: es
+status: true
+dependencies: {  }
+id: actualizacion_politicas
+label: 'Actualizacion Politicas'
+icon_uuid: null
+icon_default: null
+description: 'Actualizacion Politicas'
+behavior_plugins: {  }

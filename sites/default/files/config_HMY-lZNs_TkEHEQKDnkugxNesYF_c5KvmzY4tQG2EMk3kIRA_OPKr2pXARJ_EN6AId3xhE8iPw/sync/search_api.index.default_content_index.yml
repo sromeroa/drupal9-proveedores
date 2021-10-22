@@ -1,0 +1,156 @@
+uuid: 29339cc3-bea8-494c-889a-2d9e8f48387b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - field.storage.node.field_descripcion
+    - field.storage.paragraph.field_descripcion
+    - field.storage.paragraph.field_lista
+    - field.storage.node.field_titulo
+    - field.storage.paragraph.field_titulo
+    - search_api.server.local
+  module:
+    - node
+    - search_api
+    - paragraphs
+id: default_content_index
+name: 'Default content index'
+description: ''
+read_only: false
+field_settings:
+  body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  field_descripcion:
+    label: Descripcion
+    datasource_id: 'entity:node'
+    property_path: field_descripcion
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_descripcion
+  field_descripcion_1:
+    label: Descripción
+    datasource_id: 'entity:paragraph'
+    property_path: field_descripcion
+    type: text
+    dependencies:
+      config:
+        - field.storage.paragraph.field_descripcion
+  field_lista:
+    label: Lista
+    datasource_id: 'entity:paragraph'
+    property_path: field_lista
+    type: text
+    dependencies:
+      config:
+        - field.storage.paragraph.field_lista
+  field_titulo:
+    label: Título
+    datasource_id: 'entity:node'
+    property_path: field_titulo
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_titulo
+  field_titulo_1:
+    label: Titulo
+    datasource_id: 'entity:paragraph'
+    property_path: field_titulo
+    type: text
+    dependencies:
+      config:
+        - field.storage.paragraph.field_titulo
+  format:
+    label: 'Descripción » Formato de texto'
+    datasource_id: 'entity:paragraph'
+    property_path: 'field_descripcion:format'
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_descripcion
+  format_1:
+    label: 'Descripcion » Formato de texto'
+    datasource_id: 'entity:node'
+    property_path: 'field_descripcion:format'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descripcion
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    dependencies:
+      module:
+        - node
+  url:
+    label: URI
+    property_path: search_api_url
+    type: string
+    configuration:
+      absolute: true
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - noticias
+        - page
+        - programas
+    languages:
+      default: true
+      selected: {  }
+  'entity:paragraph':
+    bundles:
+      default: false
+      selected:
+        - elementos_descripciones
+        - sub_programas
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  ignorecase:
+    all_fields: false
+    fields:
+      - body
+      - field_descripcion
+      - field_descripcion_1
+      - field_lista
+      - field_titulo
+      - field_titulo_1
+      - format
+      - format_1
+      - title
+      - url
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  language_with_fallback: {  }
+  rendered_item: {  }
+  transliteration:
+    all_fields: false
+    fields:
+      - body
+      - field_titulo
+      - url
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 30
+server: local

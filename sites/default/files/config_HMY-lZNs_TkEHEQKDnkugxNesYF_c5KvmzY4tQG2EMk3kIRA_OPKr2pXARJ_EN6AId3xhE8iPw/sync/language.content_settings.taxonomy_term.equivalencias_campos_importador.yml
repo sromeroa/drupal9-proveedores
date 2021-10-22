@@ -1,0 +1,11 @@
+uuid: ecf0fb29-c4c1-47e2-ae9c-d24e44074fe7
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.equivalencias_campos_importador
+id: taxonomy_term.equivalencias_campos_importador
+target_entity_type_id: taxonomy_term
+target_bundle: equivalencias_campos_importador
+default_langcode: site_default
+language_alterable: false

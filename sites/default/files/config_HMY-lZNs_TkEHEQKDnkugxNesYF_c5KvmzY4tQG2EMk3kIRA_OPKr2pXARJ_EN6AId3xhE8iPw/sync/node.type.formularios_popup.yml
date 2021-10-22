@@ -1,0 +1,17 @@
+uuid: 3b48398b-334c-4f1c-ac2d-a65800221d81
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: formularios_popup
+type: formularios_popup
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

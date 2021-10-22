@@ -1,0 +1,22 @@
+uuid: f76ddaf1-f07b-494a-b5b5-7b00826f8f41
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.user_revision
+id: node.user_revision.status
+field_name: status
+entity_type: node
+bundle: user_revision
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

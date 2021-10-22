@@ -1,0 +1,29 @@
+uuid: 6682e9f5-133b-4cc5-9db0-ca648a0b9c7b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dc_regimen_fiscal
+    - node.type.user_revision
+    - taxonomy.vocabulary.regimen_fiscal
+id: node.user_revision.field_dc_regimen_fiscal
+field_name: field_dc_regimen_fiscal
+entity_type: node
+bundle: user_revision
+label: dc_regimen_fiscal
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      regimen_fiscal: regimen_fiscal
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

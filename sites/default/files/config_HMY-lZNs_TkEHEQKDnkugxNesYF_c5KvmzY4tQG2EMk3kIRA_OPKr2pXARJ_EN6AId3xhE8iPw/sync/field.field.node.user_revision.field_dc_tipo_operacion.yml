@@ -1,0 +1,19 @@
+uuid: 8cd85b56-b8c8-4968-8138-2c58595209dd
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dc_tipo_operacion
+    - node.type.user_revision
+id: node.user_revision.field_dc_tipo_operacion
+field_name: field_dc_tipo_operacion
+entity_type: node
+bundle: user_revision
+label: dc_tipo_operacion
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

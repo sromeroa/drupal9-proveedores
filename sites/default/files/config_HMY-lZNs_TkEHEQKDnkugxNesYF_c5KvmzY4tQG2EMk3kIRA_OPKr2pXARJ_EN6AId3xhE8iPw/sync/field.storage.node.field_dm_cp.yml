@@ -1,0 +1,21 @@
+uuid: 6d2a25a9-e41b-4473-8739-3fe60ce3d648
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_dm_cp
+field_name: field_dm_cp
+entity_type: node
+type: string
+settings:
+  max_length: 500
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

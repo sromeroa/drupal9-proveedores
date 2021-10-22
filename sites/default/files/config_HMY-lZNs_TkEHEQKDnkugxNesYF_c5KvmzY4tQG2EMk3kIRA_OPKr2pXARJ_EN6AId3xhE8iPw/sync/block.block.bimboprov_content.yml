@@ -1,0 +1,22 @@
+uuid: 577e691d-f4d3-4bc7-8265-bbcb755834e6
+langcode: es
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - bimboprov
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: bimboprov_content
+theme: bimboprov
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenido principal de la página'
+  provider: system
+  label_display: '0'
+visibility: {  }

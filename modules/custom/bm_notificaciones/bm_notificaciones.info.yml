@@ -1,0 +1,6 @@
+name:  Block Notificaciones - Bimbo Proveedores
+type: module
+description: Modulo de contenido de Notificaciones
+package: CustomGenerales - Custom Home Bimbo Proveedores
+version: 1.0
+core_version_requirement: ^9

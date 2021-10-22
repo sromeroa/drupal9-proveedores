@@ -1,0 +1,50 @@
+uuid: 54a6b26d-f227-4bec-a3e5-81dc926304b6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.formularios_popup.field_bloques
+    - field.field.node.formularios_popup.field_descripcion
+    - field.field.node.formularios_popup.field_fecha_publicacion
+    - node.type.formularios_popup
+  module:
+    - block_field
+    - datetime
+    - text
+    - user
+id: node.formularios_popup.default
+targetEntityType: node
+bundle: formularios_popup
+mode: default
+content:
+  field_bloques:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: block_field
+    region: content
+  field_descripcion:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_fecha_publicacion:
+    weight: 103
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

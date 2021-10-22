@@ -1,0 +1,8 @@
+uuid: 20e1d243-96a3-4169-a6ba-419ac8a6ab78
+langcode: es
+status: true
+dependencies: {  }
+name: 'Personas Morales'
+vid: personas_morales
+description: 'Personas Morales'
+weight: 0

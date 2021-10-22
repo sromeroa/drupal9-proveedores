@@ -1,0 +1,19 @@
+uuid: e58f1d42-f05e-4446-b69d-9a12c168c45f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.sidebar---menu-usuarios.field_span_class
+    - system.menu.sidebar---menu-usuarios
+id: menu_link_content.sidebar---menu-usuarios.default
+targetEntityType: menu_link_content
+bundle: sidebar---menu-usuarios
+mode: default
+content: {  }
+hidden:
+  children: true
+  field_span_class: true
+  langcode: true
+  menu_item_override_children: true
+  menu_item_roles: true
+  search_api_excerpt: true

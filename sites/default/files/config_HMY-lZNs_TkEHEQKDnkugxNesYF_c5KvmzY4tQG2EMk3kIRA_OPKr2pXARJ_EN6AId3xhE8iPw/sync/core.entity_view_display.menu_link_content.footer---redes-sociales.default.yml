@@ -1,0 +1,19 @@
+uuid: bfdf860d-50ad-4c4c-8ae0-1f715673e418
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.footer---redes-sociales.field_span_class
+    - system.menu.footer---redes-sociales
+id: menu_link_content.footer---redes-sociales.default
+targetEntityType: menu_link_content
+bundle: footer---redes-sociales
+mode: default
+content: {  }
+hidden:
+  children: true
+  field_span_class: true
+  langcode: true
+  menu_item_override_children: true
+  menu_item_roles: true
+  search_api_excerpt: true

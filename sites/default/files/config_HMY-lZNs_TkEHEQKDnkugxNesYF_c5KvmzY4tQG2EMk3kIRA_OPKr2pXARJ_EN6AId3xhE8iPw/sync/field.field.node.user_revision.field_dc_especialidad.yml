@@ -1,0 +1,29 @@
+uuid: 1ea15376-cdcc-47e8-84b3-afa81668f843
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dc_especialidad
+    - node.type.user_revision
+    - taxonomy.vocabulary.especialidad
+id: node.user_revision.field_dc_especialidad
+field_name: field_dc_especialidad
+entity_type: node
+bundle: user_revision
+label: dc_especialidad
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      especialidad: especialidad
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

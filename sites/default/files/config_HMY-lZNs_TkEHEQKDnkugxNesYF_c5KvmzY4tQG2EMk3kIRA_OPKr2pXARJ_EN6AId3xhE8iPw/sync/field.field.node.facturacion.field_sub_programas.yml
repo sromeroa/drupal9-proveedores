@@ -1,0 +1,43 @@
+uuid: 1b31c6b8-c0c5-4af8-8480-e2c86c8bce65
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sub_programas
+    - node.type.facturacion
+    - paragraphs.paragraphs_type.sub_programas
+  module:
+    - entity_reference_revisions
+id: node.facturacion.field_sub_programas
+field_name: field_sub_programas
+entity_type: node
+bundle: facturacion
+label: 'Sub - Categoria'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      sub_programas: sub_programas
+    target_bundles_drag_drop:
+      actualizacion_politicas:
+        weight: 6
+        enabled: false
+      documento_descargable:
+        weight: 7
+        enabled: false
+      elementos_descripciones:
+        weight: 8
+        enabled: false
+      hero:
+        weight: 9
+        enabled: false
+      sub_programas:
+        enabled: true
+        weight: 10
+field_type: entity_reference_revisions

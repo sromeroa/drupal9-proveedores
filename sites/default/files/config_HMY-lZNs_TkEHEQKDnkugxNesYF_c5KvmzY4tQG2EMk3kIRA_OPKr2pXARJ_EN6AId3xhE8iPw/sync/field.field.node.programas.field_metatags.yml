@@ -1,0 +1,21 @@
+uuid: 8c27574c-8eea-4fec-a498-0d7ba032b78d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.programas
+  module:
+    - metatag
+id: node.programas.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: programas
+label: Metatags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

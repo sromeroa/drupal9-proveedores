@@ -1,0 +1,30 @@
+uuid: d5488125-30c7-4df3-a70f-366fb8f90c62
+langcode: es
+status: false
+dependencies:
+  config:
+    - views.view.noticias_y_novedades
+  module:
+    - system
+    - views
+  theme:
+    - bimboprov
+id: views_block__noticias_y_novedades_block_mas_noticias
+theme: bimboprov
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:noticias_y_novedades-block_mas_noticias'
+settings:
+  id: 'views_block:noticias_y_novedades-block_mas_noticias'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /novedad-y-comunicacion
+    negate: false
+    context_mapping: {  }

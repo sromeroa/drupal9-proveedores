@@ -1,0 +1,19 @@
+uuid: 7883824c-03e8-42b4-ae04-aeabe2ded29a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ct_apellido
+    - node.type.user_revision
+id: node.user_revision.field_ct_apellido
+field_name: field_ct_apellido
+entity_type: node
+bundle: user_revision
+label: ct_apellido
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

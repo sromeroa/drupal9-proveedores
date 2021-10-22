@@ -1,0 +1,19 @@
+uuid: 805a8b37-d180-4ef1-87ba-5d982ad138e5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ct_paterno
+    - node.type.user_revision
+id: node.user_revision.field_ct_paterno
+field_name: field_ct_paterno
+entity_type: node
+bundle: user_revision
+label: ct_paterno
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

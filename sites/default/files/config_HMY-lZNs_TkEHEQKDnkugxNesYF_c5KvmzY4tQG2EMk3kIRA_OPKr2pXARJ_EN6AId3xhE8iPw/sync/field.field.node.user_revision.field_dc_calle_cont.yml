@@ -1,0 +1,19 @@
+uuid: ba7cd029-b89e-467f-aec3-3db7c87c6720
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dc_calle_cont
+    - node.type.user_revision
+id: node.user_revision.field_dc_calle_cont
+field_name: field_dc_calle_cont
+entity_type: node
+bundle: user_revision
+label: dc_calle_cont
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

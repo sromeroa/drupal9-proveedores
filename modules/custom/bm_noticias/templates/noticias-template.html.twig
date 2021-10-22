@@ -1,0 +1,36 @@
+<section class="c-noticias-ultimas">
+	<div class="c-subtitle c-subtitle--row-align">
+		<div class="c-subtitle__head">
+			<h2 class="c-subtitle__head-titulo">{{ 'Últimas noticias'|t }}</h2>
+		</div>
+		<div class="c-subtitle__boton"></div>
+	</div>
+	<div class="c-noticias__container">
+		<ul class="c-noticias__lista js-slider-noticias">
+			{% for noticia in noticias %}
+				{% if noticia.fecha %}
+					<li class="c-noticias__lista-item">
+						<div class="c-tarjeta c-tarjeta--noticias">
+							<div class="c-tarjeta__imagen">
+								<a class="c-tarjeta__imagen-link" href="{{noticia.noticiaId}}" title="{{noticia.titulo}}">
+									<img class="c-tarjeta__imagen-img" src="{{noticia.imagen}}" data-src="{{noticia.imagen}}" alt="{{noticia.titulo}}"></a>
+							</div>
+							<div class="c-tarjeta__texto">
+								<h3>
+									<a class="c-tarjeta__texto-link" href="{{noticia.noticiaId}}" title="{{noticia.titulo}}">{{noticia.titulo}}</a>
+								</h3>
+								<p>{{noticia.subtitulo}}</p>
+								<a class="btn btn-circulo c-tarjeta__boton-flotante" href="{{noticia.noticiaId}}" title="{{noticia.titulo}}">
+									<span class="icon anexar"></span>
+								</a>
+							</div>
+						</div>
+					</li>
+				{% endif %}
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="c-noticias__boton u-text-right">
+		<a class="c-noticias__link" href="novedad-y-comunicacion" title="ver todas las noticias">{{'ver todas las noticias'|t}}</a>
+	</div>
+</section>

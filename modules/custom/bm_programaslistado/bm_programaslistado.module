@@ -1,0 +1,17 @@
+<?php
+
+use Drupal\node\Entity\Node;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function bm_programaslistado_theme($existing, $type, $theme, $path){
+  return [
+    'programaslistado_template' => [
+      'variables' => [
+        'programas' => [],
+      ],
+    ],
+  ];
+}

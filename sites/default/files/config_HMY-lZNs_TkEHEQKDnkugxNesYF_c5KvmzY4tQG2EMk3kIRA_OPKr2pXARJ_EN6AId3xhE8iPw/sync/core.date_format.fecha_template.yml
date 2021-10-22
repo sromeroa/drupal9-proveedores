@@ -1,0 +1,8 @@
+uuid: c964989e-7b27-4999-a9d5-587d0988e2b6
+langcode: es
+status: true
+dependencies: {  }
+id: fecha_template
+label: 'Fecha template'
+locked: false
+pattern: 'l, j \d\e F Y'

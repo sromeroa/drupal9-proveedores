@@ -1,0 +1,11 @@
+uuid: c64a19c9-0482-4e10-a643-ec09d97de165
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.clasificacion_tamano_de_empresa
+id: taxonomy_term.clasificacion_tamano_de_empresa
+target_entity_type_id: taxonomy_term
+target_bundle: clasificacion_tamano_de_empresa
+default_langcode: site_default
+language_alterable: false

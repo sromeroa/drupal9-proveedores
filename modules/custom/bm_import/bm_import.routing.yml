@@ -1,0 +1,27 @@
+bm_import_admin.form:  
+  path: '/admin/structure/importar_proveedor'
+  defaults:
+    _form: '\Drupal\bm_import\Form\ImportarProveedorForm'
+    _title: 'Importar Proveedores '
+  requirements: 
+    _permission: 'administer users'
+
+importar_proveedor.form:  
+  path: '/admin/structure/importar_proveedor/proveedor'
+  defaults:
+    _form: '\Drupal\bm_import\Form\ImportarProveedorForm'
+    _title: 'Importar Proveedores '
+  requirements: 
+    _permission: 'administer users'
+  #options:  
+  #  _admin_route: TRUE     
+
+importar_producto.form:  
+  path: '/admin/structure/importar_proveedor/producto'
+  defaults:
+    _form: '\Drupal\bm_import\Form\ImportarProductoForm'
+    _title: 'Importar Proveedores '
+  requirements: 
+    _permission: 'administer users'
+  #options:  
+  #  _admin_route: TRUE    

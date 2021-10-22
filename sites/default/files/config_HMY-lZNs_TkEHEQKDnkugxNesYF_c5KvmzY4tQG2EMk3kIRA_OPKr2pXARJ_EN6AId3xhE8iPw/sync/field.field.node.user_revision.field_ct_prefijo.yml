@@ -1,0 +1,19 @@
+uuid: 1421631b-2f71-4629-ae4f-478be18b6e8b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ct_prefijo
+    - node.type.user_revision
+id: node.user_revision.field_ct_prefijo
+field_name: field_ct_prefijo
+entity_type: node
+bundle: user_revision
+label: ct_prefijo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

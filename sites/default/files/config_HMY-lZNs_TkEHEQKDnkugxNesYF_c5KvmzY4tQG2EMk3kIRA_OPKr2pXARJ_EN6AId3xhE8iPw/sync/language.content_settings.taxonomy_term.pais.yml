@@ -1,0 +1,11 @@
+uuid: c3152c52-8034-4fde-b2c1-445d3fd5617e
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.pais
+id: taxonomy_term.pais
+target_entity_type_id: taxonomy_term
+target_bundle: pais
+default_langcode: site_default
+language_alterable: false

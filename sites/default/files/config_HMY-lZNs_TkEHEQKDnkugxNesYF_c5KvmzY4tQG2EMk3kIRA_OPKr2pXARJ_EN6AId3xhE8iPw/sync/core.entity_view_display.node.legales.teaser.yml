@@ -1,0 +1,26 @@
+uuid: 94968f63-9715-4480-9c46-d94a3bc6a9aa
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.legales.field_descripcion
+    - field.field.node.legales.field_metatags
+    - node.type.legales
+  module:
+    - user
+id: node.legales.teaser
+targetEntityType: node
+bundle: legales
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_descripcion: true
+  field_metatags: true
+  langcode: true
+  search_api_excerpt: true

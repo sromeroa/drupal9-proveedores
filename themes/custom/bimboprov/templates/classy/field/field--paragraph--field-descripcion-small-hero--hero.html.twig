@@ -1,0 +1,24 @@
+<div class="c-texto__contenido c-texto__contenido--small">
+  {% if label_hidden %}
+    {% if multiple %}
+        {% for item in items %}
+          {{ item.content }}
+        {% endfor %}
+    {% else %}
+      {% for item in items %}
+        {{ item.content }}
+      {% endfor %}
+    {% endif %}
+  {% else %}
+      <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+      {% if multiple %}
+      {% endif %}
+      {% for item in items %}
+        {{ item.content }}
+      {% endfor %}
+      {% if multiple %}
+      {% endif %}
+  {% endif %}
+</div>
+</div>
+</div>  

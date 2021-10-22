@@ -1,0 +1,14 @@
+uuid: 0531bae2-874d-4a02-8c06-159bd8860101
+langcode: es
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: local
+name: Local
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 3
+  matching: words

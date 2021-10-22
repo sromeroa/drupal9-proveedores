@@ -1,0 +1,21 @@
+uuid: 7fb54175-cc83-4e06-8de3-22b155672884
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.preguntas_politicas
+  module:
+    - metatag
+id: node.preguntas_politicas.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: preguntas_politicas
+label: Metatags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

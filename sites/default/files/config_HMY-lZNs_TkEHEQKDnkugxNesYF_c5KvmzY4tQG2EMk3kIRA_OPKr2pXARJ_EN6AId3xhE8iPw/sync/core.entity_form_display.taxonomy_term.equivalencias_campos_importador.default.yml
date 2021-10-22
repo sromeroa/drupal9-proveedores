@@ -1,0 +1,60 @@
+uuid: 1a38914e-c2ea-4030-9c75-08db0aba9bc7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.equivalencias_campos_importador.field_catalogo
+    - taxonomy.vocabulary.equivalencias_campos_importador
+  module:
+    - path
+    - text
+id: taxonomy_term.equivalencias_campos_importador.default
+targetEntityType: taxonomy_term
+bundle: equivalencias_campos_importador
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_catalogo:
+    weight: 101
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 100
+    region: content
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,41 @@
+uuid: 6c9a3829-543b-4a4d-a847-ce15c127bf7a
+langcode: es
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:19367ec0-1da7-42e3-9838-69c790ebdce3'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - bimboprov
+id: templatebloquenoticias
+theme: bimboprov
+region: content
+weight: -5
+provider: null
+plugin: 'block_content:19367ec0-1da7-42e3-9838-69c790ebdce3'
+settings:
+  id: 'block_content:19367ec0-1da7-42e3-9838-69c790ebdce3'
+  label: 'Template bloque - noticias'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+      proveedor: proveedor
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

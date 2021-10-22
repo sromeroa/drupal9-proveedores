@@ -1,0 +1,30 @@
+uuid: 8f073cda-8f00-44b3-8293-0c376d35110a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_descripcion_hero
+    - paragraphs.paragraphs_type.hero
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    html_estilos: html_estilos
+    basic_html: '0'
+    html_code: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: paragraph.hero.field_descripcion_hero
+field_name: field_descripcion_hero
+entity_type: paragraph
+bundle: hero
+label: 'descripcion hero'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

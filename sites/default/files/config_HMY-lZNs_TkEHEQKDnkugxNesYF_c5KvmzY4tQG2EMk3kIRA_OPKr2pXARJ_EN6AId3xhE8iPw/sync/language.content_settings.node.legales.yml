@@ -1,0 +1,16 @@
+uuid: 5ad5e6fa-0508-48a7-9760-17b2065928c0
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.legales
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.legales
+target_entity_type_id: node
+target_bundle: legales
+default_langcode: site_default
+language_alterable: true

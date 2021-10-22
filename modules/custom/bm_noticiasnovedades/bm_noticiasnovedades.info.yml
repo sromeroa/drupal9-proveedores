@@ -1,0 +1,6 @@
+name:  Block Noticias y Novedades- Bimbo Proveedores
+type: module
+description: Modulo de contenido de Noticias y Novedades
+package: CustomGenerales - Custom Home Bimbo Proveedores
+version: 1.0
+core_version_requirement: ^9

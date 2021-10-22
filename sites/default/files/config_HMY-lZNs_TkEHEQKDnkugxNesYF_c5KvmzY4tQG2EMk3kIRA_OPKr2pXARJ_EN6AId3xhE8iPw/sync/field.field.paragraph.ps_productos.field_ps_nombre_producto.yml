@@ -1,0 +1,19 @@
+uuid: 6a48d17a-caa3-43d6-b199-d5039c58c4c2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ps_nombre_producto
+    - paragraphs.paragraphs_type.ps_productos
+id: paragraph.ps_productos.field_ps_nombre_producto
+field_name: field_ps_nombre_producto
+entity_type: paragraph
+bundle: ps_productos
+label: ps_nombre_producto
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

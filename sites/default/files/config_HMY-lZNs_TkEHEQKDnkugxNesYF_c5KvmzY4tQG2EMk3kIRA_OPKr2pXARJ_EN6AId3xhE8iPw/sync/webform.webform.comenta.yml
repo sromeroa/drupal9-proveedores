@@ -1,0 +1,235 @@
+uuid: 3c0330d8-6e64-4045-9ddc-cdf886dec964
+langcode: es
+status: open
+dependencies: {  }
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: comenta
+title: comenta
+description: ''
+category: ''
+elements: "markup_titulo:\n  '#type': webform_markup\n  '#markup': |\n    <section>\n    <div class=\"c-title\">\n    <div class=\"c-title__head\">\n    <h1 class=\"c-title__head-titulo\">&nbsp;</h1>\n    </div>\n    </div>\n    </section>\n    \nlogo_comenta:\n  '#type': webform_markup\n  '#markup': '<p><img alt=\"comenta\" src=\"https://repo.ingenia.com/GrupoBimbo-PortalProveedores/Code/newsite/sites/default/files/2021-07/linea_comenta.png\" /></p>'\nmarkup_descripcion:\n  '#type': webform_markup\n  '#markup': |\n    <div class=\"c-form-comenta__titulo\">\n    <p style=\"line-height:1.295; margin-left:48px; margin-bottom:10px\"><span style=\"font-size:11pt; font-variant:normal; white-space:pre-wrap\"><span style=\"font-family:Arial\"><span style=\"color:#000000\"><span style=\"font-weight:400\"><span style=\"font-style:normal\"><span style=\"text-decoration:none\">En Grupo Bimbo tenemos el compromiso con nuestros proveedores de llevar a cabo negociaciones honestas y equitativas, sin discriminaciones y/o imposiciones. Todo proveedor ser&aacute; siempre tratado con la regla de oro: respeto, justicia, confianza y afecto. &nbsp;</span></span></span></span></span></span></p>\n    \n    <p style=\"line-height:1.295; margin-left:48px; margin-bottom:10px\"><span style=\"font-size:11pt; font-variant:normal; white-space:pre-wrap\"><span style=\"font-family:Arial\"><span style=\"color:#000000\"><span style=\"font-weight:400\"><span style=\"font-style:normal\"><span style=\"text-decoration:none\">Para reportar cualquier falta a nuestra filosof&iacute;a, nuestras pol&iacute;ticas y/o c&oacute;digos de &eacute;tica y conducta, ponemos a tu disposici&oacute;n un canal de comunicaci&oacute;n confiable en el que puedas expresar cualquier comentario, sugerencia y/o queja en un marco de absoluta confidencialidad. Asumimos el compromiso de revisar exhaustivamente cada caso y actuar en consecuencia. Este espacio est&aacute; disponible antes, durante y despu&eacute;s de la relaci&oacute;n proveedor&ndash;cliente en la inteligencia de que actuaremos con toda justicia y sin afectar los intereses de las partes, en caso de que las quejas procedan.</span></span></span></span></span></span></p>\n    \n    <p style=\"line-height:1.295; margin-left:48px\"><span style=\"font-size:11pt; font-variant:normal; white-space:pre-wrap\"><span style=\"font-family:Arial\"><span style=\"color:#000000\"><span style=\"font-weight:400\"><span style=\"font-style:normal\"><span style=\"text-decoration:none\">Tel&eacute;fonos: 8005226491 / 800 012 4626</span></span></span></span></span></span></p>\n    \n    <p style=\"line-height:1.295; margin-left:48px\"><span style=\"font-size:11pt; font-variant:normal; white-space:pre-wrap\"><span style=\"font-family:Arial\"><span style=\"color:#000000\"><span style=\"font-weight:400\"><span style=\"font-style:normal\"><span style=\"text-decoration:none\">Correo electr&oacute;nico: </span></span></span></span></span></span><a href=\"mailto:comenta@grupobimbo.com\" style=\"text-decoration:none\"><span style=\"font-size:11pt; font-variant:normal; white-space:pre-wrap\"><span style=\"font-family:Arial\"><span style=\"color:#0563c1\"><span style=\"font-weight:400\"><span style=\"font-style:normal\"><span style=\"text-decoration:underline\"><span style=\"-webkit-text-decoration-skip:none\"><span style=\"text-decoration-skip-ink:none\">comenta@grupobimbo.com</span></span></span></span></span></span></span></span></a></p>\n    \n    <p>&nbsp;</p>\n    </div>\nnombre:\n  '#type': textfield\n  '#title': Nombre\n  '#title_display': invisible\n  '#placeholder': 'Nombre Completo'\n  '#required': true\n  '#required_error': 'Nombre Completo requerido'\n  '#prefix': '<fieldset class=\"c-form__fieldset\"><ul class=\"form-list full\"><li><span class=\"currentInput\">'\n  '#suffix': '</span></li>'\nemail:\n  '#type': email\n  '#title': Email\n  '#title_display': invisible\n  '#placeholder': Email\n  '#required': true\n  '#required_error': 'Campo Email obligatorio'\n  '#prefix': '<li><span class=\"currentInput\">'\n  '#suffix': '</span></li>'\ncomentario:\n  '#type': textarea\n  '#title': Comentario\n  '#title_display': invisible\n  '#placeholder': Comentario\n  '#counter_type': character\n  '#counter_minimum': 1\n  '#counter_maximum': 350\n  '#prefix': '<li><span class=\"currentInput\">'\n  '#suffix': '</span><div class=\"c-form__registro-conta u-text-right\"></div></li>'\nterminos:\n  '#type': checkbox\n  '#title': 'Terminos y condiciones'\n  '#description': 'He le&iacute;do y acepto <a href=\"#!\">T&eacute;rminos y Condiciones</a>&nbsp;y el&nbsp;<a href=\"#!\">Aviso de Privacidad.</a>'\n  '#title_display': before\n  '#required': true\n  '#required_error': 'Campo Terminos requerido'\n  '#return_value': '1'\n  '#prefix': '<li class=\"c-form__terminos-aviso c-form__terminos-aviso-comenta group-input required\"><div class=\"lbCh\">'\n  '#suffix': '<span class=\"flCh\"></span></div></li>'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': Enviar\n  '#submit__attributes':\n    class:\n      - 'btn btn-primario btn-mediano btn-icono-derecha'\n  '#prefix': '<li>'\n  '#suffix': '</li></ul>'"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: both
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_remote_addr: true
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  correo_electronico:
+    id: email
+    label: 'Correo electrónico'
+    notes: ''
+    handler_id: correo_electronico
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: comenta@grupobimbo.com
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      subject: _default
+      body: _default
+      excluded_elements:
+        logo_comenta: logo_comenta
+        markup_descripcion: markup_descripcion
+        terminos: terminos
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      theme_name: ''
+      parameters: {  }
+variants: {  }

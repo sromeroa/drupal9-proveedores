@@ -1,0 +1,8 @@
+uuid: 9b7fa95b-fe81-4f3b-b0ae-6344ffa633eb
+langcode: es
+status: true
+dependencies: {  }
+name: 'Certificaciones vigentes'
+vid: certificaciones_vigentes
+description: 'Certificaciones vigentes'
+weight: 0

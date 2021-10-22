@@ -1,0 +1,29 @@
+uuid: c3ea782e-6561-4a49-a5d2-2621b1d6866d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dc_certificaciones_vigente
+    - node.type.user_revision
+    - taxonomy.vocabulary.certificaciones_vigentes
+id: node.user_revision.field_dc_certificaciones_vigente
+field_name: field_dc_certificaciones_vigente
+entity_type: node
+bundle: user_revision
+label: dc_certificaciones_vigentes
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      certificaciones_vigentes: certificaciones_vigentes
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

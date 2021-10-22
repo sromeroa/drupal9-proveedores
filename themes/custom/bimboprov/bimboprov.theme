@@ -1,0 +1,328 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the bimboprov theme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Template\Attribute;
+use \Drupal\Core\Render\Element\RenderElement;
+use Drupal\Core\Entity\EntityInterface;
+
+
+/**
+ * Implements hook_entity_presave().
+ */
+
+function bimboprov_node_presave(&$variables) {
+   //if($entity->getEntityTypeId() == 'node' && $entity->bundle() == 'source_node') {
+echo "sssdd  ";
+ $entity->field_subtitulo->value = 'Some value';
+ $entity->save();
+//return;
+//   }
+}
+
+
+
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ *
+ * Adds body classes if certain regions have content.
+ */
+function bimboprov_preprocess_html(&$variables) {
+  // Add information about the number of sidebars.
+  if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
+    $variables['attributes']['class'][] = 'layout-two-sidebars';
+  }
+  elseif (!empty($variables['page']['sidebar_first'])) {
+    $variables['attributes']['class'][] = 'layout-one-sidebar';
+    $variables['attributes']['class'][] = 'layout-sidebar-first';
+  }
+  elseif (!empty($variables['page']['sidebar_second'])) {
+    $variables['attributes']['class'][] = 'layout-one-sidebar';
+    $variables['attributes']['class'][] = 'layout-sidebar-second';
+  }
+  else {
+    $variables['attributes']['class'][] = 'layout-no-sidebars';
+  }
+
+  if (!empty($variables['page']['featured_top'])) {
+    $variables['attributes']['class'][] = 'has-featured-top';
+  }
+
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function bimboprov_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+
+  /*
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $content_type = $node->bundle();
+    $suggestions[] = 'page__'.$content_type;
+  }
+  */
+
+  $path = \Drupal::request()->getRequestUri();
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    \Drupal::logger('path')->notice(print_r($path, true));      
+    switch ($path) {
+      case "/registro":
+      case "/node/5":
+        $suggestions[] = 'page__registro';
+        break;
+        case "/datos-enviados":
+          $suggestions[] = 'page__success';
+          break;        
+    } // end switch    
+  } // end if 
+
+
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page title templates.
+ */
+function bimboprov_preprocess_page_title(&$variables) {
+  // Since the title and the shortcut link are both block level elements,
+  // positioning them next to each other is much simpler with a wrapper div.
+  if (!empty($variables['title_suffix']['add_or_remove_shortcut']) && $variables['title']) {
+    // Add a wrapper div using the title_prefix and title_suffix render
+    // elements.
+    $variables['title_prefix']['shortcut_wrapper'] = [
+      '#markup' => '<div class="shortcut-wrapper clearfix">',
+      '#weight' => 100,
+    ];
+    $variables['title_suffix']['shortcut_wrapper'] = [
+      '#markup' => '</div>',
+      '#weight' => -99,
+    ];
+    // Make sure the shortcut link is the first item in title_suffix.
+    $variables['title_suffix']['add_or_remove_shortcut']['#weight'] = -100;
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for maintenance-page.html.twig.
+ */
+function bimboprov_preprocess_maintenance_page(&$variables) {
+  // By default, site_name is set to Drupal if no db connection is available
+  // or during site installation. Setting site_name to an empty string makes
+  // the site and update pages look cleaner.
+  // @see template_preprocess_maintenance_page
+  if (!$variables['db_is_active']) {
+    $variables['site_name'] = '';
+  }
+
+  // bimboprov has custom styling for the maintenance page.
+  $variables['#attached']['library'][] = 'bimboprov/maintenance_page';
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for node.html.twig.
+ */
+function bimboprov_preprocess_node(&$variables) {
+  // Remove the "Add new comment" link on teasers or when the comment form is
+  // displayed on the page.
+  if ($variables['teaser'] || !empty($variables['content']['comments']['comment_form'])) {
+    unset($variables['content']['links']['comment']['#links']['comment-add']);
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for block.html.twig.
+ */
+function bimboprov_preprocess_block(&$variables) {
+  // Add a clearfix class to system branding blocks.
+  if ($variables['plugin_id'] == 'system_branding_block') {
+    $variables['attributes']['class'][] = 'clearfix';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for menu.html.twig.
+ */
+function bimboprov_preprocess_menu(&$variables) {
+  $variables['attributes']['class'][] = '';
+  if (isset($variables['menu_name'])) {
+    switch($variables['menu_name']) {
+      case "footer---redes-sociales":
+      case "sidebar---menu-usuarios":  
+        foreach($variables['items'] as $key => $item) {
+          $_menu_entity = $item['entity'];
+          $span_class = $_menu_entity->get('field_span_class');
+          \Drupal::logger('span_class')->notice(print_r($span_class->value, true));      
+          $variables['items'][$key]['span']['class'] = $span_class->value;     
+        }  // end foreach  
+        break;
+    } // end switch
+  }
+
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function bimboprov_form_user_register_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for form templates.
+ */
+function bimboprov_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+  \Drupal::logger('form_id_form_alter')->notice(print_r($variables['element']['#form_id'],true));
+  if ($variables['element']['#form_id'] == 'search_block_form') {
+    $suggestions[] = 'form__search_block_form';
+  }
+  if ($variables['element']['#form_id'] == 'user_login_form') {
+    $suggestions[] = 'form__user_login_form';
+  }  
+}
+
+/**
+ * Implements hook_form_alter() to add classes to the search form.
+ */
+function bimboprov_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  \Drupal::logger('my_module_logger')->notice(print_r($form_id,true));
+  if (in_array($form_id, ['search_block_form', 'search_form'])) {
+    $key = ($form_id == 'search_block_form') ? 'actions' : 'basic';
+    if (!isset($form[$key]['submit']['#attributes'])) {
+      $form[$key]['submit']['#attributes'] = new Attribute();
+    }
+    $form[$key]['submit']['#attributes']->addClass('search-form__submit');
+  }
+
+  if (in_array($form_id, ['actualdatos_form'])) {
+    $form['actions']['submit']['#attributes']['data-twig-suggestion'] = 'actualdatos_form_submit';
+  } // end if  
+
+  if (in_array($form_id, ['bloque_registro_form'])) {
+    \Drupal::logger('keys')->notice(print_r(array_keys($form['actions']),true));
+    $form['dc_actividad_economica']['#attributes']['data-twig-suggestion'] = 'radio_registro_submit';
+    $form['ps_productos']['ps_produce']['#attributes']['data-twig-suggestion'] = 'radio_registro_multiple';
+    $form['ps_productos']['ps_comercializa']['#attributes']['data-twig-suggestion'] = 'radio_registro_multiple';
+    $form['actions']['submit']['#attributes']['data-twig-suggestion'] = 'solicitud_form';    
+  }
+
+  $path = \Drupal::service('path.current')->getPath();
+  \Drupal::logger('$path')->notice(print_r($path,true));
+  switch ($path) {
+    case "/preguntas-frecuentes":
+      if (in_array($form_id, ['views_exposed_form'])) {
+        $form['#prefix'] = "<div class='c-faqs__content-filtro'>";
+        $form['#suffix'] = "</div>";
+        $form['#attached']['library'][] = 'bimboprov/view-filter-submit';
+      } // end if 
+    break;
+    case "/webform/registro_usuario":
+      \Drupal::logger('registro_usuario')->notice(print_r($form_id,true));
+      if (in_array($form_id, ['webform_submission_registro_usuario_add_form'])) {
+        $form['#attached']['library'][] = 'bimboprov/libs-registro';
+      } // end if 
+      break;  
+    case '/user/login':
+      if (in_array($form_id, ['user_login_form'])) {
+        $form['#attributes']['class'][] = 'c-form__iniciar-sesion js-form-send-iniciar-sesion';
+        // Username
+        $form['name']['#attributes']['placeholder'] = t('User name');
+        $form['name']['#description'] = "";
+        // Password
+        $form['pass']['#attributes']['placeholder'] = t('Contraseña');
+        $form['pass']['#description'] = "";
+        // Terminos y condiciones
+        $form['find_us'] = array(
+          '#type' => 'checkbox',
+          '#title' => t(''),
+          '#name' => 'find_us',
+          '#required' => TRUE
+        );
+
+        /*
+        $form['captcha_element'] = [
+          '#type' => 'captcha',
+          '#captcha_type' => 'recaptcha/reCAPTCHA',
+        ];
+        */
+
+        // Envio
+        $form['actions']['submit']['#attributes']['class'][] = 'btn btn-primario btn-mediano';
+        $form['actions']['submit']['#attributes']['data-twig-suggestion'] = 'submit_login';
+        // Librerias  
+        
+        $form['#attached']['library'][] = 'bimboprov/libs-login';
+      } // end if
+      break;      
+    case '/user/password':
+      $form['name']['#description'] = "";
+      $form['actions']['submit']['#attributes']['class'][] = 'btn btn-primario btn-mediano';
+      break;  
+  }
+
+}
+
+/**
+ * @param $suggestions
+ * @param array $variables
+ */
+function bimboprov_js_alter(&$javascript) {
+  $path = \Drupal::service('path.current')->getPath();
+  \Drupal::logger('$javascript')->notice(print_r($javascript,true));
+  switch ($path) {
+    case '/user/login':
+    case '/registro':      
+      unset($javascript['//repo.ingenia.com/GrupoBimbo-PortalProveedores/Code/front_end/dist/dev/js/main.js']);
+      unset($javascript['js/main.js']);
+      break;      
+  } // end switch
+
+}
+
+/**
+ * @param $suggestions
+ * @param array $variables
+ */
+function bimboprov_radio_theme($variables) {
+  $element = $variables['element'];
+}
+
+/**
+ * Implements hook_form_alter() to add classes to the search form.
+ */
+function bimboprov_preprocess_select(&$variables) {
+  
+  if (\Drupal::service('path.current')->getPath() == '/preguntas-frecuentes') {
+    $element = $variables['element'];
+    RenderElement::setAttributes($element, array(
+      'form-select',
+      'customSelect c-form__lista-item-select customSelect--white'
+    ));
+    $variables['attributes'] = $element['#attributes'];      
+  }  
+}
+
+
+
+
+
+
+
+/**
+ * @param $suggestions
+ * @param array $variables
+ */
+function bimboprov_theme_suggestions_input_alter(&$suggestions, array $variables) {
+  $element = $variables['element'];
+
+  if (isset($element['#attributes']['data-twig-suggestion'])) {
+    $suggestions[] = 'input__' . $element['#type'] . '__' . $element['#attributes']['data-twig-suggestion'];
+  }
+
+  if (strpos($element['#id'], 'edit-ps-productos-add-more') !== false) {
+    $suggestions[] = 'input__addmore';
+  }  
+
+}
+

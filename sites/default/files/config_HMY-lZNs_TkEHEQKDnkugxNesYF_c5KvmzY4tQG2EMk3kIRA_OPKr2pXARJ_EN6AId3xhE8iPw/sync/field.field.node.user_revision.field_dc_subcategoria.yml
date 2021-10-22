@@ -1,0 +1,29 @@
+uuid: 442bc0be-fdda-413b-b64e-0b821a0fe4c3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dc_subcategoria
+    - node.type.user_revision
+    - taxonomy.vocabulary.subcategoria
+id: node.user_revision.field_dc_subcategoria
+field_name: field_dc_subcategoria
+entity_type: node
+bundle: user_revision
+label: dc_subcategoria
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      subcategoria: subcategoria
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

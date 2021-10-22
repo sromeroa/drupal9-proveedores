@@ -1,0 +1,14 @@
+uuid: 03fdd18f-8aa6-45bd-9d85-fcda0b50c41a
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.proveedor
+  module:
+    - user
+id: user_remove_role_action.proveedor
+label: 'Elimina el rol Proveedor al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: proveedor

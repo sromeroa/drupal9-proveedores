@@ -1,0 +1,32 @@
+uuid: 0856f7d0-6c6a-4df0-b3ff-084934158f51
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_descripcion
+    - paragraphs.paragraphs_type.sub_programas
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    basic_html: '0'
+    html_code: '0'
+    html_estilos: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: paragraph.sub_programas.field_descripcion
+field_name: field_descripcion
+entity_type: paragraph
+bundle: sub_programas
+label: Descripción
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

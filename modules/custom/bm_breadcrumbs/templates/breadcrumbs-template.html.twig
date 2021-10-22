@@ -1,0 +1,19 @@
+<div class="c-breadcrumbs">
+    <ul class="c-breadcrumbs__menu">
+	{% for breadcrumb in breadcrumbs %}
+		{% if breadcrumb.title %}
+			{% if breadcrumb.url %}
+    			<li class="c-breadcrumbs__menu-item">
+					<a class="c-breadcrumbs__menu-item-link" href="{{breadcrumb.url}}" title="{{breadcrumb.title}}">
+					{{breadcrumb.title}}
+					</a>
+				</li>
+			{% else %}
+				<li class="c-breadcrumbs__menu-item">
+				<span>{{breadcrumb.title}}</span>
+				</li>
+			{% endif %}
+		{% endif %}
+	{% endfor %}
+    </ul>
+</div>

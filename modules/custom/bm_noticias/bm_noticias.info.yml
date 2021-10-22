@@ -1,0 +1,6 @@
+name:  Block Noticias - Bimbo Proveedores
+type: module
+description: Modulo de contenido de Noticias
+package: Custom
+version: 1.0
+core_version_requirement: ^9

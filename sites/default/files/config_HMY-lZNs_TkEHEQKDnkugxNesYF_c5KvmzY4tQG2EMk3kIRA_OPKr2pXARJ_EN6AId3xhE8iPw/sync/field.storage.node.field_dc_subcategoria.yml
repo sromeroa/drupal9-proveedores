@@ -1,0 +1,20 @@
+uuid: e3dc6a71-7d6d-4c9d-9e88-d950eb9fa64b
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_dc_subcategoria
+field_name: field_dc_subcategoria
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

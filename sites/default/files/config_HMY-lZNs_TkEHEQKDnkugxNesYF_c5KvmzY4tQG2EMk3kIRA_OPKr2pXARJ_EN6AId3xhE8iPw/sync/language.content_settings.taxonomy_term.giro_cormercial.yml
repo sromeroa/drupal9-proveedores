@@ -1,0 +1,11 @@
+uuid: 860dc37c-4347-4137-9dc9-a6c4fad60b82
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.giro_cormercial
+id: taxonomy_term.giro_cormercial
+target_entity_type_id: taxonomy_term
+target_bundle: giro_cormercial
+default_langcode: site_default
+language_alterable: false

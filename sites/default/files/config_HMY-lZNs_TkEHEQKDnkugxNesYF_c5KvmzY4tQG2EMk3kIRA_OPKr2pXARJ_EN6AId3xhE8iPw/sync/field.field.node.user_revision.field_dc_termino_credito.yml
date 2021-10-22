@@ -1,0 +1,19 @@
+uuid: e1300cf1-fc3b-42da-8ef0-b3f9c7f6fd94
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dc_termino_credito
+    - node.type.user_revision
+id: node.user_revision.field_dc_termino_credito
+field_name: field_dc_termino_credito
+entity_type: node
+bundle: user_revision
+label: dc_termino_credito
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

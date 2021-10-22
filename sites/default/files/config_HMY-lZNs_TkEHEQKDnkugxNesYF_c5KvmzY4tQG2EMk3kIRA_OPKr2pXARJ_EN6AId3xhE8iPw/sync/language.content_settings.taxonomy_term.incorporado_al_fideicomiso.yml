@@ -1,0 +1,11 @@
+uuid: 86f01b8c-43d1-4064-9317-c0b1298a2930
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.incorporado_al_fideicomiso
+id: taxonomy_term.incorporado_al_fideicomiso
+target_entity_type_id: taxonomy_term
+target_bundle: incorporado_al_fideicomiso
+default_langcode: site_default
+language_alterable: false

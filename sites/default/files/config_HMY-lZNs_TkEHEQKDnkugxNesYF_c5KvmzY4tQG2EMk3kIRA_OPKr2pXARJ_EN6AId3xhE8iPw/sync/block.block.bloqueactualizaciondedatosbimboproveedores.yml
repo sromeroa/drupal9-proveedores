@@ -1,0 +1,36 @@
+uuid: 2d0b3afd-62bc-4104-9ddd-943e2356ee3a
+langcode: es
+status: true
+dependencies:
+  module:
+    - bm_actualdatos
+    - system
+    - user
+  theme:
+    - bimboprov
+id: bloqueactualizaciondedatosbimboproveedores
+theme: bimboprov
+region: content
+weight: 0
+provider: null
+plugin: actualdatos_block
+settings:
+  id: actualdatos_block
+  label: 'Actualización de datos'
+  provider: bm_actualdatos
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /actualizacion-de-datosr
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+      proveedor: proveedor
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

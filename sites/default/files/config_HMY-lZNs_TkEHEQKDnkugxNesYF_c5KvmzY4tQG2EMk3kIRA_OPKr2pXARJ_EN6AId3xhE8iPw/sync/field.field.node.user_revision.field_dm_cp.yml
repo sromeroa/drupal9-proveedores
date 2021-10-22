@@ -1,0 +1,19 @@
+uuid: aff2ca42-4bc5-41d9-ba52-b6eb666bf108
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dm_cp
+    - node.type.user_revision
+id: node.user_revision.field_dm_cp
+field_name: field_dm_cp
+entity_type: node
+bundle: user_revision
+label: dm_cp
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

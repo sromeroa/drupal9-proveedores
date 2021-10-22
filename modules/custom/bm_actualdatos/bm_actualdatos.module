@@ -1,0 +1,23 @@
+<?php
+
+use Drupal\node\Entity\Node;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Removiendo tabs de login
+ * @param $suggestions
+ * @param array $variables
+ */
+function bm_actualdatos_menu_local_tasks_alter(&$data, $route_name) {
+
+    \Drupal::logger('$route_name')->notice(print_r($route_name,true));
+    \Drupal::logger('$tabs')->notice(print_r($data['tabs'],true));
+    
+    $routes = ['user.login'];
+    if (in_array($route_name, $routes)) {
+      unset($data['tabs'][0]['user.register']); 
+      unset($data['tabs'][0]['user.pass']); 
+      unset($data['tabs'][0]['user.login']); 
+    }
+  }
+  

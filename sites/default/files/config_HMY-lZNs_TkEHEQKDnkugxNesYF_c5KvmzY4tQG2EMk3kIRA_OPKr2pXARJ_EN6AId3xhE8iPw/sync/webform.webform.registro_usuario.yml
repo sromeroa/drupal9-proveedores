@@ -1,0 +1,195 @@
+uuid: 1a7faee5-8f3d-4d45-8748-1d2113c49120
+langcode: es
+status: open
+dependencies: {  }
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: registro_usuario
+title: 'Registro de Usuario'
+description: ''
+category: ''
+elements: "nombre:\n  '#type': textfield\n  '#title': Nombre\n  '#placeholder': Nombre\n  '#required': true\n  '#prefix': '<fieldset class=\"c-form__fieldset\"><ul class=\"form-list full\"><li><h3 class=\"c-form__registro-titulo\">Datos personales</h3></li><li><span class=\"currentInput\">'\n  '#suffix': '</span></li>'\napellido_paterno:\n  '#type': textfield\n  '#title': 'Apellido Paterno'\n  '#placeholder': 'Apellido Paterno'\n  '#required': true\n  '#prefix': '<li class=\"doble\"><span class=\"currentInput\">'\n  '#suffix': '</span></li>'\napellido_materno:\n  '#type': textfield\n  '#title': 'Apellido Materno'\n  '#placeholder': 'Apellido Materno'\n  '#required': true\n  '#prefix': '<li class=\"doble mg-left\"><span class=\"currentInput\">'\n  '#suffix': '</span></li>'\nemail:\n  '#type': email\n  '#title': Email\n  '#placeholder': Email\n  '#required': true\n  '#prefix': '<li><span class=\"currentInput\">'\n  '#suffix': '</span></li>'\ntelefono_fijo:\n  '#type': tel\n  '#title': 'Teléfono fijo'\n  '#placeholder': 'Teléfono fijo'\n  '#prefix': '<li class=\"doble\"><span class=\"currentInput\">'\n  '#suffix': '</span></li>'\ntelefono_celular:\n  '#type': tel\n  '#title': 'Teléfono celular'\n  '#placeholder': 'Teléfono celular'\n  '#prefix': '<li class=\"doble mg-left\"><span class=\"currentInput\">'\n  '#suffix': '</span></li>'\npassword:\n  '#type': textfield\n  '#title': Password\n  '#placeholder': Contraseña\n  '#prefix': '<li><div class=\"icon-contrasena js-contrasena\"><span class=\"currentInput listo\">'\n  '#suffix': '</span><span class=\"icon ver js-mostrar-pass\"></span></div></li>'\npassword_confirmado:\n  '#type': textfield\n  '#title': 'Password confirmado'\n  '#placeholder': 'Confirmar contraseña'\n  '#prefix': '<li><div class=\"icon-contrasena js-contrasena\"><span class=\"currentInput listo\">'\n  '#suffix': '</span><span class=\"icon ver js-mostrar-pass\"></span></div></li></ul></fieldset>'\nrazon_social:\n  '#type': textfield\n  '#title': 'Razon Social'\n  '#minlength': 10\n  '#maxlength': 12\n  '#placeholder': 'Razón Social'\n  '#prefix': '<fieldset class=\"c-form__fieldset\"><ul class=\"form-list full\"><li><h3 class=\"c-form__registro-titulo\">Datos comerciales</h3></li><li><span class=\"currentInput\">'\n  '#suffix': '</span></li>'\nrfc:\n  '#type': textfield\n  '#title': Rfc\n  '#placeholder': R.F.C.\n  '#prefix': '<li><span class=\"currentInput\">'\n  '#suffix': '</span></li>'\nactividad_economica:\n  '#type': radios\n  '#title': ''\n  '#options':\n    fisica: 'Persona física'\n    moral: 'Persona moral'\n  '#prefix': '<li class=\"c-form__checkbox group-input required\"><span class=\"c-form__registro-label\">Actividad económica:</span><div class=\"c-form__checkbox-inline\">'\n  '#suffix': '</div><span class=\"group-label\">Selecciona una opción</span></li>'\nmarca_principal:\n  '#type': textfield\n  '#title': 'Marca principal'\n  '#placeholder': 'Marca principal'\n  '#prefix': '<li><span class=\"currentInput\">'\n  '#suffix': '</span></li>'\nmonto:\n  '#type': textfield\n  '#title': Monto\n  '#placeholder': 'Monto de facturación anual'\n  '#prefix': '<li><span class=\"currentInput\">'\n  '#suffix': '</span></li>'\npais_relacion_comercial:\n  '#type': select\n  '#title': 'Pais relacion comercial'\n  '#options': country_names\n  '#empty_option': 'País en el que desea tener relaciones comerciales'\n  '#prefix': '<li>'\n  '#suffix': '</li>'\npais_productor_distribuidor:\n  '#type': select\n  '#title': 'Pais productor distribuidor'\n  '#options': country_names\n  '#empty_option': 'País en los que produce y/o distribuye'\n  '#prefix': '<li>'\n  '#suffix': '</li>'\nususario_categoria:\n  '#type': select\n  '#title': 'Ususario categoria'\n  '#options':\n    categoria1: categoria1\n    categoria2: categoria2\n    categoria3: categoria3\n  '#empty_option': Categoría\n  '#prefix': '<li>'\n  '#suffix': '</li>'\nusuario_subcategoria:\n  '#type': select\n  '#title': 'usuario subcategoria'\n  '#options':\n    subcategoria1: subcategoria1\n    subcategoria2: subcategoria2\n    subcategoria3: subcategoria3\n  '#empty_option': 'Sub categoría'\n  '#prefix': '<li>'\n  '#suffix': '</li></ul></fieldset>'\nprocessed_text:\n  '#type': processed_text\n  '#text': |\n    <fieldset class=\"c-form__fieldset js-template-producto\">\n                        <ul class=\"form-list full c-form__productos\" id=\"c-producto__dinamico-1\">\n                          <li>\n                            <h3 class=\"c-form__registro-titulo\">Productos que suministra</h3>\n                          </li>\n                          <li>\n                            <span class=\"currentInput\"><input class=\"required withLabel\" name=\"nombre_producto[1][]\" type=\"text\" data-name=\"Nombre del producto\" value=\"Nombre del producto\"><label class=\"currentInput-label\">Nombre del producto</label></span>\n                          </li>\n                          <li>\n                            <span class=\"currentInput listo\"><textarea class=\"js-textarea withLabel required\" data-autoresize=\"\" name=\"mensaje[1][]\" cols=\"33\" rows=\"3\" data-name=\"Descripción\" maxlength=\"350\"></textarea><label class=\"currentInput-label\">Descripción</label></span>\n                            <label class=\"c-form__registro-conta u-text-right\"><span class=\"c-form__current js-incremento\">0</span><span class=\"c-form__max\">/ 350</span></label>\n                          </li>\n                          <li class=\"c-form__checkbox group-input required\">\n                            <label class=\"c-form__registro-label\">Produce:</label>\n                            <div class=\"c-form__checkbox-inline c-form__checkbox-margin\">\n                              <label class=\"c-form__registro-label lbRd\">\n                                <input name=\"produce[1][]\" type=\"radio\" value=\"Si\">Si\n                              <span class=\"flCh\"></span></label>\n                              <label class=\"c-form__registro-label lbRd\">\n                                <input name=\"produce[1][]\" type=\"radio\" value=\"No\">No\n                              <span class=\"flCh\"></span></label>\n                            </div><span class=\"group-label\">Selecciona una opción</span>\n                          </li>\n                          <li class=\"c-form__checkbox group-input required\">\n                            <label class=\"c-form__registro-label\">Comercializa:</label>\n                            <div class=\"c-form__checkbox-inline c-form__checkbox-margin\">\n                              <label class=\"c-form__registro-label lbRd\">\n                                <input name=\"comercializa[1][]\" type=\"radio\" value=\"Si\">Si\n                              <span class=\"flCh\"></span></label>\n                              <label class=\"c-form__registro-label lbRd\">\n                                <input name=\"comercializa[1][]\" type=\"radio\" value=\"No\">No\n                              <span class=\"flCh\"></span></label>\n                            </div><span class=\"group-label\">Selecciona una opción</span>\n                          </li>\n                        </ul>          \n            </fieldset>\n    \n  '#format': html_code\nnombre_del_producto:\n  '#type': hidden\n  '#title': 'Nombre del producto'\n  '#placeholder': 'Nombre del producto'\n  '#prefix': ''\n  '#suffix': ''\ndescripcion_producto:\n  '#type': hidden\n  '#title': 'Descripcion producto'\n  '#prefix': ''\n  '#suffix': ''\nproduce:\n  '#type': hidden\n  '#title': Produce\n  '#prefix': ''\n  '#suffix': ''\ncomercializa:\n  '#type': hidden\n  '#title': Comercializa\n  '#prefix': ''\n  '#suffix': ''\nprocessed_text_01:\n  '#type': processed_text\n  '#text': |\n    <fieldset class=\"c-form__fieldset\">\n                        <ul class=\"form-list full\">\n                          <li>\n                            <div class=\"c-form__botones c-form__agregar\"><a class=\"btn btn-circulo btn-borde js-agregar-producto\" href=\"#!\" title=\"Agregar\"><span class=\"icon anexar\"> </span></a>\n                              <p class=\"c-form__registro-titulo\">Agregar otro producto</p>\n                            </div>\n                          </li>\n    \n  '#format': html_code\ncaptcha:\n  '#type': captcha\n  '#captcha_type': recaptcha/reCAPTCHA\n  '#prefix': '<li class=\"full\"><div class=\"c-form__recaptcha\">'\n  '#suffix': '</div></li>'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Enviar Solicitud'\n  '#submit__attributes':\n    class:\n      - 'btn btn-primario btn-mediano btn-icono-derecha'\n  '#prefix': '<li>'\n  '#suffix': '</li>'\nprocessed_text_02:\n  '#type': processed_text\n  '#text': '</ul></fieldset>'\n  '#format': html_code"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: both
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_remote_addr: true
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }

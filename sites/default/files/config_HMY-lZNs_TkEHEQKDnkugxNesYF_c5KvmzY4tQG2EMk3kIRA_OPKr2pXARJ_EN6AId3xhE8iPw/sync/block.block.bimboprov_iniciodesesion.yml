@@ -1,0 +1,26 @@
+uuid: 19a4e4c4-2d01-495a-a398-7f03e01aafe3
+langcode: es
+status: false
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - bimboprov
+id: bimboprov_iniciodesesion
+theme: bimboprov
+region: content
+weight: -1
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'Inicio de sesión'
+  provider: user
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,8 @@
+uuid: 5929cb39-f373-4fc6-ab1a-73a2a5236427
+langcode: es
+status: true
+dependencies: {  }
+name: 'Giro cormercial'
+vid: giro_cormercial
+description: 'Giro cormercial'
+weight: 0

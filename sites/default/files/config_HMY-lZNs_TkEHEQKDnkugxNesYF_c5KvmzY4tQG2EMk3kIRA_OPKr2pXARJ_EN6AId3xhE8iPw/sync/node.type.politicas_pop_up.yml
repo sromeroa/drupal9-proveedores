@@ -1,0 +1,18 @@
+uuid: 6e109ae9-6344-43ce-affd-13f69b0d6a1a
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Politicas Pop up'
+type: politicas_pop_up
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

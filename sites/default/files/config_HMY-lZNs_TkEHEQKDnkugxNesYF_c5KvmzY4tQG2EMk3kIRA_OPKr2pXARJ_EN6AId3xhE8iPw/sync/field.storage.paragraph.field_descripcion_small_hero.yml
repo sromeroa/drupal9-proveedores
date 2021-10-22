@@ -1,0 +1,19 @@
+uuid: 33845028-905f-4bac-9e6e-9f829da949a2
+langcode: es
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_descripcion_small_hero
+field_name: field_descripcion_small_hero
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

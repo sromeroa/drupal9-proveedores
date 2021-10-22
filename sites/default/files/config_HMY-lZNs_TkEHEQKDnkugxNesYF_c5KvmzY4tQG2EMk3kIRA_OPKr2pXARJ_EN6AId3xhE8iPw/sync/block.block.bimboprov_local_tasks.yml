@@ -1,0 +1,22 @@
+uuid: 168d6339-1726-4812-8f34-8eecf5c3d747
+langcode: es
+status: true
+dependencies:
+  theme:
+    - bimboprov
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: bimboprov_local_tasks
+theme: bimboprov
+region: content
+weight: -18
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Pestañas
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

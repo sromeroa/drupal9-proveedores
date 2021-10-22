@@ -1,0 +1,25 @@
+uuid: cb690a32-1750-4cec-b8b9-525af8a89550
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_block
+    - node.type.home_page
+  module:
+    - block_field
+id: node.home_page.field_block
+field_name: field_block
+entity_type: node
+bundle: home_page
+label: Block
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: blocks
+  selection_settings:
+    plugin_ids:
+      politicasmodal_block: politicasmodal_block
+field_type: block_field

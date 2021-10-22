@@ -1,0 +1,17 @@
+uuid: ab5f3769-8806-4ab3-831f-4c3f8a5f71a0
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Legales
+type: legales
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

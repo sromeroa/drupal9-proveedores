@@ -1,0 +1,8 @@
+uuid: 0cb11dd4-eb5a-4013-bc2b-cd65582b826a
+langcode: es
+status: true
+dependencies: {  }
+name: 'Personas Físicas'
+vid: personas_fisicas
+description: 'Personas Físicas'
+weight: 0

@@ -1,0 +1,31 @@
+uuid: d8737db1-13ad-4f1d-b146-5bc3463591df
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:general:f953b94c-35a3-4e00-a5b7-908d2ce7b063'
+  module:
+    - block_content
+    - system
+  theme:
+    - bimboprov
+id: titulonoticias
+theme: bimboprov
+region: content
+weight: -12
+provider: null
+plugin: 'block_content:f953b94c-35a3-4e00-a5b7-908d2ce7b063'
+settings:
+  id: 'block_content:f953b94c-35a3-4e00-a5b7-908d2ce7b063'
+  label: 'Titulo Noticias'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /novedad-y-comunicacion
+    negate: false
+    context_mapping: {  }

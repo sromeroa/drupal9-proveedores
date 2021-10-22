@@ -1,0 +1,26 @@
+uuid: 2c4cf27b-2a9d-4a80-ab70-71674bbaf10b
+langcode: es
+status: false
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - bartik
+id: iniciodesesion
+theme: bartik
+region: content
+weight: -3
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'Inicio de sesión'
+  provider: user
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

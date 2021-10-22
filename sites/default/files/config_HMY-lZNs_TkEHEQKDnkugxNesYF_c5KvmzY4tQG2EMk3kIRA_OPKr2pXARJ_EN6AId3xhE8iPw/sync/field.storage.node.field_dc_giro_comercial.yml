@@ -1,0 +1,20 @@
+uuid: aed85aa5-23fe-4dab-82a6-93b6d2e6cd71
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_dc_giro_comercial
+field_name: field_dc_giro_comercial
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: e0de1be1-e8f6-497d-a61a-9016879565c2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dc_nombre_comercial
+    - node.type.user_revision
+id: node.user_revision.field_dc_nombre_comercial
+field_name: field_dc_nombre_comercial
+entity_type: node
+bundle: user_revision
+label: dc_nombre_comercial
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

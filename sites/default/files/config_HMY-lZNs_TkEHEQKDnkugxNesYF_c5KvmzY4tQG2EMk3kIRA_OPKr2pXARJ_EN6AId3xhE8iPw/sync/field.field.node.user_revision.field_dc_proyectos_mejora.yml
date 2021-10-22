@@ -1,0 +1,19 @@
+uuid: e3a32ee5-da77-4316-930e-0169e5e08d46
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dc_proyectos_mejora
+    - node.type.user_revision
+id: node.user_revision.field_dc_proyectos_mejora
+field_name: field_dc_proyectos_mejora
+entity_type: node
+bundle: user_revision
+label: dc_proyectos_mejora
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

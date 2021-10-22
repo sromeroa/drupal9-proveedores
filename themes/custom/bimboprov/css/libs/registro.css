@@ -1,0 +1,19 @@
+/**
+ * @file
+ * Bartik layout styling.
+ */
+.c-form__registro-titulo {
+  text-align: left;
+}
+.field-multiple-drag {
+  display: none;
+}
+.tabledrag-toggle-weight-wrapper {
+  display: none;
+}
+.c-form__registro-label {
+  display: inline;
+}
+.c-form__checkbox-inline {
+  margin-top: 15px;
+}

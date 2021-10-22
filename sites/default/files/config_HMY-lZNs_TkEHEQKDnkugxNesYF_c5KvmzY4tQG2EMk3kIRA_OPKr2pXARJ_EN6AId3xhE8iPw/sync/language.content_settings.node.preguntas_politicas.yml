@@ -1,0 +1,16 @@
+uuid: 43dd6e2d-1bdf-4940-b345-35cf03794573
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.preguntas_politicas
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.preguntas_politicas
+target_entity_type_id: node
+target_bundle: preguntas_politicas
+default_langcode: site_default
+language_alterable: true

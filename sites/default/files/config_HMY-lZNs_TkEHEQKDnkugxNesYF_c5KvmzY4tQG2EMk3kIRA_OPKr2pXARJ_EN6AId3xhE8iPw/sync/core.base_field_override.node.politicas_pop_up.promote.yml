@@ -1,0 +1,22 @@
+uuid: 65d623a3-b849-48fd-8f0b-5993de52aa89
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.politicas_pop_up
+id: node.politicas_pop_up.promote
+field_name: promote
+entity_type: node
+bundle: politicas_pop_up
+label: 'Promocionado a la página principal'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

@@ -1,0 +1,19 @@
+uuid: 9d38d170-82aa-40d6-8b53-b56703daeced
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_titulo
+    - paragraphs.paragraphs_type.sub_programas
+id: paragraph.sub_programas.field_titulo
+field_name: field_titulo
+entity_type: paragraph
+bundle: sub_programas
+label: Titulo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

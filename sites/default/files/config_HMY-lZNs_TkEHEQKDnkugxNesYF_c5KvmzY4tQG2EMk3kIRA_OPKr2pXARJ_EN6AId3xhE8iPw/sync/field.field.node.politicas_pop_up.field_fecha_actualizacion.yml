@@ -1,0 +1,21 @@
+uuid: 3971e985-e85d-4213-872e-753acf277b94
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fecha_actualizacion
+    - node.type.politicas_pop_up
+  module:
+    - datetime
+id: node.politicas_pop_up.field_fecha_actualizacion
+field_name: field_fecha_actualizacion
+entity_type: node
+bundle: politicas_pop_up
+label: 'Fecha Actualizacion'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

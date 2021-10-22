@@ -1,0 +1,19 @@
+uuid: 50a5aaa0-1521-4edf-ac06-53bf31e94351
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dm_ciudad
+    - node.type.user_revision
+id: node.user_revision.field_dm_ciudad
+field_name: field_dm_ciudad
+entity_type: node
+bundle: user_revision
+label: dm_ciudad
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

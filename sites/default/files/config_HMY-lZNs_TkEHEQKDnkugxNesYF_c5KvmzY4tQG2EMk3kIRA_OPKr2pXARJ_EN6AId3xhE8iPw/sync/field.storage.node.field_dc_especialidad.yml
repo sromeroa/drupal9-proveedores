@@ -1,0 +1,20 @@
+uuid: 0de283af-1bb5-48a7-a9f9-c6efa42f520f
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_dc_especialidad
+field_name: field_dc_especialidad
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,11 @@
+uuid: a6a4bc35-272b-4b06-b66a-7d27163b2299
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.personas_fisicas
+id: taxonomy_term.personas_fisicas
+target_entity_type_id: taxonomy_term
+target_bundle: personas_fisicas
+default_langcode: site_default
+language_alterable: false

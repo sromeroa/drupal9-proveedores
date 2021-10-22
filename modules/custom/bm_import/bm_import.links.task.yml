@@ -1,0 +1,11 @@
+bm_import.tab_1:
+  route_name: importar_proveedor.form
+  title: 'Proveedores'  
+  base_route: bm_import_admin.form
+  weight: 10
+
+bm_import.tab_2:
+  route_name: importar_producto.form
+  title: 'Productos'  
+  base_route: bm_import_admin.form
+  weight: 20

@@ -1,0 +1,19 @@
+uuid: 12052fb2-a2be-4214-a94d-4f5e59348828
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dc_vendor_site
+    - node.type.user_revision
+id: node.user_revision.field_dc_vendor_site
+field_name: field_dc_vendor_site
+entity_type: node
+bundle: user_revision
+label: dc_vendor_site
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

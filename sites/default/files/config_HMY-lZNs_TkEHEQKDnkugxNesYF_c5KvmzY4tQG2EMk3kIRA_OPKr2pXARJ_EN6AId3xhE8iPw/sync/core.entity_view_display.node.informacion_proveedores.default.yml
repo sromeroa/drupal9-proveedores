@@ -1,0 +1,47 @@
+uuid: e1f436be-0657-4a90-bbc5-ccb8dd47ce73
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.informacion_proveedores.body
+    - field.field.node.informacion_proveedores.field_nombre_del_proveedor
+    - field.field.node.informacion_proveedores.field_usuario_relacionado
+    - node.type.informacion_proveedores
+  module:
+    - text
+    - user
+id: node.informacion_proveedores.default
+targetEntityType: node
+bundle: informacion_proveedores
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_nombre_del_proveedor:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_usuario_relacionado:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

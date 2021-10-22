@@ -1,0 +1,36 @@
+uuid: 14c50678-287c-4ec6-ab82-c5f7adae50e9
+langcode: es
+status: true
+dependencies:
+  module:
+    - bm_detallenoticia
+    - ctools
+    - node
+  theme:
+    - bimboprov
+id: blockdetallenoticiabimboproveedores
+theme: bimboprov
+region: content
+weight: -6
+provider: null
+plugin: detallenoticia_block
+settings:
+  id: detallenoticia_block
+  label: 'Block detallenoticia - Bimbo Proveedores'
+  provider: bm_detallenoticia
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      noticias: noticias
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  node_type:
+    id: node_type
+    bundles:
+      noticias: noticias
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

@@ -1,0 +1,37 @@
+uuid: 6f0a2ad1-4df9-45bc-af70-49aee8fff1a3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.menu_notificaciones.field_enlace_menu
+    - taxonomy.vocabulary.menu_notificaciones
+  module:
+    - link
+    - text
+id: taxonomy_term.menu_notificaciones.default
+targetEntityType: taxonomy_term
+bundle: menu_notificaciones
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_enlace_menu:
+    weight: 1
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

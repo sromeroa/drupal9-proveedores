@@ -1,0 +1,8 @@
+uuid: 2ba77578-183b-4755-8de7-ef474ff1d892
+langcode: es
+status: true
+dependencies: {  }
+name: 'Menu Notificaciones'
+vid: menu_notificaciones
+description: ''
+weight: 0

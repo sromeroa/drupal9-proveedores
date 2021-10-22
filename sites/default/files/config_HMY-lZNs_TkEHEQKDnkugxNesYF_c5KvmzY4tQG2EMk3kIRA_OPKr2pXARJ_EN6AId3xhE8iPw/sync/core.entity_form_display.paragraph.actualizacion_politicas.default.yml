@@ -1,0 +1,34 @@
+uuid: 0383c057-a535-46ed-9b1a-00b82d755ae7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.actualizacion_politicas.field_fecha_aceptacion
+    - field.field.paragraph.actualizacion_politicas.field_politica
+    - paragraphs.paragraphs_type.actualizacion_politicas
+  module:
+    - datetime
+id: paragraph.actualizacion_politicas.default
+targetEntityType: paragraph
+bundle: actualizacion_politicas
+mode: default
+content:
+  field_fecha_aceptacion:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_politica:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

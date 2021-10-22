@@ -1,0 +1,30 @@
+uuid: e8aae392-2fa2-496a-8687-30a2db41d2a8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_descripcion
+    - node.type.noticias
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    basic_html: '0'
+    html_code: '0'
+    html_estilos: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: node.noticias.field_descripcion
+field_name: field_descripcion
+entity_type: node
+bundle: noticias
+label: Descripcion
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

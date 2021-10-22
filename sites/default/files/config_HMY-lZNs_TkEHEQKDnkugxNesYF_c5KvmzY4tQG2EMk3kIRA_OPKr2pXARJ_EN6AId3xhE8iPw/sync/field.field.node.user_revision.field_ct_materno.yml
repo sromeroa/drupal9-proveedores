@@ -1,0 +1,19 @@
+uuid: 2d486ca5-9cf7-4044-aaa3-b34627cf6681
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ct_materno
+    - node.type.user_revision
+id: node.user_revision.field_ct_materno
+field_name: field_ct_materno
+entity_type: node
+bundle: user_revision
+label: ct_materno
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Default theme implementation to each level of menu.
+ */
+#}
+{% import _self as menu %}
+
+{{ menu.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  <ul{{ attributes.addClass('menu-secundario__lista') }}>
+  {% for key, item in items if key|first != '#' %}
+    {% set menu_item_classes = [
+      'menu-secundario__item',
+      item.is_expanded ? 'menu-item--expanded',
+      item.is_collapsed ? 'menu-item--collapsed',
+      item.in_active_trail ? 'menu-item--active-trail',
+    ] %}
+
+    <li{{ item.attributes.addClass(menu_item_classes) }}>
+
+      {% if (item.span.class|length > 0) %}  
+        <span class="{{ item.span.class }} menu-secundario__icon icon"></span>  
+      {% endif %}      
+      {{ link(item.title, item.url, item.attributes.addClass('menu-secundario__btn btn btn-terciario')) }}
+
+      {% set rendered_content = item.content|without('') %}
+      {% if rendered_content|render %}
+        {{ rendered_content }}
+      {% endif %}
+    </li>
+  {% endfor %}
+  </ul>
+{% endmacro %}

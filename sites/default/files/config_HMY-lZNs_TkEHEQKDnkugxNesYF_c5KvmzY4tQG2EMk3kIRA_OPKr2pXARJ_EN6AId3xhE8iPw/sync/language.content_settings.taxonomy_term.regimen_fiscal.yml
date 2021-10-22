@@ -1,0 +1,11 @@
+uuid: 564b8dd5-1569-48fa-b90e-b0abcfc27ff1
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.regimen_fiscal
+id: taxonomy_term.regimen_fiscal
+target_entity_type_id: taxonomy_term
+target_bundle: regimen_fiscal
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,654 @@
+uuid: b01e7f76-e7ba-428d-aad5-4b5fc80d4ae2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.user_revision.field_ct_apellido
+    - field.field.node.user_revision.field_ct_celular
+    - field.field.node.user_revision.field_ct_email
+    - field.field.node.user_revision.field_ct_lada
+    - field.field.node.user_revision.field_ct_materno
+    - field.field.node.user_revision.field_ct_nombre
+    - field.field.node.user_revision.field_ct_paterno
+    - field.field.node.user_revision.field_ct_prefijo
+    - field.field.node.user_revision.field_ct_profesion
+    - field.field.node.user_revision.field_ct_telefono
+    - field.field.node.user_revision.field_dc_actividad_economica
+    - field.field.node.user_revision.field_dc_anticipo
+    - field.field.node.user_revision.field_dc_calle_cont
+    - field.field.node.user_revision.field_dc_categoria
+    - field.field.node.user_revision.field_dc_centro_impresion
+    - field.field.node.user_revision.field_dc_certificaciones_vigente
+    - field.field.node.user_revision.field_dc_clasif_retencion
+    - field.field.node.user_revision.field_dc_clasificacion
+    - field.field.node.user_revision.field_dc_clasificacion_header
+    - field.field.node.user_revision.field_dc_clasificacion_tamano_em
+    - field.field.node.user_revision.field_dc_creation_date
+    - field.field.node.user_revision.field_dc_cuenta_bancaria
+    - field.field.node.user_revision.field_dc_distribucion
+    - field.field.node.user_revision.field_dc_especialidad
+    - field.field.node.user_revision.field_dc_fideicomiso
+    - field.field.node.user_revision.field_dc_genero_direccion
+    - field.field.node.user_revision.field_dc_giro_comercial
+    - field.field.node.user_revision.field_dc_inactivacion_principal
+    - field.field.node.user_revision.field_dc_inactivacion_site
+    - field.field.node.user_revision.field_dc_incorporado_fideicomiso
+    - field.field.node.user_revision.field_dc_marca
+    - field.field.node.user_revision.field_dc_metod_payment_site
+    - field.field.node.user_revision.field_dc_moneda
+    - field.field.node.user_revision.field_dc_monto_facturacion
+    - field.field.node.user_revision.field_dc_nivel_ventas_anuales
+    - field.field.node.user_revision.field_dc_nombre_banco
+    - field.field.node.user_revision.field_dc_nombre_comercial
+    - field.field.node.user_revision.field_dc_nombre_respresantante
+    - field.field.node.user_revision.field_dc_numero_colaboradores
+    - field.field.node.user_revision.field_dc_numero_duns
+    - field.field.node.user_revision.field_dc_numero_proveedor
+    - field.field.node.user_revision.field_dc_pais
+    - field.field.node.user_revision.field_dc_pay_group_site
+    - field.field.node.user_revision.field_dc_proyectos_mejora
+    - field.field.node.user_revision.field_dc_purchasing
+    - field.field.node.user_revision.field_dc_razon_social
+    - field.field.node.user_revision.field_dc_regimen_fiscal
+    - field.field.node.user_revision.field_dc_relacion_comercial
+    - field.field.node.user_revision.field_dc_rfc
+    - field.field.node.user_revision.field_dc_sistema_calidad
+    - field.field.node.user_revision.field_dc_site_term
+    - field.field.node.user_revision.field_dc_subcategoria
+    - field.field.node.user_revision.field_dc_termino_credito
+    - field.field.node.user_revision.field_dc_tipo_operacion
+    - field.field.node.user_revision.field_dc_vendor_site
+    - field.field.node.user_revision.field_dgc_codigo_fax
+    - field.field.node.user_revision.field_dgc_fax
+    - field.field.node.user_revision.field_dgc_lada
+    - field.field.node.user_revision.field_dgc_telefono
+    - field.field.node.user_revision.field_dm_calle
+    - field.field.node.user_revision.field_dm_ciudad
+    - field.field.node.user_revision.field_dm_colonia
+    - field.field.node.user_revision.field_dm_cp
+    - field.field.node.user_revision.field_dm_estado
+    - field.field.node.user_revision.field_dm_municipio
+    - field.field.node.user_revision.field_dm_no_exterior
+    - field.field.node.user_revision.field_dm_no_interior
+    - field.field.node.user_revision.field_informacion_valida
+    - field.field.node.user_revision.field_proveedor
+    - field.field.node.user_revision.field_ps_productos
+    - node.type.user_revision
+  module:
+    - entity_reference_revisions
+    - user
+id: node.user_revision.default
+targetEntityType: node
+bundle: user_revision
+mode: default
+content:
+  field_ct_apellido:
+    weight: 144
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ct_celular:
+    weight: 127
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ct_email:
+    weight: 124
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ct_lada:
+    weight: 125
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ct_materno:
+    weight: 122
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ct_nombre:
+    weight: 120
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ct_paterno:
+    weight: 121
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ct_prefijo:
+    weight: 143
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ct_profesion:
+    weight: 123
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ct_telefono:
+    weight: 126
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_actividad_economica:
+    weight: 161
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_anticipo:
+    weight: 136
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_calle_cont:
+    weight: 137
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_categoria:
+    weight: 132
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_dc_centro_impresion:
+    weight: 138
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_certificaciones_vigente:
+    weight: 170
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_dc_clasif_retencion:
+    weight: 141
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_clasificacion:
+    weight: 139
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_clasificacion_header:
+    weight: 140
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_clasificacion_tamano_em:
+    weight: 164
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_dc_creation_date:
+    weight: 145
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_cuenta_bancaria:
+    weight: 146
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_distribucion:
+    weight: 131
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_dc_especialidad:
+    weight: 168
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_dc_fideicomiso:
+    weight: 147
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_genero_direccion:
+    weight: 172
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_giro_comercial:
+    weight: 167
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_dc_inactivacion_principal:
+    weight: 148
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_inactivacion_site:
+    weight: 149
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_incorporado_fideicomiso:
+    weight: 169
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_dc_marca:
+    weight: 128
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_metod_payment_site:
+    weight: 150
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_moneda:
+    weight: 151
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_monto_facturacion:
+    weight: 129
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_nivel_ventas_anuales:
+    weight: 166
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_dc_nombre_banco:
+    weight: 160
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_nombre_comercial:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_nombre_respresantante:
+    weight: 171
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_numero_colaboradores:
+    weight: 165
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_dc_numero_duns:
+    weight: 162
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_numero_proveedor:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_pais:
+    weight: 173
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_dc_pay_group_site:
+    weight: 152
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_proyectos_mejora:
+    weight: 153
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_purchasing:
+    weight: 154
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_razon_social:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_regimen_fiscal:
+    weight: 163
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_dc_relacion_comercial:
+    weight: 130
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_dc_rfc:
+    weight: 106
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_sistema_calidad:
+    weight: 159
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_dc_site_term:
+    weight: 155
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_subcategoria:
+    weight: 133
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_dc_termino_credito:
+    weight: 105
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_tipo_operacion:
+    weight: 157
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dc_vendor_site:
+    weight: 158
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dgc_codigo_fax:
+    weight: 118
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dgc_fax:
+    weight: 119
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dgc_lada:
+    weight: 116
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dgc_telefono:
+    weight: 117
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dm_calle:
+    weight: 108
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dm_ciudad:
+    weight: 114
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dm_colonia:
+    weight: 111
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dm_cp:
+    weight: 112
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dm_estado:
+    weight: 113
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dm_municipio:
+    weight: 115
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dm_no_exterior:
+    weight: 110
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dm_no_interior:
+    weight: 109
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_informacion_valida:
+    weight: 135
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_proveedor:
+    weight: 101
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_ps_productos:
+    type: entity_reference_revisions_entity_view
+    weight: 134
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

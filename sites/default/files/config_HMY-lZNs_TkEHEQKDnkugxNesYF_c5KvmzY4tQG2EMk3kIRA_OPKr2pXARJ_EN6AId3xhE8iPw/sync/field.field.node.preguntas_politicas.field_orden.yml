@@ -1,0 +1,23 @@
+uuid: 9f5c2ffd-cf9a-415d-9377-c2509435c050
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_orden
+    - node.type.preguntas_politicas
+id: node.preguntas_politicas.field_orden
+field_name: field_orden
+entity_type: node
+bundle: preguntas_politicas
+label: Orden
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

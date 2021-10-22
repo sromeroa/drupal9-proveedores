@@ -1,0 +1,9 @@
+uuid: 330b4967-3a54-4409-91eb-157ded24a5db
+langcode: es
+status: true
+dependencies: {  }
+id: proveedor
+label: Proveedor
+weight: 3
+is_admin: null
+permissions: {  }

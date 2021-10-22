@@ -1,0 +1,22 @@
+uuid: c2d350d9-ee1a-4461-af85-86bd29958686
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.informacion_proveedores
+id: node.informacion_proveedores.status
+field_name: status
+entity_type: node
+bundle: informacion_proveedores
+label: Publicado
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

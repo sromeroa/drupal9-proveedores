@@ -1,0 +1,49 @@
+uuid: b0e8b176-0672-40fc-b1e7-8ff36a6b2fe8
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:9b06f3ad-cfec-41d9-8505-a119c915620d'
+  module:
+    - block_content
+    - ctools
+    - system
+    - user
+  theme:
+    - bimboprov
+id: fecha
+theme: bimboprov
+region: content
+weight: -15
+provider: null
+plugin: 'block_content:9b06f3ad-cfec-41d9-8505-a119c915620d'
+settings:
+  id: 'block_content:9b06f3ad-cfec-41d9-8505-a119c915620d'
+  label: Fecha
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+      proveedor: proveedor
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+  request_path:
+    id: request_path
+    pages: "/preguntas-frecuentes\r\n/resultados-de-busqueda"
+    negate: true
+    context_mapping: {  }
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      programas: programas
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'

@@ -1,0 +1,21 @@
+uuid: 52bf6c8f-b53f-4ba3-aeaf-c5ecb62365e8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.legales
+  module:
+    - metatag
+id: node.legales.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: legales
+label: Metatags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

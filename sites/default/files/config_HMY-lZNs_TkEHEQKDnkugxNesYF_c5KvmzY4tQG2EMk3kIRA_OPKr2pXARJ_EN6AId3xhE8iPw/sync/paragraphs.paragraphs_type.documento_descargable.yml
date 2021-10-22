@@ -1,0 +1,10 @@
+uuid: dacca606-03f9-414d-b494-f74a40cb69a2
+langcode: es
+status: true
+dependencies: {  }
+id: documento_descargable
+label: 'Documento descargable'
+icon_uuid: null
+icon_default: null
+description: 'Título y Documento descargable.'
+behavior_plugins: {  }

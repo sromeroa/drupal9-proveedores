@@ -1,0 +1,36 @@
+uuid: 03523267-f55c-473f-ae57-6b5b43373b9a
+langcode: es
+status: true
+dependencies:
+  module:
+    - bm_facturacioncatalogo
+    - system
+    - user
+  theme:
+    - bimboprov
+id: blockfacturacioncatalogoprincipalbimboproveedores
+theme: bimboprov
+region: content
+weight: 0
+provider: null
+plugin: facturacioncatalogo_block
+settings:
+  id: facturacioncatalogo_block
+  label: 'Block Facturacion catalogo principal- Bimbo Proveedores'
+  provider: bm_facturacioncatalogo
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /facturacion
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+      proveedor: proveedor
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

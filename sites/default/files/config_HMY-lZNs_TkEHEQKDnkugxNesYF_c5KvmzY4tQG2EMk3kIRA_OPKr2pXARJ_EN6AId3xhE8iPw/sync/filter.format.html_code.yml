@@ -1,0 +1,30 @@
+uuid: 2d88f926-ad81-4b27-81c7-f0c7466bb7f4
+langcode: es
+status: true
+dependencies:
+  module:
+    - token_filter
+name: 'HTML Code'
+format: html_code
+weight: 0
+filters:
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: false
+    weight: 0
+    settings: {  }
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: false
+    weight: 9
+    settings:
+      filter_url_length: 72
+  token_filter:
+    id: token_filter
+    provider: token_filter
+    status: true
+    weight: 10
+    settings:
+      replace_empty: '0'

@@ -1,0 +1,14 @@
+uuid: 4b4014fd-04d9-40f1-9414-847a58e98f7c
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.proveedor
+  module:
+    - user
+id: user_add_role_action.proveedor
+label: 'Añade el rol Proveedor al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: proveedor

@@ -1,0 +1,25 @@
+uuid: fe77b170-02a5-4777-918b-3d9ce3666774
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_block
+    - node.type.facturacion
+  module:
+    - block_field
+id: node.facturacion.field_block
+field_name: field_block
+entity_type: node
+bundle: facturacion
+label: Block
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: blocks
+  selection_settings:
+    plugin_ids:
+      facturacionlistado_block: facturacionlistado_block
+field_type: block_field

@@ -1,0 +1,19 @@
+uuid: 2101c6aa-1ec5-4401-ad74-a027e84d35bc
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dc_genero_direccion
+    - node.type.user_revision
+id: node.user_revision.field_dc_genero_direccion
+field_name: field_dc_genero_direccion
+entity_type: node
+bundle: user_revision
+label: dc_genero_direccion
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

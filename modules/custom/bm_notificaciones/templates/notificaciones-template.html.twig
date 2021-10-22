@@ -1,0 +1,11 @@
+<li class="c-header__lista-item c-header__lista-item--borde"> <a class="c-header__lista-link js-open-notificacion"
+        href="#" title="Notificaciones"><span class="icon notificaciones"></span></a>
+    <div class="c-notificacion js-notificacion">
+        <ul class="c-notificacion__lista">
+            {% for notificacion in notificaciones %}
+            <li class="c-notificacion__lista-item"><a class="c-notificacion__lista-link"
+                    href="{{notificacion.link_uri}}" title="{{notificacion.name}}">{{notificacion.name}} </a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</li>

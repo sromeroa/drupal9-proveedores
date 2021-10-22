@@ -1,0 +1,8 @@
+uuid: 942fa182-1f97-4011-a854-8700059f0fae
+langcode: es
+status: true
+dependencies: {  }
+name: 'régimen fiscal'
+vid: regimen_fiscal
+description: 'régimen fiscal'
+weight: 0

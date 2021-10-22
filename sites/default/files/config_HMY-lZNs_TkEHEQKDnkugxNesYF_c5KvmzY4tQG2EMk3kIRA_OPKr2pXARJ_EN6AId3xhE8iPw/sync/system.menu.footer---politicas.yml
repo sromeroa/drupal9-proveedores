@@ -1,0 +1,8 @@
+uuid: 05402a1c-c484-4b7a-9437-f172b37b81aa
+langcode: es
+status: true
+dependencies: {  }
+id: footer---politicas
+label: 'Footer - Políticas'
+description: ''
+locked: false

@@ -1,0 +1,20 @@
+uuid: d77a5c16-72f4-4617-a5c7-3b0ab97a45e4
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_dc_clasificacion_tamano_em
+field_name: field_dc_clasificacion_tamano_em
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

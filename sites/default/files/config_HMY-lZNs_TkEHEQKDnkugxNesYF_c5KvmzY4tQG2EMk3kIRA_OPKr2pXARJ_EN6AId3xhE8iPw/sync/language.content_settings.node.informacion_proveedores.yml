@@ -1,0 +1,11 @@
+uuid: 0e9f58ad-c2ea-4b30-823a-cfe59906c152
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.informacion_proveedores
+id: node.informacion_proveedores
+target_entity_type_id: node
+target_bundle: informacion_proveedores
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,10 @@
+uuid: afcf2d92-b148-4c0c-9a1f-c2a6fc21bda7
+langcode: es
+status: true
+dependencies: {  }
+id: sub_programas
+label: 'Sub - Programas'
+icon_uuid: null
+icon_default: null
+description: 'Agregar Sub - Programas'
+behavior_plugins: {  }

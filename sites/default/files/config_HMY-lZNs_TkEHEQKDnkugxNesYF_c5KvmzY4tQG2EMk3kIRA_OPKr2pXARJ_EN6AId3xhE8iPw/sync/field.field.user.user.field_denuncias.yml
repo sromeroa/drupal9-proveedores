@@ -1,0 +1,25 @@
+uuid: eb310d5a-964b-41dc-9be5-6f0a33565031
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_denuncias
+  module:
+    - block_field
+    - user
+id: user.user.field_denuncias
+field_name: field_denuncias
+entity_type: user
+bundle: user
+label: denuncias
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: blocks
+  selection_settings:
+    plugin_ids:
+      webform_block: webform_block
+field_type: block_field

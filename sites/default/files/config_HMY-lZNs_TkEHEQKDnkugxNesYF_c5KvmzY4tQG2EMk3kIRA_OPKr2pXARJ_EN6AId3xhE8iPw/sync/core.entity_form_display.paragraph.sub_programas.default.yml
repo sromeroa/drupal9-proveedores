@@ -1,0 +1,61 @@
+uuid: 60065b7d-c716-46e3-929d-e477b8591f97
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sub_programas.field_descripcion
+    - field.field.paragraph.sub_programas.field_documento_descargable
+    - field.field.paragraph.sub_programas.field_imagen
+    - field.field.paragraph.sub_programas.field_titulo
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.sub_programas
+  module:
+    - image
+    - paragraphs
+    - text
+id: paragraph.sub_programas.default
+targetEntityType: paragraph
+bundle: sub_programas
+mode: default
+content:
+  field_descripcion:
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_documento_descargable:
+    type: entity_reference_paragraphs
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: documento_descargable
+    third_party_settings: {  }
+    region: content
+  field_imagen:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_titulo:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

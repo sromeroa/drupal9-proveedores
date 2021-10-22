@@ -1,0 +1,8 @@
+uuid: 27e0794d-1e02-4aa7-915c-62348a43e061
+langcode: es
+status: true
+dependencies: {  }
+name: 'Nivel de ventas anuales'
+vid: nivel_de_ventas_anuales
+description: 'Nivel de ventas anuales'
+weight: 0

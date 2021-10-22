@@ -1,0 +1,19 @@
+uuid: 405810f5-ed2b-4a75-b04f-97f0218ddc5c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dc_inactivacion_site
+    - node.type.user_revision
+id: node.user_revision.field_dc_inactivacion_site
+field_name: field_dc_inactivacion_site
+entity_type: node
+bundle: user_revision
+label: dc_inactivacion_site
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

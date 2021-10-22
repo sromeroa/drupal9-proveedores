@@ -1,0 +1,17 @@
+uuid: 79d76d61-cd49-48f5-8fdd-afd815114fd1
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Preguntas Frecuentes'
+type: preguntas_frecuentes
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

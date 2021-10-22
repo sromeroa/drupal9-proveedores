@@ -1,0 +1,23 @@
+uuid: 95c94aaf-0029-44d5-8d32-b1551e707613
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ps_produce
+    - paragraphs.paragraphs_type.ps_productos
+id: paragraph.ps_productos.field_ps_produce
+field_name: field_ps_produce
+entity_type: paragraph
+bundle: ps_productos
+label: ps_produce
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

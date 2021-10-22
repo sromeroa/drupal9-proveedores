@@ -1,0 +1,30 @@
+uuid: dc36f0d4-4a2e-4316-90fc-98ec676e2fa6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_descripcion
+    - node.type.formularios_popup
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    full_html: full_html
+    basic_html: '0'
+    html_code: '0'
+    html_estilos: '0'
+    restricted_html: '0'
+    plain_text: '0'
+id: node.formularios_popup.field_descripcion
+field_name: field_descripcion
+entity_type: node
+bundle: formularios_popup
+label: Descripcion
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

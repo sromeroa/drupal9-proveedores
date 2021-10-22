@@ -1,0 +1,30 @@
+uuid: 821ed971-ba06-47fe-8ecc-a878ab7b0cd2
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.preguntas_frecuentes.field_descripcion
+    - field.field.node.preguntas_frecuentes.field_metatags
+    - field.field.node.preguntas_frecuentes.field_orden
+    - field.field.node.preguntas_frecuentes.field_preguntas_frecuentes_categ
+    - node.type.preguntas_frecuentes
+  module:
+    - user
+id: node.preguntas_frecuentes.teaser
+targetEntityType: node
+bundle: preguntas_frecuentes
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_descripcion: true
+  field_metatags: true
+  field_orden: true
+  field_preguntas_frecuentes_categ: true
+  langcode: true
+  search_api_excerpt: true

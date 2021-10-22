@@ -1,0 +1,30 @@
+uuid: e5f4c1ce-e7b8-4459-989e-cd55da5f9c64
+langcode: es
+status: true
+dependencies:
+  module:
+    - bm_notificaciones
+    - user
+  theme:
+    - bimboprov
+id: blocknotificacionesbimboproveedores
+theme: bimboprov
+region: sidebar_second
+weight: -16
+provider: null
+plugin: notificaciones_block
+settings:
+  id: notificaciones_block
+  label: 'Block Notificaciones - Bimbo Proveedores'
+  provider: bm_notificaciones
+  label_display: '0'
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+      proveedor: proveedor
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

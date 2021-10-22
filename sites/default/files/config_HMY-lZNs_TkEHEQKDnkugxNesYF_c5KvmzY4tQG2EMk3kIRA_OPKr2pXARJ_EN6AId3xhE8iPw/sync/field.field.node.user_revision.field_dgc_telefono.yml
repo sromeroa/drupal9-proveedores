@@ -1,0 +1,19 @@
+uuid: 81f49de5-3be4-4447-9a24-ed1d9b5ffda8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dgc_telefono
+    - node.type.user_revision
+id: node.user_revision.field_dgc_telefono
+field_name: field_dgc_telefono
+entity_type: node
+bundle: user_revision
+label: dgc_telefono
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

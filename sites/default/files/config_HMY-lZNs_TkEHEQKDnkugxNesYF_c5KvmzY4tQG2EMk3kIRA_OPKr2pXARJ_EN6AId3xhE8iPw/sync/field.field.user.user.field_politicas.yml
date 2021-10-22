@@ -1,0 +1,40 @@
+uuid: 5accc14b-152f-4c76-ab91-7744cfd39446
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_politicas
+    - paragraphs.paragraphs_type.actualizacion_politicas
+  module:
+    - entity_reference_revisions
+    - user
+id: user.user.field_politicas
+field_name: field_politicas
+entity_type: user
+bundle: user
+label: Politicas
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      actualizacion_politicas: actualizacion_politicas
+    target_bundles_drag_drop:
+      actualizacion_politicas:
+        enabled: true
+        weight: 5
+      documento_descargable:
+        weight: 6
+        enabled: false
+      hero:
+        weight: 7
+        enabled: false
+      sub_programas:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

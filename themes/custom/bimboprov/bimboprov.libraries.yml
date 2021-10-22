@@ -1,0 +1,207 @@
+fonts:
+  css:
+    theme:
+      'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&amp;family=Roboto:wght@100;300;400;500;700&amp;display=swap': { type: external, minified: true }
+
+global-styling:
+  version: 1.7
+  css:
+    base:
+    component:
+    layout:
+      css/layout.css: {}
+    theme:
+      css/print.css: { media: print }
+      /frontdev/css/style.css: { type: external }
+
+      #//repo.ingenia.com/GrupoBimbo-PortalProveedores/Code/front_end/dist/dev/css/style.css: { type: external }
+  js:
+    /nrepo/core/assets/vendor/jquery/jquery.min.js: { type: external }
+    /frontdev/js/main.js: { type: external }
+    /frontdev/js/libs/_fillViews.js: { type: external}
+    /frontdev/js/libs/_alert.js: { type: external}
+    /frontdev/js/libs/_select.js: { type: external}
+    /frontdev/js/libs/_customForm.js: { type: external}
+    /frontdev/js/libs/_validate.js: { type: external}
+    /frontdev/js/controllers/actualizacion-datos.js: { type: external}
+    #//repo.ingenia.com/GrupoBimbo-PortalProveedores/Code/front_end/dist/dev/js/global/jquery.js: { type: external }    
+    #//repo.ingenia.com/GrupoBimbo-PortalProveedores/Code/front_end/dist/dev/js/main.js: { type: external }
+    #//repo.ingenia.com/GrupoBimbo-PortalProveedores/Code/front_end/dist/prod/js/main.min.js: { type: external }
+
+view-filter-submit:
+  version: VERSION
+  js:
+    js/classy/view_filter_submit.js: {}
+
+libs-registro:
+  version: VERSION
+  css:
+    component:
+      css/libs/registro.css: {}  
+  js:
+    js/libs/_fillViews.js: {}
+    js/libs/_alert.js: {}
+    /frontdev/js/main.js: { type: external }
+    /frontdev/js/libs/_fillViews.js: { type: external}
+    /frontdev/js/libs/_alert.js: { type: external}
+    /frontdev/js/libs/_select.js: { type: external}
+    /frontdev/js/libs/_customForm.js: { type: external}
+    /frontdev/js/libs/_validate.js: { type: external}
+    /frontdev/js/controllers/actualizacion-datos.js: { type: external}
+    #js/libs/register_multiple_value.js: {}
+
+libs-login:
+  version: VERSION
+  css:
+    component:
+      css/libs/login.css: { weight: 1 }
+  js:
+    js/libs/_fillViews.js: {}
+    js/libs/_alert.js: {}
+    js/libs/_select.js: {}
+    js/libs/_customForm.js: {}
+    js/libs/_validate.js: {}
+    js/main.js: {}
+    js/controllers/iniciar-sesion.js: {}
+
+messages:
+  version: VERSION
+  css:
+    component:
+      css/components/messages.css: { preprocess: false }
+
+color.preview:
+  version: VERSION
+  css:
+    theme:
+      color/preview.css: {}
+  js:
+    color/preview.js: {}
+  dependencies:
+    - color/drupal.color
+
+maintenance_page:
+  version: VERSION
+  css:
+    theme:
+      css/maintenance-page.css: {}
+  dependencies:
+    - system/maintenance
+    - bartik/global-styling
+
+classy.base:
+  version: VERSION
+  css:
+    component:
+      css/classy/components/action-links.css: { weight: -10 }
+      css/classy/components/breadcrumb.css: { weight: -10 }
+      css/classy/components/button.css: { weight: -10 }
+      css/classy/components/collapse-processed.css: { weight: -10 }
+      css/classy/components/container-inline.css: { weight: -10 }
+      css/classy/components/details.css: { weight: -10 }
+      css/classy/components/exposed-filters.css: { weight: -10 }
+      css/classy/components/field.css: { weight: -10 }
+      css/classy/components/form.css: { weight: -10 }
+      css/classy/components/icons.css: { weight: -10 }
+      css/classy/components/inline-form.css: { weight: -10 }
+      css/classy/components/item-list.css: { weight: -10 }
+      css/classy/components/link.css: { weight: -10 }
+      css/classy/components/links.css: { weight: -10 }
+      css/classy/components/menu.css: { weight: -10 }
+      css/classy/components/more-link.css: { weight: -10 }
+      css/classy/components/pager.css: { weight: -10 }
+      css/classy/components/tabledrag.css: { weight: -10 }
+      css/classy/components/tableselect.css: { weight: -10 }
+      css/classy/components/tablesort.css: { weight: -10 }
+      css/classy/components/tabs.css: { weight: -10 }
+      css/classy/components/textarea.css: { weight: -10 }
+      css/classy/components/ui-dialog.css: { weight: -10 }
+
+classy.book-navigation:
+  version: VERSION
+  css:
+    component:
+      css/classy/components/book-navigation.css: {}
+
+classy.dialog:
+  version: VERSION
+  css:
+    component:
+      css/classy/components/dialog.css: { weight: -10 }
+
+classy.dropbutton:
+  version: VERSION
+  css:
+    component:
+      css/classy/components/dropbutton.css: { weight: -10 }
+
+classy.file:
+  version: VERSION
+  css:
+    component:
+      css/classy/components/file.css: { weight: -10 }
+
+classy.forum:
+  version: VERSION
+  css:
+    component:
+      css/classy/components/forum.css: { weight: -10 }
+
+classy.image-widget:
+  version: VERSION
+  css:
+    component:
+      css/classy/components/image-widget.css: {}
+
+classy.indented:
+  version: VERSION
+  css:
+    component:
+      css/classy/components/indented.css: {}
+
+classy.media_embed_ckeditor_theme:
+  version: VERSION
+  js:
+    js/classy/media_embed_ckeditor.theme.js: {}
+
+classy.media_embed_error:
+  version: VERSION
+  css:
+    component:
+      css/classy/components/media-embed-error.css: {}
+
+classy.media_library:
+  version: VERSION
+  css:
+    layout:
+      css/classy/layout/media-library.css: {}
+
+classy.messages:
+  version: VERSION
+  css:
+    component:
+      css/classy/components/messages.css: { weight: -10 }
+
+classy.node:
+  version: VERSION
+  css:
+    component:
+      css/classy/components/node.css: { weight: -10 }
+
+classy.progress:
+  version: VERSION
+  css:
+    component:
+      css/classy/components/progress.css: { weight: -10 }
+
+classy.search-results:
+  version: VERSION
+  css:
+    component:
+      css/classy/components/search-results.css: {}
+
+classy.user:
+  version: VERSION
+  css:
+    component:
+      css/classy/components/user.css: { weight: -10 }

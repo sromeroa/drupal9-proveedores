@@ -1,0 +1,20 @@
+uuid: 20c003b1-2353-4802-a477-77c3025eb3ca
+langcode: es
+status: true
+dependencies:
+  theme:
+    - bimboprov
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: bimboprov_local_actions
+theme: bimboprov
+region: content
+weight: -17
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Acciones principales de la administración'
+  provider: core
+  label_display: '0'
+visibility: {  }

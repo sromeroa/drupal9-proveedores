@@ -1,0 +1,28 @@
+uuid: 039d8cf7-3770-48a6-886d-5f425d8c9f0c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_politica
+    - node.type.politicas_pop_up
+    - paragraphs.paragraphs_type.actualizacion_politicas
+id: paragraph.actualizacion_politicas.field_politica
+field_name: field_politica
+entity_type: paragraph
+bundle: actualizacion_politicas
+label: Politica
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      politicas_pop_up: politicas_pop_up
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

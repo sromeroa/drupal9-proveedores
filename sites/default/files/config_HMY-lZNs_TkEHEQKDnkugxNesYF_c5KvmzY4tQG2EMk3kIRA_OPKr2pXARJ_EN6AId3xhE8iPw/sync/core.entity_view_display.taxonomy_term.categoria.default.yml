@@ -1,0 +1,32 @@
+uuid: 29321f96-f13c-43a4-9563-f76e8355ef01
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.categoria.field_email
+    - taxonomy.vocabulary.categoria
+  module:
+    - text
+id: taxonomy_term.categoria.default
+targetEntityType: taxonomy_term
+bundle: categoria
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_email:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

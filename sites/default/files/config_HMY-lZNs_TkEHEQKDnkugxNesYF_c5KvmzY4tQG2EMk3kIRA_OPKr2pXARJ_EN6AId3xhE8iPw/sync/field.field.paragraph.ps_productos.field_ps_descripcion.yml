@@ -1,0 +1,19 @@
+uuid: 337bb71a-4c98-4f76-85f8-fc5675f598ec
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ps_descripcion
+    - paragraphs.paragraphs_type.ps_productos
+id: paragraph.ps_productos.field_ps_descripcion
+field_name: field_ps_descripcion
+entity_type: paragraph
+bundle: ps_productos
+label: ps_descripcion
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

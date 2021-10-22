@@ -1,0 +1,8 @@
+uuid: 9784eed9-a8b2-43fa-a3c9-b85dea7533c3
+langcode: es
+status: true
+dependencies: {  }
+name: 'Numero de colaboladores'
+vid: numero_de_colaboladores
+description: 'Numero de colaboladores'
+weight: 0

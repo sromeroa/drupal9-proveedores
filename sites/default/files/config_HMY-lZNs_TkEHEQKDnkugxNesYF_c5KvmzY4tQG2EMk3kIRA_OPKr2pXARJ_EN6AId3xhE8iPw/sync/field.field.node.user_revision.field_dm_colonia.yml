@@ -1,0 +1,19 @@
+uuid: e3b93b29-0a77-47d9-9cc9-2fed9d79ef41
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dm_colonia
+    - node.type.user_revision
+id: node.user_revision.field_dm_colonia
+field_name: field_dm_colonia
+entity_type: node
+bundle: user_revision
+label: dm_colonia
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

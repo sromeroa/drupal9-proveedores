@@ -1,0 +1,19 @@
+uuid: 4ba5a149-2579-4bae-b0c3-467e247d4dba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dc_sistema_calidad
+    - node.type.user_revision
+id: node.user_revision.field_dc_sistema_calidad
+field_name: field_dc_sistema_calidad
+entity_type: node
+bundle: user_revision
+label: dc_sistema_calidad
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

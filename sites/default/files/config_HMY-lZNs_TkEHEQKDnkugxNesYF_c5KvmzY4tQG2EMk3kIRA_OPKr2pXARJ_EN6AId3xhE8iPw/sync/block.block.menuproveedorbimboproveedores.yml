@@ -1,0 +1,28 @@
+uuid: a49c69a7-24b5-43f0-95b1-89c971edf334
+langcode: es
+status: true
+dependencies:
+  module:
+    - bm_perfilproveedor
+    - user
+  theme:
+    - bimboprov
+id: menuproveedorbimboproveedores
+theme: bimboprov
+region: sidebar_second
+weight: 0
+provider: null
+plugin: menuproveedor_block
+settings:
+  id: menuproveedor_block
+  label: 'Menu Proveedor - Bimbo Proveedores'
+  provider: bm_perfilproveedor
+  label_display: '0'
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      proveedor: proveedor
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

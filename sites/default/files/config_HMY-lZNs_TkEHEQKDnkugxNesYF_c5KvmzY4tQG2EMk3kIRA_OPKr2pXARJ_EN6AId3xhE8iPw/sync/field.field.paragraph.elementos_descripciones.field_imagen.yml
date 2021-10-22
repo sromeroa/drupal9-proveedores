@@ -1,0 +1,45 @@
+uuid: c94a224b-9023-46a7-9f49-65b6db911657
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_imagen
+    - paragraphs.paragraphs_type.elementos_descripciones
+  module:
+    - content_translation
+    - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
+id: paragraph.elementos_descripciones.field_imagen
+field_name: field_imagen
+entity_type: paragraph
+bundle: elementos_descripciones
+label: Imagen
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

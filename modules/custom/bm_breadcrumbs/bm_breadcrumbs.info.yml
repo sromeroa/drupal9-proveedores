@@ -1,0 +1,6 @@
+name:  Block Breadcrumbs - Bimbo Proveedores
+type: module
+description: Modulo de contenido de Breadcrumbs
+package: CustomGenerales - Custom Home Bimbo Proveedores
+version: 1.0
+core_version_requirement: ^9

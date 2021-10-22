@@ -1,0 +1,739 @@
+uuid: 310c8694-6b26-485d-8b34-29423240cd30
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.user_revision.field_ct_apellido
+    - field.field.node.user_revision.field_ct_celular
+    - field.field.node.user_revision.field_ct_email
+    - field.field.node.user_revision.field_ct_lada
+    - field.field.node.user_revision.field_ct_materno
+    - field.field.node.user_revision.field_ct_nombre
+    - field.field.node.user_revision.field_ct_paterno
+    - field.field.node.user_revision.field_ct_prefijo
+    - field.field.node.user_revision.field_ct_profesion
+    - field.field.node.user_revision.field_ct_telefono
+    - field.field.node.user_revision.field_dc_actividad_economica
+    - field.field.node.user_revision.field_dc_anticipo
+    - field.field.node.user_revision.field_dc_calle_cont
+    - field.field.node.user_revision.field_dc_categoria
+    - field.field.node.user_revision.field_dc_centro_impresion
+    - field.field.node.user_revision.field_dc_certificaciones_vigente
+    - field.field.node.user_revision.field_dc_clasif_retencion
+    - field.field.node.user_revision.field_dc_clasificacion
+    - field.field.node.user_revision.field_dc_clasificacion_header
+    - field.field.node.user_revision.field_dc_clasificacion_tamano_em
+    - field.field.node.user_revision.field_dc_creation_date
+    - field.field.node.user_revision.field_dc_cuenta_bancaria
+    - field.field.node.user_revision.field_dc_distribucion
+    - field.field.node.user_revision.field_dc_especialidad
+    - field.field.node.user_revision.field_dc_fideicomiso
+    - field.field.node.user_revision.field_dc_genero_direccion
+    - field.field.node.user_revision.field_dc_giro_comercial
+    - field.field.node.user_revision.field_dc_inactivacion_principal
+    - field.field.node.user_revision.field_dc_inactivacion_site
+    - field.field.node.user_revision.field_dc_incorporado_fideicomiso
+    - field.field.node.user_revision.field_dc_marca
+    - field.field.node.user_revision.field_dc_metod_payment_site
+    - field.field.node.user_revision.field_dc_moneda
+    - field.field.node.user_revision.field_dc_monto_facturacion
+    - field.field.node.user_revision.field_dc_nivel_ventas_anuales
+    - field.field.node.user_revision.field_dc_nombre_banco
+    - field.field.node.user_revision.field_dc_nombre_comercial
+    - field.field.node.user_revision.field_dc_nombre_respresantante
+    - field.field.node.user_revision.field_dc_numero_colaboradores
+    - field.field.node.user_revision.field_dc_numero_duns
+    - field.field.node.user_revision.field_dc_numero_proveedor
+    - field.field.node.user_revision.field_dc_pais
+    - field.field.node.user_revision.field_dc_pay_group_site
+    - field.field.node.user_revision.field_dc_proyectos_mejora
+    - field.field.node.user_revision.field_dc_purchasing
+    - field.field.node.user_revision.field_dc_razon_social
+    - field.field.node.user_revision.field_dc_regimen_fiscal
+    - field.field.node.user_revision.field_dc_relacion_comercial
+    - field.field.node.user_revision.field_dc_rfc
+    - field.field.node.user_revision.field_dc_sistema_calidad
+    - field.field.node.user_revision.field_dc_site_term
+    - field.field.node.user_revision.field_dc_subcategoria
+    - field.field.node.user_revision.field_dc_termino_credito
+    - field.field.node.user_revision.field_dc_tipo_operacion
+    - field.field.node.user_revision.field_dc_vendor_site
+    - field.field.node.user_revision.field_dgc_codigo_fax
+    - field.field.node.user_revision.field_dgc_fax
+    - field.field.node.user_revision.field_dgc_lada
+    - field.field.node.user_revision.field_dgc_telefono
+    - field.field.node.user_revision.field_dm_calle
+    - field.field.node.user_revision.field_dm_ciudad
+    - field.field.node.user_revision.field_dm_colonia
+    - field.field.node.user_revision.field_dm_cp
+    - field.field.node.user_revision.field_dm_estado
+    - field.field.node.user_revision.field_dm_municipio
+    - field.field.node.user_revision.field_dm_no_exterior
+    - field.field.node.user_revision.field_dm_no_interior
+    - field.field.node.user_revision.field_informacion_valida
+    - field.field.node.user_revision.field_proveedor
+    - field.field.node.user_revision.field_ps_productos
+    - node.type.user_revision
+  module:
+    - paragraphs
+    - path
+id: node.user_revision.default
+targetEntityType: node
+bundle: user_revision
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ct_apellido:
+    weight: 52
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ct_celular:
+    weight: 36
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ct_email:
+    weight: 33
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ct_lada:
+    weight: 34
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ct_materno:
+    weight: 31
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ct_nombre:
+    weight: 29
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ct_paterno:
+    weight: 30
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ct_prefijo:
+    weight: 51
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ct_profesion:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ct_telefono:
+    weight: 35
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_actividad_economica:
+    weight: 69
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_anticipo:
+    weight: 44
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_calle_cont:
+    weight: 45
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_categoria:
+    weight: 41
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_dc_centro_impresion:
+    weight: 46
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_certificaciones_vigente:
+    weight: 78
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_dc_clasif_retencion:
+    weight: 49
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_clasificacion:
+    weight: 47
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_clasificacion_header:
+    weight: 48
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_clasificacion_tamano_em:
+    weight: 72
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_dc_creation_date:
+    weight: 53
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_cuenta_bancaria:
+    weight: 54
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_distribucion:
+    weight: 40
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_dc_especialidad:
+    weight: 76
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_dc_fideicomiso:
+    weight: 55
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_genero_direccion:
+    weight: 80
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_giro_comercial:
+    weight: 75
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_dc_inactivacion_principal:
+    weight: 56
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_inactivacion_site:
+    weight: 57
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_incorporado_fideicomiso:
+    weight: 77
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_dc_marca:
+    weight: 37
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_metod_payment_site:
+    weight: 58
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_moneda:
+    weight: 59
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_monto_facturacion:
+    weight: 38
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_nivel_ventas_anuales:
+    weight: 74
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_dc_nombre_banco:
+    weight: 68
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_nombre_comercial:
+    weight: 13
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_nombre_respresantante:
+    weight: 79
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_numero_colaboradores:
+    weight: 73
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_dc_numero_duns:
+    weight: 70
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_numero_proveedor:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_pais:
+    weight: 81
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_dc_pay_group_site:
+    weight: 60
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_proyectos_mejora:
+    weight: 61
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_purchasing:
+    weight: 62
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_razon_social:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_regimen_fiscal:
+    weight: 71
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_dc_relacion_comercial:
+    weight: 39
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_dc_rfc:
+    weight: 15
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_sistema_calidad:
+    weight: 67
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_dc_site_term:
+    weight: 63
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_subcategoria:
+    weight: 42
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_dc_termino_credito:
+    weight: 14
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_tipo_operacion:
+    weight: 65
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dc_vendor_site:
+    weight: 66
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dgc_codigo_fax:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dgc_fax:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dgc_lada:
+    weight: 25
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dgc_telefono:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dm_calle:
+    weight: 17
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dm_ciudad:
+    weight: 23
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dm_colonia:
+    weight: 20
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dm_cp:
+    weight: 21
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dm_estado:
+    weight: 22
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dm_municipio:
+    weight: 24
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dm_no_exterior:
+    weight: 19
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dm_no_interior:
+    weight: 18
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_informacion_valida:
+    weight: 10
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_proveedor:
+    weight: 9
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_ps_productos:
+    type: entity_reference_paragraphs
+    weight: 43
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 8
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+  url_redirects:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

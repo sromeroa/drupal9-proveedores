@@ -1,0 +1,20 @@
+uuid: 7a6ee72f-3452-4eef-8ad7-4fff09cd9414
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_dc_relacion_comercial
+field_name: field_dc_relacion_comercial
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

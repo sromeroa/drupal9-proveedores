@@ -1,0 +1,56 @@
+<section class="detalle-programas"><a class="o-btn__enlace-link o-btn__enlace-link-regresar" href="../programas" title="Regresar"> <span class="o-btn__enlace-icon icon leer-mas"></span>Regresar</a>
+  <div class="c-title">
+    <div class="c-title__fecha">
+      <p class="c-title__fecha-texto">Jueves, 14 de Octubre 2021</p>
+    </div>
+    {% if programas[0].field_titulo_value %}
+      <div class="c-title__head">
+       <h1 class="c-title__head-titulo">{{programas[0].field_titulo_value}}</h1>
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="c-catologo-programas-3">
+    <div class="tarjeta tarjeta--imagen-full tarjeta--imagen-izquierda tarjeta--imagen-izquierda-larga tarjeta--imagen-izquierda-sin-fondo">
+    {% if programas[0].field_imagen %}
+      <div class="tarjeta__imagen"><img class="tarjeta__imagen-img-normal lazy" src="#!" data-src="{{programas[0].field_imagen}}" alt="{{programas[0].field_titulo_value}}"></div>
+    {% endif %}
+    <div class="tarjeta__texto">
+      {% if programas[0].field_subtitulo_value %}<h2>{{programas[0].field_subtitulo_value}}</h2>{% endif %}
+      {% for programa in programas %}
+        {% if programa.id %}
+          <div class="tarjeta__texto-contenido">
+            {% if programa.field_descripcion_value %}
+              {{programa.field_descripcion_value|raw}}
+            {% endif %}
+            {% if programa.field_imagen_target_id|length > 0 %}
+              <ul>
+                {% for  imagen in programa.field_imagen_target_id  %}
+                  <li><img class="lazy" src="#!" data-src="{{imagen}}" alt="imagen prueba"></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+            {% if programa.field_listas|length > 0 %}
+              {% for  lista in programa.field_listas  %}
+                <div class="tarjeta__texto-lista">
+                  {{lista|raw}}
+                </div>
+              {% endfor %}
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+      {% if programas[0].field_archivos %}
+        {% if programas[0].field_archivos|length > 0 %}
+          {% for  archivo in programas[0].field_archivos  %}
+            <div class="tarjeta__descarga"><a href="{{archivo.path}}" title="{{archivo.name}}" download="{{archivo.path}}">
+              <h4>{{archivo.name}}</h4></a>
+              <p>Formato PDF</p><a class="btn btn-circulo btn-flecha" href="{{archivo.path}}" title="Agregar" download="#!"><span class="icon flecha-derecha"></span></a>
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+  </div>
+</section>

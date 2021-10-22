@@ -1,0 +1,21 @@
+uuid: 8c30fa51-3afc-4e3d-99dd-c2771ae45f4d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_fecha_aceptacion
+    - paragraphs.paragraphs_type.actualizacion_politicas
+  module:
+    - datetime
+id: paragraph.actualizacion_politicas.field_fecha_aceptacion
+field_name: field_fecha_aceptacion
+entity_type: paragraph
+bundle: actualizacion_politicas
+label: 'Fecha Aceptacion'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

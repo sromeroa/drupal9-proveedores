@@ -1,0 +1,40 @@
+uuid: 7b242872-7f97-40ab-8308-c0f0955ca43f
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.politicas_pop_up.body
+    - field.field.node.politicas_pop_up.field_descripcion
+    - field.field.node.politicas_pop_up.field_fecha_actualizacion
+    - field.field.node.politicas_pop_up.field_orden
+    - field.field.node.politicas_pop_up.field_titulo
+    - node.type.politicas_pop_up
+  module:
+    - text
+    - user
+id: node.politicas_pop_up.teaser
+targetEntityType: node
+bundle: politicas_pop_up
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_descripcion: true
+  field_fecha_actualizacion: true
+  field_orden: true
+  field_titulo: true
+  langcode: true
+  search_api_excerpt: true

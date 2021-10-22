@@ -1,0 +1,30 @@
+<section class="programas">
+	<div class="c-title">
+		<div class="c-title__head">
+			<h1 class="c-title__head-titulo">{{ 'Programas'|t }}</h1>
+		</div>
+	</div>
+
+	{% for programa in programas %}
+		{% if programa.programaId %}
+
+			<div class="c-catalogo-programas">
+				<div class="tarjeta tarjeta--imagen-full tarjeta--imagen-izquierda">
+					<div class="tarjeta__imagen">
+						<a href="{{programa.programaId}}" title="{{programa.titulo}}"><img class="tarjeta__imagen-img-normal lazy" src="#!" data-src="{{programa.imagen}}" alt="{{programa.titulo}}"></a>
+					</div>
+					<div class="tarjeta__texto">
+						<h3>
+							<a href="{{programa.programaId}}" title="{{programa.titulo}}">{{programa.titulo}}</a>
+						</h3>
+						<p>{{programa.subtitulo}}</p>
+						<a class="o-btn__enlace-link" href="{{programa.programaId}}" title="Conoce mas">
+							<span class="o-btn__enlace-icon icon leer-mas"></span>{{ 'Conoce más'|t }}</a>
+					</div>
+				</div>
+			</div>
+
+		{% endif %}
+	{% endfor %}
+
+</section>

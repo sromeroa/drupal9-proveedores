@@ -1,0 +1,270 @@
+<section class="c-form-actualizacion-datos">
+                            {# <form class="c-form-actualizacion-datos js-form-actualizacion-datos" action="../json/form.json" method="get" autocomplete="off" data-thanks="datos-enviados.html"> #}
+                            <form class="c-form-actualizacion-datos js-form-actualizacion-datos" action="actualizacion-de-datos" method="post" autocomplete="off" data-thanks="datos-enviados.html">
+
+                                <fieldset class="c-form-actualizacion-datos__field js-datos-focus" disabled>
+                                    <h4>Datos comerciales</h4>
+                                    <ul class="form-list full">
+                                        <li class="c-form-actualizacion-datos__candado js-block-group"><a href="" title="Bloquear campos"><span class="icon candado"></span></a></li>
+                                        <li>
+                                            <input class="withLabel" name="dc_razon_social" type="text" data-name="Razon social" value="{{actualizardatos['dc_razon_social']}}">
+                                        </li>
+                                         <li>
+                                            <input class="withLabel" name="dc_numero_proveedor" type="text" data-name="Número proveedor" value="{{actualizardatos['dc_numero_proveedor']}}">
+                                        </li>
+                                         <li>
+                                            <input class="withLabel" name="dc_nombre_comercial" type="text" data-name="Nombre Comercial" value="{{actualizardatos['dc_nombre_comercial']}}">
+                                        </li>
+                                         <li>
+                                            <input class="withLabel" name="dc_rfc" type="text" data-name="R.F.C." value="{{actualizardatos['dc_rfc']}}">
+                                        </li>
+                                         <li>
+                                            <input class="withLabel" name="dc_actividad_economica" type="text" data-name="Actividad economica" value="Actividad economica">
+                                        </li> 
+                                        {% if catalogos["field_dc_regimen_fiscal"] %}
+                                        <li>
+                                            <select id="dc_regimen_fiscal" class="required withLabel" name="dc_regimen_fiscal" data-name="Regimen Fiscal">
+                                                <option value=>Regimen Fiscal</option>
+                                            {% for regimen in catalogos["field_dc_regimen_fiscal"] %}
+                                            {% if regimen.tid== actualizardatos["dc_regimen_fiscal"] %}
+                                                <option value={{regimen.tid}} selected>{{regimen.name}}</option>
+                                            {% else %}
+                                                <option value={{regimen.tid}}>{{regimen.name}}</option>
+                                            {% endif %}
+                                            <option value={{regimen.tid}}>{{regimen.name}}</option>
+                                            {% endfor %}  
+                                            </select>
+                                        </li>
+                                        {% endif %}
+                                            {% if catalogos["field_dc_clasificacion_tamano_em"] %}
+                                        <li>
+                                            <select class="required withLabel" name="dc_clasificacion_tamano_em" data-name="Clasificaión tamaño de empresa">
+                                                <option value=>Clasificaión tamaño de empresa</option>
+                                            {% for regimen in catalogos["field_dc_clasificacion_tamano_em"] %}
+                                            {% if regimen.tid== actualizardatos["dc_clasificacion_tamano_em"] %}
+                                                <option value={{regimen.tid}} selected>{{regimen.name}}</option>
+                                            {% else %}
+                                                <option value={{regimen.tid}}>{{regimen.name}}</option>
+                                            {% endif %}
+                                            {% endfor %}  
+                                            </select>
+                                        </li>
+                                        {% endif %}
+                                       {#   <li>  
+                                            <input class="withLabel" name="Número de Colaboradores" type="text" data-name="Número de Colaboradores" value="Número de Colaboradores">
+                                        </li> #}
+                                             {% if catalogos["field_dc_numero_colaboradore"] %}
+                                        <li>
+                                            <select class="required withLabel" name="dc_numero_colaboradores" data-name="Número de Colaboradores">
+                                            <option value=>Número de Colaboradores</option>
+                                            {% for regimen in catalogos["field_dc_numero_colaboradore"] %}
+                                             {% if regimen.tid== actualizardatos["dc_numero_colaboradore"] %}
+                                                <option value={{regimen.tid}} selected>{{regimen.name}}</option>
+                                            {% else %}
+                                                <option value={{regimen.tid}}>{{regimen.name}}</option>
+                                            {% endif %}
+                                            {% endfor %}  
+                                            </select>
+                                        </li>
+                                        {% endif %}
+
+                                        {#  <li>
+                                            <input class="withLabel" name="Nivel de ventas(Millores de pesos)" type="text" data-name="Nivel de ventas(Millores de pesos)" value="Nivel de ventas(Millores de pesos)">
+                                        </li> #}
+
+                                              {% if catalogos["field_dc_nivel_ventas_anuales"] %}
+                                        <li>
+                                            <select class="required withLabel" name="dc_nivel_ventas_anuales" data-name="Nivel de ventas(Millores de pesos)">
+                                            <option value=>Nivel de ventas(Millores de pesos)</option>
+                                            {% for regimen in catalogos["field_dc_nivel_ventas_anuales"] %}
+                                            {% if regimen.tid== actualizardatos["dc_nivel_ventas_anuales"] %}
+                                                <option value={{regimen.tid}} selected>{{regimen.name}}</option>
+                                            {% else %}
+                                                <option value={{regimen.tid}}>{{regimen.name}}</option>
+                                            {% endif %}
+                                            {% endfor %}  
+                                            </select>
+                                        </li>
+                                        {% endif %}
+
+
+                                         <li>
+                                            <input class="withLabel" name="dc_numero_duns" type="text" data-name="Número Duns" value="Número Duns">
+                                        </li>
+                                       {#   <li>
+                                            <input class="withLabel" name="Giro Comercial de la Empresa" type="text" data-name="Giro Comercial de la Empresa" value="Giro Comercial de la Empresa">
+                                        </li> #}
+                                        {% if catalogos["field_dc_giro_comercial"] %}
+                                        <li>
+                                            <select class="required withLabel" name="dc_giro_comercial" data-name="Giro Comercial de la Empresa">
+                                                <option value=>Giro Comercial de la Empresa</option>
+                                            {% for regimen in catalogos["field_dc_giro_comercial"]  %}
+                                            {% if regimen.tid== actualizardatos["dc_giro_comercial"] %}
+                                                <option value={{regimen.tid}} selected>{{regimen.name}}</option>
+                                            {% else %}
+                                                <option value={{regimen.tid}}>{{regimen.name}}</option>
+                                            {% endif %}
+                                            {% endfor %}  
+                                            </select>
+                                        </li>
+                                        {% endif %}
+                                        {#  <li>
+                                            <input class="withLabel" name="Especialidad a la que Cooresponde" type="text" data-name="Especialidad a la que Cooresponde" value="Especialidad a la que Cooresponde">
+                                        </li> #}
+                                         {% if catalogos["field_dc_especialidad"] %}
+                                        <li>
+                                            <select class="required withLabel" name="dc_especialidad" data-name="Especialidad a la que Cooresponde">
+                                                <option value=>Especialidad a la que Cooresponde</option>
+                                            {% for regimen in catalogos["field_dc_especialidad"] %}
+                                             {% if regimen.tid == actualizardatos["dc_especialidad"] %}
+                                                <option value={{regimen.tid}} selected>{{regimen.name}}</option>
+                                            {% else %}
+                                                <option value={{regimen.tid}}>{{regimen.name}}</option>
+                                            {% endif %}
+                                            {% endfor %}  
+                                            </select>
+                                        </li>
+                                        {% endif %}
+                                         <li>
+                                            <input class="withLabel" name="dc_nombre_respresantante" type="text" data-name="Nombre de su representante legal" value="Nombre de su representante legal">
+                                        </li>
+                                         <li>
+                                            <input class="withLabel" name="dc_genero_direccion" type="text" data-name="Genero que preside la direccion general de la empresa" value="Genero que preside la direccion general de la empresa">
+                                        </li>
+                                       {#   <li>
+                                            <input class="withLabel" name="Esta incorporado al Fideicomiso de Grupo Bimbo - Nafinsa" type="text" data-name="Esta incorporado al Fideicomiso de Grupo Bimbo - Nafinsa" value="Esta incorporado al Fideicomiso de Grupo Bimbo - Nafinsa">
+                                        </li> #}
+                                          {% if catalogos["field_dc_incorporado_fideicomiso"] %}
+                                        <li>
+                                            <select class="required withLabel" name="dc_incorporado_fideicomiso" data-name="Esta incorporado al Fideicomiso de Grupo Bimbo - Nafinsa">
+                                                <option value=>Esta incorporado al Fideicomiso de Grupo Bimbo - Nafinsa</option>
+                                            {% for regimen in catalogos["field_dc_incorporado_fideicomiso"] %}
+                                             {% if regimen.tid== actualizardatos["dc_incorporado_fideicomiso"] %}
+                                                <option value={{regimen.tid}} selected>{{regimen.name}}</option>
+                                            {% else %}
+                                                <option value={{regimen.tid}}>{{regimen.name}}</option>
+                                            {% endif %}
+                                            {% endfor %}  
+                                            </select>
+                                        </li>
+                                        {% endif %}
+
+                                        {#  <li>
+                                            <input class="withLabel" name="Cuenta con Certificaciones con vigencia a 2 años de acuerdo a su giro comercial" type="text" data-name="Cuenta con Certificaciones con vigencia a 2 años de acuerdo a su giro comercial" value="Cuenta con Certificaciones con vigencia a 2 años de acuerdo a su giro comercial">
+                                        </li> #}
+                                        {% if catalogos["field_dc_certificaciones_vigente"] %}
+                                            <li>
+                                                <select class="required withLabel" id="multi-select" name="dc_certificaciones_vigente" data-name="Cuenta con Certificaciones con vigencia a 2 años de acuerdo a su giro comercial"  multiple>
+                                                <option value=>Cuenta con Certificaciones con vigencia a 2 años de acuerdo a su giro comercial</option>
+                                                    {% for regimen in catalogos["field_dc_certificaciones_vigente"] %}
+                                                        {% if regimen.tid  in actualizardatos["dc_certificaciones_vigente"] %}
+                                                            <option value={{regimen.tid}} class="selected hide">{{regimen.name}}</option>
+                                                        {% else %}
+                                                            <option value={{regimen.tid}}>{{regimen.name}}</option>
+                                                        {% endif %}
+                                                    {% endfor %}  
+                                                </select>
+                                            </li>
+                                        {% endif %}
+                                    </ul>
+                                    <div class="c-form-actualizacion-datos__editar"><a class="js-desbloquear-fieldset" href="#!" title="Editar Datos Comerciales"><span class="icon editar"></span>
+                        <p>Editar Datos Comerciales</p></a></div>
+                                </fieldset>
+                                <fieldset class="c-form-actualizacion-datos__field" disabled>
+                                    <h4>Domicilio</h4>
+                                    <ul class="form-list full">
+                                        <li class="c-form-actualizacion-datos__candado js-block-group"><a href="" title="Bloquear campos"><span class="icon candado"></span></a></li>
+                                        <li>
+                                            <input class="withLabel" name="dm_calle" type="text" data-name="Calle" value="{{actualizardatos['dm_calle']}}">
+                                        </li>
+                                        <li class="doble">
+                                            <input class="withLabel onlyNumbers" name="dm_no_interior" type="text" data-name="No. Interior" value="{{actualizardatos['dm_no_interior']}}" maxlength="5">
+                                        </li>
+                                        <li class="doble mg-left">
+                                            <input class="withLabel onlyNumbers" name="dm_no_exterior" type="text" data-name="No. Exterior" value="{{actualizardatos['dm_no_exterior']}}" maxlength="5">
+                                        </li>
+                                          <li >
+                                            <input class="withLabel onlyNumbers" name="dm_colonia" type="text" data-name="Colonia" value="{{actualizardatos['dm_colonia']}}" maxlength="5">
+                                        </li>
+{#                                         <li>
+                                            <select class="withLabel" name="select" data-name="Colonia">
+                          <option value="">Colonia</option>
+                          <option value="1">1</option>
+                        </select>
+                                        </li> #}
+                                        <li class="doble">
+                                            <input class="withLabel onlyNumbers" name="dm_cp" type="text" data-name="Codigo postal" value="{{actualizardatos['dm_cp']}}">
+                                        </li>
+                                        <li class="doble mg-left">
+                                            <input class="withLabel" name="dm_estado" type="text" data-name="Estado" value="{{actualizardatos['dm_estado']}}">
+                                        </li>
+                                        <li class="doble">
+                                            <input class="withLabel" name="dm_ciudad" type="text" data-name="Ciudad" value="{{actualizardatos['dm_ciudad']}}">
+                                        </li>
+                                        <li class="doble mg-left">
+                                            <input class="withLabel" name="dm_municipio" type="text" data-name="Municipio" value="{{actualizardatos['dm_municipio']}}">
+                                        </li>
+                                        <li class="c-form-actualizacion-datos__customFileInput js-detect-error">
+                                            <label class="c-form-actualizacion-datos__customFileInput-label js-add-file-class">
+                          <input class="js-data-file" name="archivo_pdf" type="file" accept="application/pdf"><span class="c-form-actualizacion-datos__customFileInput-span">Anexar comprobante de domicilio</span>
+                        </label><span class="group-label-format">Formato .PDF</span><span class="group-label">Selecciona un archivo PDF</span>
+                                        </li>
+                                    </ul>
+                                    <div class="c-form-actualizacion-datos__editar"><a class="js-desbloquear-fieldset" href="#!" title="Editar Domicilio"><span class="icon editar"></span>
+                        <p>Editar Domicilio</p></a></div>
+                                </fieldset>
+                                <fieldset class="c-form-actualizacion-datos__field" disabled>
+                                    <h4>Datos generales de contacto</h4>
+                                    <ul class="form-list full">
+                                        <li class="c-form-actualizacion-datos__candado js-block-group"><a href="" title="Bloquear campos"><span class="icon candado"></span></a></li>
+                                        <li class="doble">
+                                            <input class="withLabel onlyNumbers" name="dgc_lada" type="text" data-name="Lada" value="{{actualizardatos['dgc_lada']}}" maxlength="2">
+                                        </li>
+                                        <li class="doble mg-left">
+                                            <input class="withLabel onlyNumbers tel" name="dgc_telefono" type="text" data-name="Telefono" value="{{actualizardatos['dgc_telefono']}}" maxlength="10">
+                                        </li>
+                                        <li class="doble">
+                                            <input class="withLabel onlyNumbers" name="dgc_codigo_fax" type="text" data-name="Codigo fax" value="{{actualizardatos['dgc_codigo_fax']}}" maxlength="18">
+                                        </li>
+                                        <li class="doble mg-left">
+                                            <input class="withLabel onlyNumbers" name="dgc_fax" type="text" data-name="Fax" value="{{actualizardatos['dgc_fax']}}" maxlength="18">
+                                        </li>
+                                    </ul>
+                                    <div class="c-form-actualizacion-datos__editar"><a class="js-desbloquear-fieldset" href="#!" title="Editar Generales"><span class="icon editar"></span>
+                        <p>Editar Generales</p></a></div>
+                                </fieldset>
+                                <fieldset class="c-form-actualizacion-datos__field" disabled>
+                                    <h4>Contacto</h4>
+                                    <ul class="form-list full">
+                                        <li class="c-form-actualizacion-datos__candado js-block-group"><a href="" title="Bloquear campos"><span class="icon candado"></span></a></li>
+                                        <li>
+                                            <input class="withLabel name" name="ct_nombre" type="text" data-name="Nombre (s)" value="{{actualizardatos['ct_nombre']}}">
+                                        </li>
+                                        <li class="doble">
+                                            <input class="withLabel name" name="ct_paterno" type="text" data-name="Apellido paterno" value="{{actualizardatos['ct_paterno']}}">
+                                        </li>
+                                        <li class="doble mg-left">
+                                            <input class="withLabel name" name="ct_materno" type="text" data-name="Apellido materno" value="{{actualizardatos['ct_materno']}}">
+                                        </li>
+                                        <li>
+                                            <input class="withLabel name" name="ct_profesion" type="text" data-name="Profesion" value="{{actualizardatos['ct_profesion']}}">
+                                        </li>
+                                        <li>
+                                            <input class="withLabel email" name="ct_email" type="text" data-name="E-mail" value="{{actualizardatos['ct_email']}}">
+                                        </li>
+                                        <li class="doble">
+                                            <input class="withLabel onlyNumbers" name="ct_lada" type="text" data-name="Lada" value="{{actualizardatos['ct_lada']}}" maxlength="2">
+                                        </li>
+                                        <li class="doble mg-left">
+                                            <input class="withLabel onlyNumbers tel" name="ct_telefono" type="text" data-name="Telefono" value="{{actualizardatos['ct_telefono']}}" maxlength="10">
+                                        </li>
+                                    </ul>
+                                    <div class="c-form-actualizacion-datos__editar"><a class="js-desbloquear-fieldset" href="#!" title="Editar Contacto"><span class="icon editar"></span>
+                        <p>Editar Contacto</p></a></div>
+                                </fieldset>
+                                <fieldset class="c-form-actualizacion-datos__enviar">
+                                
+                                    <button class="btn btn-primario btn-mediano btn-icono-derecha" type="submit"><span>Enviar cambios</span><span class="icon flecha-derecha"></span></button>
+                                </fieldset>
+                            </form>
+                        </section>

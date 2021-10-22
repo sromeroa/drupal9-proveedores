@@ -1,0 +1,41 @@
+uuid: f38542e2-e8e0-4330-ac8a-f9d4d08cf0c4
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:general:8eed6b07-a5b8-4527-bd95-ce6669cf3f4c'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - bimboprov
+id: titulobienvenida
+theme: bimboprov
+region: content
+weight: -13
+provider: null
+plugin: 'block_content:8eed6b07-a5b8-4527-bd95-ce6669cf3f4c'
+settings:
+  id: 'block_content:8eed6b07-a5b8-4527-bd95-ce6669cf3f4c'
+  label: 'Titulo Bienvenida'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+      proveedor: proveedor
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

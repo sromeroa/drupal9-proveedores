@@ -1,0 +1,8 @@
+uuid: 0046b97a-2dee-4db3-bc25-ea546a4e7e68
+langcode: es
+status: true
+dependencies: {  }
+name: 'Pregunta categoria'
+vid: pregunta_categoria
+description: ''
+weight: 0

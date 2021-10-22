@@ -1,0 +1,40 @@
+uuid: 864a5b25-0d2c-4b1e-8f0e-363653de7f8f
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.bimbo_politicas
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - bimboprov
+id: views_block__bimbo_politicas_block_preguntas_politicas
+theme: bimboprov
+region: content
+weight: -8
+provider: null
+plugin: 'views_block:bimbo_politicas-block_preguntas_politicas'
+settings:
+  id: 'views_block:bimbo_politicas-block_preguntas_politicas'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /politicas
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+      proveedor: proveedor
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

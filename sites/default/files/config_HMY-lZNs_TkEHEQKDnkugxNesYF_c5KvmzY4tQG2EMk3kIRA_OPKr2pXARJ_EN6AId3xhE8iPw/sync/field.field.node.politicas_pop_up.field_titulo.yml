@@ -1,0 +1,19 @@
+uuid: 94bd25d6-b24f-4e1c-8cbf-11fa74290785
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_titulo
+    - node.type.politicas_pop_up
+id: node.politicas_pop_up.field_titulo
+field_name: field_titulo
+entity_type: node
+bundle: politicas_pop_up
+label: Título
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

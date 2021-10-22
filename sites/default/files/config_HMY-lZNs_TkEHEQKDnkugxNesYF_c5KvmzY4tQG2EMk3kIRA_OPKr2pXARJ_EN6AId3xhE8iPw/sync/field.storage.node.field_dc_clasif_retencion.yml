@@ -1,0 +1,21 @@
+uuid: e187d834-3422-42fd-8bc4-eb38042c0521
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_dc_clasif_retencion
+field_name: field_dc_clasif_retencion
+entity_type: node
+type: string
+settings:
+  max_length: 500
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

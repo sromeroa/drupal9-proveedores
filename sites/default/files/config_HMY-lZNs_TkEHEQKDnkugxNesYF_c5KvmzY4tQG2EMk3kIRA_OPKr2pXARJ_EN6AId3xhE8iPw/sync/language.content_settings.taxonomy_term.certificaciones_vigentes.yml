@@ -1,0 +1,11 @@
+uuid: a16f1d29-a1a4-4431-b411-c4ab5ec770a5
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.certificaciones_vigentes
+id: taxonomy_term.certificaciones_vigentes
+target_entity_type_id: taxonomy_term
+target_bundle: certificaciones_vigentes
+default_langcode: site_default
+language_alterable: false

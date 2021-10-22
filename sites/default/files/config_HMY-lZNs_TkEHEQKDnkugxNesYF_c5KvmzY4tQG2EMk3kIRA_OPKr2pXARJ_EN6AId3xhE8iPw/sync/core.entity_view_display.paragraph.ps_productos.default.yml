@@ -1,0 +1,53 @@
+uuid: 901d51fb-214f-4bef-b9a8-9c05377ec8c6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ps_productos.field_ps_comercializa
+    - field.field.paragraph.ps_productos.field_ps_descripcion
+    - field.field.paragraph.ps_productos.field_ps_nombre_producto
+    - field.field.paragraph.ps_productos.field_ps_produce
+    - paragraphs.paragraphs_type.ps_productos
+id: paragraph.ps_productos.default
+targetEntityType: paragraph
+bundle: ps_productos
+mode: default
+content:
+  field_ps_comercializa:
+    weight: 2
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_ps_descripcion:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ps_nombre_producto:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ps_produce:
+    weight: 3
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+hidden:
+  search_api_excerpt: true

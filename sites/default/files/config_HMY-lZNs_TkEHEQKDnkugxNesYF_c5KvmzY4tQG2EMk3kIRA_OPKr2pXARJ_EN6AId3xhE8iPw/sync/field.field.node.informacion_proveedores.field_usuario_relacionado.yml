@@ -1,0 +1,28 @@
+uuid: d7eecf56-3152-41c4-bf88-71b94a65fa0b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_usuario_relacionado
+    - node.type.informacion_proveedores
+id: node.informacion_proveedores.field_usuario_relacionado
+field_name: field_usuario_relacionado
+entity_type: node
+bundle: informacion_proveedores
+label: 'Usuario relacionado'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

@@ -1,0 +1,28 @@
+uuid: 5a050219-1573-46e1-81b3-f3318ba257f7
+langcode: es
+status: true
+dependencies:
+  module:
+    - bm_denunciamodal
+    - user
+  theme:
+    - bimboprov
+id: blockdenunciasmodalbimboproveedores
+theme: bimboprov
+region: aftercontent
+weight: 0
+provider: null
+plugin: denunciamodal_block
+settings:
+  id: denunciamodal_block
+  label: 'Block Denuncias modal - Bimbo Proveedores'
+  provider: bm_denunciamodal
+  label_display: '0'
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      proveedor: proveedor
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

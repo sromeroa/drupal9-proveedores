@@ -1,0 +1,11 @@
+uuid: 962c6969-9496-4a2c-9741-c399430fb8e6
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.personas_morales
+id: taxonomy_term.personas_morales
+target_entity_type_id: taxonomy_term
+target_bundle: personas_morales
+default_langcode: site_default
+language_alterable: false

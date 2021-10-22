@@ -1,0 +1,10 @@
+uuid: 58ff2be7-d700-4518-833a-3bd657f0716e
+langcode: es
+status: true
+dependencies: {  }
+id: elementos_descripciones
+label: 'Elementos descripciones'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

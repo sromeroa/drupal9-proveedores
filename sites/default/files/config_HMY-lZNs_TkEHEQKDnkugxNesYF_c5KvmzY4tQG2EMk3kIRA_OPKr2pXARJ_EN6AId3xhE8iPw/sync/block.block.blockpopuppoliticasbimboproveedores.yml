@@ -1,0 +1,30 @@
+uuid: 38b2a33f-141c-46da-8738-048abe0dbd78
+langcode: es
+status: true
+dependencies:
+  module:
+    - bm_politicasmodal
+    - user
+  theme:
+    - bimboprov
+id: blockpopuppoliticasbimboproveedores
+theme: bimboprov
+region: aftercontent
+weight: -17
+provider: null
+plugin: politicasmodal_block
+settings:
+  id: politicasmodal_block
+  label: 'Block Pop-up Politicas  - Bimbo Proveedores'
+  provider: bm_politicasmodal
+  label_display: '0'
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+      proveedor: proveedor
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

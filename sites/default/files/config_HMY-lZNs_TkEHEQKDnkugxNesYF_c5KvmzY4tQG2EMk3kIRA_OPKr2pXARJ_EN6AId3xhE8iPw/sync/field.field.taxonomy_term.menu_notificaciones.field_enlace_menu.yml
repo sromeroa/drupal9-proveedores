@@ -1,0 +1,23 @@
+uuid: f4603d34-72a7-43f0-bf05-96975544281a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_enlace_menu
+    - taxonomy.vocabulary.menu_notificaciones
+  module:
+    - link
+id: taxonomy_term.menu_notificaciones.field_enlace_menu
+field_name: field_enlace_menu
+entity_type: taxonomy_term
+bundle: menu_notificaciones
+label: 'Enlace Menú'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

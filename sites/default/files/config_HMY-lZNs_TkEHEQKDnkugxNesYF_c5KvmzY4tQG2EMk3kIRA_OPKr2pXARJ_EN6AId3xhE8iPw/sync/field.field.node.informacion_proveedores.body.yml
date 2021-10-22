@@ -1,0 +1,23 @@
+uuid: 58455cfb-cee2-4a22-b1e9-e0c93bd17df7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.informacion_proveedores
+  module:
+    - text
+id: node.informacion_proveedores.body
+field_name: body
+entity_type: node
+bundle: informacion_proveedores
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

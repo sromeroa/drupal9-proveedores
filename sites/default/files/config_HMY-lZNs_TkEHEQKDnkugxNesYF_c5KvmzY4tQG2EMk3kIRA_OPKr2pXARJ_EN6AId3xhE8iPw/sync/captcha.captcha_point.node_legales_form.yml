@@ -1,0 +1,7 @@
+uuid: 110ff51c-18d3-4b77-acd3-71ba65b12c68
+langcode: es
+status: false
+dependencies: {  }
+formId: node_legales_form
+captchaType: default
+label: null

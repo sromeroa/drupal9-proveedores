@@ -1,0 +1,27 @@
+uuid: 3748ecd8-b6ce-4e75-bf1b-3afc54865765
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_archivo_de_descarga
+    - paragraphs.paragraphs_type.documento_descargable
+  module:
+    - file
+id: paragraph.documento_descargable.field_archivo_de_descarga
+field_name: field_archivo_de_descarga
+entity_type: paragraph
+bundle: documento_descargable
+label: 'Archivo de descarga'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt rtf doc docx ppt pptx xls xlsx pdf'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

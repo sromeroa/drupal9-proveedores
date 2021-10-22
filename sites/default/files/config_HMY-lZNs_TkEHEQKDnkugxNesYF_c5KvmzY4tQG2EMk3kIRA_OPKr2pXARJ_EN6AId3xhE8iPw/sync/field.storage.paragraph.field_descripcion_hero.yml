@@ -1,0 +1,19 @@
+uuid: 0ef7b7d9-19ae-4f64-828f-fa6c99422fd8
+langcode: es
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_descripcion_hero
+field_name: field_descripcion_hero
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

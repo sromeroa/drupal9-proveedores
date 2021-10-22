@@ -1,0 +1,19 @@
+uuid: 999699fa-9203-4e8c-87b4-687d9e3040a2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nombre_del_proveedor
+    - node.type.informacion_proveedores
+id: node.informacion_proveedores.field_nombre_del_proveedor
+field_name: field_nombre_del_proveedor
+entity_type: node
+bundle: informacion_proveedores
+label: 'Nombre del Proveedor'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: 4e6f670d-2f92-4fa8-84e4-886610492e7a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_informacion_valida
+    - node.type.user_revision
+id: node.user_revision.field_informacion_valida
+field_name: field_informacion_valida
+entity_type: node
+bundle: user_revision
+label: 'Informacion valida'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

@@ -1,0 +1,33 @@
+uuid: de1261f4-5f18-4d5e-acb7-e7043f999e8b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.documento_descargable.field_archivo_de_descarga
+    - field.field.paragraph.documento_descargable.field_titulo_documento
+    - paragraphs.paragraphs_type.documento_descargable
+  module:
+    - file
+id: paragraph.documento_descargable.default
+targetEntityType: paragraph
+bundle: documento_descargable
+mode: default
+content:
+  field_archivo_de_descarga:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_titulo_documento:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

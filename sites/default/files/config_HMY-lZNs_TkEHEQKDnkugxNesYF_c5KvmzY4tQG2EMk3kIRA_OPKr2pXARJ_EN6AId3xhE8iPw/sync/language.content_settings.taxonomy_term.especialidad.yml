@@ -1,0 +1,11 @@
+uuid: 75264404-efab-4b3c-bab2-0ff618634d7b
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.especialidad
+id: taxonomy_term.especialidad
+target_entity_type_id: taxonomy_term
+target_bundle: especialidad
+default_langcode: site_default
+language_alterable: false

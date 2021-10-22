@@ -1,0 +1,26 @@
+uuid: d835532a-99c9-4619-b55f-6334c3c46ce3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_block
+    - node.type.programas
+  module:
+    - block_field
+id: node.programas.field_block
+field_name: field_block
+entity_type: node
+bundle: programas
+label: Block
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: blocks
+  selection_settings:
+    plugin_ids:
+      programasdetalle_block: programasdetalle_block
+      programaslistado_block: programaslistado_block
+field_type: block_field

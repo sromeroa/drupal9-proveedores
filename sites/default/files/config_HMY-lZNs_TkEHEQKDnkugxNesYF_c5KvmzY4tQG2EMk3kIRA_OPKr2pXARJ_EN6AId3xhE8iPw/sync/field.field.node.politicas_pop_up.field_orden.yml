@@ -1,0 +1,23 @@
+uuid: d17d42e5-14af-4d71-bfe9-b6ecca3c8c94
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_orden
+    - node.type.politicas_pop_up
+id: node.politicas_pop_up.field_orden
+field_name: field_orden
+entity_type: node
+bundle: politicas_pop_up
+label: Orden
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

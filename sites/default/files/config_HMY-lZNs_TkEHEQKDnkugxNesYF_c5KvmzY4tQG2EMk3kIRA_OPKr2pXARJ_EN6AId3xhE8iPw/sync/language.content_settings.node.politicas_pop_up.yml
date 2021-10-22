@@ -1,0 +1,16 @@
+uuid: 7436f866-8554-4ddc-a4b9-404d9d61e8fb
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.politicas_pop_up
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.politicas_pop_up
+target_entity_type_id: node
+target_bundle: politicas_pop_up
+default_langcode: site_default
+language_alterable: true

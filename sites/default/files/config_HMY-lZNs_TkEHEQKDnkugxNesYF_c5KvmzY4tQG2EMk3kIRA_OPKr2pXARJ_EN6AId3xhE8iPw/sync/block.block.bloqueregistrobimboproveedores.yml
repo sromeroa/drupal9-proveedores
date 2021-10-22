@@ -1,0 +1,26 @@
+uuid: e6098bdc-6d3c-4c57-9174-d153dd104042
+langcode: es
+status: true
+dependencies:
+  module:
+    - bm_registro
+    - system
+  theme:
+    - bimboprov
+id: bloqueregistrobimboproveedores
+theme: bimboprov
+region: content
+weight: 0
+provider: null
+plugin: info_registro_block
+settings:
+  id: info_registro_block
+  label: 'Bloque Registro - Bimbo Proveedores'
+  provider: bm_registro
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /registro
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,21 @@
+<li class="c-header__lista-item c-header__lista-item--borde">
+	<div class="avatares">
+		{%  if(user_img|length > 0) %}
+			<div class="avatares__imagen is-active">
+				<img class="avatares__imagen-img" src="{{ user_img }}" data-src="{{ user_img }}" alt="Avatar">
+			</div>
+		{% endif %}
+	</div>
+	<a class="c-header__lista-link c-header__lista-link--perfil js-open-notificacion" href="#" title="Formulario de busqueda">Perfil Proveedor
+	</a>
+	<div class="c-notificacion c-notificacion--texto-large js-notificacion">
+		<ul class="c-notificacion__lista">
+			{% for items in menu %}
+				<li class="c-notificacion__lista-item">
+					<a class="c-notificacion__lista-link" href="{{ items.uri }}" title="Actualización de datos">{{ items.link_title }}
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</li>

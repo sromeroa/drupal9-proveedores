@@ -1,0 +1,28 @@
+  <form{{ attributes }}>
+    <fieldset class="c-form__fieldset">
+      {{ element.messages }}
+      <ul class="form-list full">
+        <li>
+          <span class="currentInput">{{ element.name }}<label class="currentInput-label">E-mail</label></span>
+        </li>
+        <li>
+          <div class="icon-contrasena js-contrasena">
+            <span class="currentInput listo">{{ element.pass }}<label class="currentInput-label">{{ 'Contraseña'|t }}</label></span><span class="icon ver js-mostrar-pass"></span>
+          </div>
+        </li>
+        <li class="c-form__terminos-aviso group-input required">
+          <label class="lbCh">
+            {{ element.find_us }}{{'He leído y acepto'|t}} <a href="./terminos-y-condiciones" title="{{ 'Términos y Condiciones'|t }}">{{ 'Términos y Condiciones'|t }}</a>{{ 'y el'|t }}<a href="#!" title="{{ 'Términos y Condiciones'|t }}">{{ 'Términos y Condiciones'|t }}.</a>
+            <span class="flCh"></span>
+          </label>
+        </li>
+        <li>
+          {{ element.form_build_id }}
+          {{ element.form_id }}
+          <div class="c-form__recaptcha--iniciar-sesion">            
+            {{ element.actions.submit }}
+          </div>
+        </li>
+      </ul>
+    </fieldset>
+  </form>

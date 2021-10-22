@@ -1,0 +1,35 @@
+uuid: 6d7f5e20-d70b-4282-b9f9-5a8a0d7d3dd1
+langcode: es
+status: false
+dependencies:
+  content:
+    - 'block_content:general:3fe1909e-1de6-4958-a83e-6040e73ad539'
+  module:
+    - block_content
+    - user
+  theme:
+    - bimboprov
+id: notificacionescampana
+theme: bimboprov
+region: sidebar_second
+weight: -14
+provider: null
+plugin: 'block_content:3fe1909e-1de6-4958-a83e-6040e73ad539'
+settings:
+  id: 'block_content:3fe1909e-1de6-4958-a83e-6040e73ad539'
+  label: 'Notificaciones (campana)'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+      proveedor: proveedor
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

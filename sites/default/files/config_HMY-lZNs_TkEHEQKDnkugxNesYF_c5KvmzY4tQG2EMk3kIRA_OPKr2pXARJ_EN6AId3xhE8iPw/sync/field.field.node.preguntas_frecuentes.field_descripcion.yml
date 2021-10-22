@@ -1,0 +1,30 @@
+uuid: fb908c40-61a6-48cf-81d3-0c761d39b556
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_descripcion
+    - node.type.preguntas_frecuentes
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    html_estilos: html_estilos
+    basic_html: '0'
+    html_code: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: node.preguntas_frecuentes.field_descripcion
+field_name: field_descripcion
+entity_type: node
+bundle: preguntas_frecuentes
+label: Descripcion
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

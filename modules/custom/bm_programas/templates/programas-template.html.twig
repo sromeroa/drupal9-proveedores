@@ -1,0 +1,45 @@
+<section class="c-noticias-programas">
+	<div class="c-subtitle">
+		<div class="c-subtitle__head">
+			<h2 class="c-subtitle__head-titulo">{{ 'Programas'|t }}</h2>
+		</div>
+		<div class="c-subtitle__texto">
+			<p class="c-subtitle__texto-descripcion">{{ 'Herramientas de apoyo para nuestros proveedores'|t }}</p>
+		</div>
+	</div>
+	<div class="c-noticias__container">
+		<ul class="c-noticias__lista c-noticias__lista--programas">
+			{% set count = 0 %}
+			{% for programa in programas %}
+				{% if programa.programaId %}
+					{% set count = count + 1 %}
+					{% if count <= 3 %}
+						<li class="c-noticias__lista-item">
+							<div class="c-tarjeta c-tarjeta--small">
+								<div class="c-tarjeta__imagen">
+									<a class="c-tarjeta__imagen-link" href="{{ programa.programaId }}" title="{{programa.titulo}}">
+										<img class="c-tarjeta__imagen-img" src="{{programa.imagen}}" data-src="{{programa.imagen}}" alt="{{programa.titulo}}"></a>
+								</div>
+								<div class="c-tarjeta__texto">
+									<h4 class="c-tarjeta__titulo c-tarjeta__titulo--small o-font-roboto">
+										<a class="c-tarjeta__texto-link" href="{{ programa.programaId }}" title="{{programa.titulo}}">{{programa.titulo}}.</a>
+									</h4>
+									<a class="o-btn__enlace-link" href="{{ programa.programaId }}" title="{{ 'Conoce los detalles'|t }} ">
+										<span class="o-btn__enlace-icon icon leer-mas"></span>
+										{{ 'Conoce los detalles'|t }}</a>
+								</div>
+							</div>
+						</li>
+					{% endif %}
+				{% endif %}
+			{% endfor %}
+		</ul>
+
+	</div>
+
+	{% if count >= 4 %}
+		<div class="c-noticias__boton u-text-right">
+			<a class="c-noticias__link" href="programas" title="ver todas las noticias">ver todas los programas</a>
+		</div>
+	{% endif %}
+</section>

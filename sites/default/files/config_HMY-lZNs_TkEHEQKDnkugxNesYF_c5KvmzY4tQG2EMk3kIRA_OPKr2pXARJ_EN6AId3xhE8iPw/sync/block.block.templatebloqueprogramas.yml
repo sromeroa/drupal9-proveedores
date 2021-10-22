@@ -1,0 +1,41 @@
+uuid: 1e54014f-269f-4565-858e-10d098549ee1
+langcode: es
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:8507550a-f39a-4b6c-abb2-f69c464b2b08'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - bimboprov
+id: templatebloqueprogramas
+theme: bimboprov
+region: content
+weight: -4
+provider: null
+plugin: 'block_content:8507550a-f39a-4b6c-abb2-f69c464b2b08'
+settings:
+  id: 'block_content:8507550a-f39a-4b6c-abb2-f69c464b2b08'
+  label: 'Template bloque - programas'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+      proveedor: proveedor
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

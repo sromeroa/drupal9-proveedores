@@ -1,0 +1,19 @@
+uuid: 91d3397d-5110-4bc4-899e-f1d57b365d3a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ct_lada
+    - node.type.user_revision
+id: node.user_revision.field_ct_lada
+field_name: field_ct_lada
+entity_type: node
+bundle: user_revision
+label: ct_lada
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

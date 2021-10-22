@@ -1,0 +1,4 @@
+services:
+    bm_denunciamodal.bloquesvisibles:
+        class: Drupal\bm_denunciamodal\AppBundle\Service\BloquesVisibles
+        arguments: ['@current_user']

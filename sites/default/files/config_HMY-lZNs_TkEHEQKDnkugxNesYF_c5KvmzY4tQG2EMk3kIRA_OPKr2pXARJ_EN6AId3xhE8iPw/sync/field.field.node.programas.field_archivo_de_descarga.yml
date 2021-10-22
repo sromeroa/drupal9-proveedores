@@ -1,0 +1,37 @@
+uuid: c923e9db-f53d-481d-ba61-925860514a36
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_archivo_de_descarga
+    - node.type.programas
+    - paragraphs.paragraphs_type.documento_descargable
+  module:
+    - entity_reference_revisions
+id: node.programas.field_archivo_de_descarga
+field_name: field_archivo_de_descarga
+entity_type: node
+bundle: programas
+label: 'Archivo de descarga'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      documento_descargable: documento_descargable
+    target_bundles_drag_drop:
+      documento_descargable:
+        enabled: true
+        weight: 4
+      hero:
+        weight: 5
+        enabled: false
+      sub_programas:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

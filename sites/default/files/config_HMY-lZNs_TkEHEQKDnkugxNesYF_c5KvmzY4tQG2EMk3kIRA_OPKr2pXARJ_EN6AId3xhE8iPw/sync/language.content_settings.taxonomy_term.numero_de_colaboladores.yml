@@ -1,0 +1,11 @@
+uuid: d87bff5b-e19c-4a1b-84d1-e377df0484e2
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.numero_de_colaboladores
+id: taxonomy_term.numero_de_colaboladores
+target_entity_type_id: taxonomy_term
+target_bundle: numero_de_colaboladores
+default_langcode: site_default
+language_alterable: false

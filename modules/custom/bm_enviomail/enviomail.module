@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Contains enviomail.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+
+/**
+* Implements hook_mail().
+*/
+function enviomail_mail($key, &$message, $params) {
+ switch ($key) {
+   case 'the_mail_key':
+     $message['from'] = \Drupal::config('system.site')->get('mail');
+     $message['subject'] = t('Mail Subject');
+     $message['body'][] = $params['message'];
+     $message['params']['files'] = $params['attachments'];
+     break;
+ }
+}

@@ -1,0 +1,8 @@
+uuid: 526d50a4-9efb-44c4-8f67-0ef638381350
+langcode: zxx
+status: true
+dependencies: {  }
+name: 'equivalencias campos importador'
+vid: equivalencias_campos_importador
+description: ''
+weight: 0

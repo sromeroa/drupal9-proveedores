@@ -1,0 +1,49 @@
+uuid: 063f46e9-255e-4dd1-a829-5a52ed095f32
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.preguntas_politicas.field_descripcion
+    - field.field.node.preguntas_politicas.field_metatags
+    - field.field.node.preguntas_politicas.field_orden
+    - node.type.preguntas_politicas
+  module:
+    - metatag
+    - text
+    - user
+id: node.preguntas_politicas.default
+targetEntityType: node
+bundle: preguntas_politicas
+mode: default
+content:
+  field_descripcion:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_metatags:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_orden:
+    weight: 102
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

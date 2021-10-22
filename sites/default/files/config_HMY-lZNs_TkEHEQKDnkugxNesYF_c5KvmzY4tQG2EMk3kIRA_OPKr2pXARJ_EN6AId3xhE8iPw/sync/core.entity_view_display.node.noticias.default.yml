@@ -1,0 +1,50 @@
+uuid: 54e19e83-b68a-4959-8898-d7da1292a5df
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.noticias.body
+    - field.field.node.noticias.field_breadcrumb
+    - field.field.node.noticias.field_descripcion
+    - field.field.node.noticias.field_fecha_publicacion
+    - field.field.node.noticias.field_image
+    - field.field.node.noticias.field_imagen_de_portada
+    - field.field.node.noticias.field_imagen_mobile
+    - field.field.node.noticias.field_metatags
+    - field.field.node.noticias.field_subtitulo
+    - field.field.node.noticias.field_thumbnail
+    - field.field.node.noticias.field_titulo
+    - node.type.noticias
+  module:
+    - metatag
+    - user
+id: node.noticias.default
+targetEntityType: node
+bundle: noticias
+mode: default
+content:
+  field_metatags:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_breadcrumb: true
+  field_descripcion: true
+  field_fecha_publicacion: true
+  field_image: true
+  field_imagen_de_portada: true
+  field_imagen_mobile: true
+  field_subtitulo: true
+  field_thumbnail: true
+  field_titulo: true
+  langcode: true
+  search_api_excerpt: true

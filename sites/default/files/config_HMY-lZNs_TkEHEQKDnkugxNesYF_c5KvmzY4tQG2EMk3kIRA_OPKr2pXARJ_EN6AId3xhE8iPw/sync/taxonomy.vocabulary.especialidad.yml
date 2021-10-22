@@ -1,0 +1,8 @@
+uuid: 3923a4ee-0664-4a60-92f1-ff3974f861e6
+langcode: es
+status: true
+dependencies: {  }
+name: Especialidad
+vid: especialidad
+description: Especialidad
+weight: 0

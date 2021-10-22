@@ -1,0 +1,22 @@
+uuid: d8c180df-e067-4ba2-9afe-a78b53e816b9
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.formularios_popup
+id: node.formularios_popup.promote
+field_name: promote
+entity_type: node
+bundle: formularios_popup
+label: 'Promocionado a la página principal'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

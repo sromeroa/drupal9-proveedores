@@ -1,0 +1,36 @@
+uuid: 5822e78b-ca93-4d2a-9111-a14fc571aab8
+langcode: es
+status: true
+dependencies:
+  module:
+    - bm_programas
+    - system
+    - user
+  theme:
+    - bimboprov
+id: blockprogramasbimboproveedores
+theme: bimboprov
+region: content
+weight: -9
+provider: null
+plugin: programas_block
+settings:
+  id: programas_block
+  label: 'Block Programas - Bimbo Proveedores'
+  provider: bm_programas
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+      proveedor: proveedor
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

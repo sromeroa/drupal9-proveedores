@@ -1,0 +1,35 @@
+uuid: 9ed6b932-7495-47f1-8fa3-2f8d094cdab1
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.sidebar---menu-usuarios
+  module:
+    - system
+    - user
+  theme:
+    - bimboprov
+id: sidebarmenuusuarios
+theme: bimboprov
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:sidebar---menu-usuarios'
+settings:
+  id: 'system_menu_block:sidebar---menu-usuarios'
+  label: 'Sidebar - Menu usuarios'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+      proveedor: proveedor
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

@@ -1,0 +1,19 @@
+uuid: cddbd531-6803-4b44-a325-e37ecfd8accc
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dm_no_interior
+    - node.type.user_revision
+id: node.user_revision.field_dm_no_interior
+field_name: field_dm_no_interior
+entity_type: node
+bundle: user_revision
+label: dm_no_interior
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

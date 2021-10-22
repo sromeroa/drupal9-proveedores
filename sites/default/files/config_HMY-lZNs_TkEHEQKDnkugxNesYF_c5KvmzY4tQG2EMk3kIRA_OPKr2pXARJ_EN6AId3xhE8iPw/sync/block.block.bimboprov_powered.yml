@@ -1,0 +1,22 @@
+uuid: ec172b77-e735-4619-ba71-985790ad5c93
+langcode: es
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - bimboprov
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: bimboprov_powered
+theme: bimboprov
+region: footer_fifth
+weight: 10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Funciona con Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

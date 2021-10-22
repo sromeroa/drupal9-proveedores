@@ -1,0 +1,5 @@
+bm_import_admin.form:
+  title: Importador Proveedores
+  description: 'Importar informacion de Proveedores desde archivo CSV.'
+  parent: system.admin_structure
+  route_name: bm_import_admin.form

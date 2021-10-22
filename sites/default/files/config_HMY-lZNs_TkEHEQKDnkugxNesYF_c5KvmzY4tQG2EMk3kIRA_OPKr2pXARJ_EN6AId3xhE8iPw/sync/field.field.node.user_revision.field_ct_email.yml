@@ -1,0 +1,19 @@
+uuid: 5c7ddd55-f6ce-4bb6-b349-d47c27b1d34c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ct_email
+    - node.type.user_revision
+id: node.user_revision.field_ct_email
+field_name: field_ct_email
+entity_type: node
+bundle: user_revision
+label: ct_email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

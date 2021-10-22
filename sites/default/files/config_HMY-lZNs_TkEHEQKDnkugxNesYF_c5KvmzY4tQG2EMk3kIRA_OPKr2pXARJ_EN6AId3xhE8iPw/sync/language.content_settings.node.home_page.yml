@@ -1,0 +1,16 @@
+uuid: daea57e3-8623-4195-917d-15e1c37f0309
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.home_page
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.home_page
+target_entity_type_id: node
+target_bundle: home_page
+default_langcode: site_default
+language_alterable: true

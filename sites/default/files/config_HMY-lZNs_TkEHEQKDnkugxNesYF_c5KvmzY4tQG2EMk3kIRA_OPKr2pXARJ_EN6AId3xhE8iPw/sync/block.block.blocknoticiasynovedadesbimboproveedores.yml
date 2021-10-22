@@ -1,0 +1,36 @@
+uuid: d75f943a-7f3b-4cbb-857a-05f534c4cf21
+langcode: es
+status: true
+dependencies:
+  module:
+    - bm_noticiasnovedades
+    - system
+    - user
+  theme:
+    - bimboprov
+id: blocknoticiasynovedadesbimboproveedores
+theme: bimboprov
+region: content
+weight: -11
+provider: null
+plugin: noticiasnovedades_block
+settings:
+  id: noticiasnovedades_block
+  label: 'Block Noticias y Novedades - Bimbo Proveedores'
+  provider: bm_noticiasnovedades
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /novedad-y-comunicacion
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+      proveedor: proveedor
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

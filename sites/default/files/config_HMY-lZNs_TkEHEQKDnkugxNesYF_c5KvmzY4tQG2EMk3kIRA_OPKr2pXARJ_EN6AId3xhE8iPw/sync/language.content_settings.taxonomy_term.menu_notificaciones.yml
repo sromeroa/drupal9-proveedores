@@ -1,0 +1,11 @@
+uuid: edd946a2-e2d1-44a9-bb00-f7f5508106e6
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.menu_notificaciones
+id: taxonomy_term.menu_notificaciones
+target_entity_type_id: taxonomy_term
+target_bundle: menu_notificaciones
+default_langcode: site_default
+language_alterable: false

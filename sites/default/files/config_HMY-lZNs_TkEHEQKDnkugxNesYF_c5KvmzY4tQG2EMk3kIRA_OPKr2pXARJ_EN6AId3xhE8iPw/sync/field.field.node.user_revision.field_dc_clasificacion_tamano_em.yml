@@ -1,0 +1,29 @@
+uuid: eb486023-e9e1-49f5-97c1-90faee14e06b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dc_clasificacion_tamano_em
+    - node.type.user_revision
+    - taxonomy.vocabulary.clasificacion_tamano_de_empresa
+id: node.user_revision.field_dc_clasificacion_tamano_em
+field_name: field_dc_clasificacion_tamano_em
+entity_type: node
+bundle: user_revision
+label: dc_clasificacion_tamaño_empresa
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      clasificacion_tamano_de_empresa: clasificacion_tamano_de_empresa
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

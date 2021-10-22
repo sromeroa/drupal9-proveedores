@@ -1,0 +1,5 @@
+name: Envio de e-mail
+type: module
+description: Módulo de envío de Email
+core_version_requirement: ^9
+package: Custom

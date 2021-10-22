@@ -1,0 +1,50 @@
+uuid: 3388eab9-6110-4cd4-84ca-1a3880f0fb7c
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.programas.body
+    - field.field.node.programas.field_archivo_de_descarga
+    - field.field.node.programas.field_block
+    - field.field.node.programas.field_elementos_descripciones
+    - field.field.node.programas.field_fecha_publicacion
+    - field.field.node.programas.field_image
+    - field.field.node.programas.field_metatags
+    - field.field.node.programas.field_sub_programas
+    - field.field.node.programas.field_subtitulo
+    - field.field.node.programas.field_titulo
+    - node.type.programas
+  module:
+    - text
+    - user
+id: node.programas.teaser
+targetEntityType: node
+bundle: programas
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_archivo_de_descarga: true
+  field_block: true
+  field_elementos_descripciones: true
+  field_fecha_publicacion: true
+  field_image: true
+  field_metatags: true
+  field_sub_programas: true
+  field_subtitulo: true
+  field_titulo: true
+  langcode: true
+  search_api_excerpt: true

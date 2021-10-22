@@ -1,0 +1,8 @@
+uuid: 297d60a2-2263-4483-b3c7-3ccdca30b080
+langcode: es
+status: true
+dependencies: {  }
+name: 'incorporado al Fideicomiso'
+vid: incorporado_al_fideicomiso
+description: 'incorporado al Fideicomiso'
+weight: 0

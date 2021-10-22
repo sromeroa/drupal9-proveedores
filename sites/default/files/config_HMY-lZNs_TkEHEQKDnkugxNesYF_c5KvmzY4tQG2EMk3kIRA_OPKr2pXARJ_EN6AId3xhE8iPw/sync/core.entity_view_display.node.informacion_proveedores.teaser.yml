@@ -1,0 +1,35 @@
+uuid: a1eea28d-452c-46b6-8070-2343d656dde2
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.informacion_proveedores.body
+    - field.field.node.informacion_proveedores.field_nombre_del_proveedor
+    - field.field.node.informacion_proveedores.field_usuario_relacionado
+    - node.type.informacion_proveedores
+  module:
+    - text
+    - user
+id: node.informacion_proveedores.teaser
+targetEntityType: node
+bundle: informacion_proveedores
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_nombre_del_proveedor: true
+  field_usuario_relacionado: true
+  langcode: true

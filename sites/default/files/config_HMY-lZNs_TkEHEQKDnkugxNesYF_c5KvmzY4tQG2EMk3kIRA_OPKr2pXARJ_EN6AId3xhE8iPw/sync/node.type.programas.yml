@@ -1,0 +1,17 @@
+uuid: 8e6eab16-024c-4768-a8de-56da97cf1e35
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Programas
+type: programas
+description: 'Tipo de contenido para Programas'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

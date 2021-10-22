@@ -1,0 +1,19 @@
+uuid: 68013800-58e3-48ca-b23f-e9b0edd376dd
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dc_moneda
+    - node.type.user_revision
+id: node.user_revision.field_dc_moneda
+field_name: field_dc_moneda
+entity_type: node
+bundle: user_revision
+label: dc_moneda
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

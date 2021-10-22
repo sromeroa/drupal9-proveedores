@@ -1,0 +1,41 @@
+uuid: e896b60c-a43c-4b84-957a-282d670a5c47
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.home_page.field_block
+    - field.field.node.home_page.field_hero
+    - field.field.node.home_page.field_metatags
+    - node.type.home_page
+  module:
+    - block_field
+    - metatag
+    - user
+id: node.home_page.default
+targetEntityType: node
+bundle: home_page
+mode: default
+content:
+  field_block:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: block_field
+    region: content
+  field_metatags:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_hero: true
+  langcode: true
+  search_api_excerpt: true

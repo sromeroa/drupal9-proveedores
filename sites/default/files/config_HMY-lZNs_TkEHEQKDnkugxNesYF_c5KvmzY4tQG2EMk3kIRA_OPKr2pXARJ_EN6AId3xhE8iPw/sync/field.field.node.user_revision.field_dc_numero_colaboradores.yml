@@ -1,0 +1,29 @@
+uuid: 768e63a3-38cb-417d-a10d-5bb469637cb7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dc_numero_colaboradores
+    - node.type.user_revision
+    - taxonomy.vocabulary.numero_de_colaboladores
+id: node.user_revision.field_dc_numero_colaboradores
+field_name: field_dc_numero_colaboradores
+entity_type: node
+bundle: user_revision
+label: dc_numero_colaboradores
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      numero_de_colaboladores: numero_de_colaboladores
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

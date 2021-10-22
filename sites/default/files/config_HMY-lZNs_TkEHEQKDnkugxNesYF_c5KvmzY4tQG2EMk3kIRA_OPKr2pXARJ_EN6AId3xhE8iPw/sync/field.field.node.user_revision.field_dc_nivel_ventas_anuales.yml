@@ -1,0 +1,29 @@
+uuid: 62547ccf-a293-4ab3-8109-c6ea1620158d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dc_nivel_ventas_anuales
+    - node.type.user_revision
+    - taxonomy.vocabulary.nivel_de_ventas_anuales
+id: node.user_revision.field_dc_nivel_ventas_anuales
+field_name: field_dc_nivel_ventas_anuales
+entity_type: node
+bundle: user_revision
+label: dc_nivel_ventas_anuales
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      nivel_de_ventas_anuales: nivel_de_ventas_anuales
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

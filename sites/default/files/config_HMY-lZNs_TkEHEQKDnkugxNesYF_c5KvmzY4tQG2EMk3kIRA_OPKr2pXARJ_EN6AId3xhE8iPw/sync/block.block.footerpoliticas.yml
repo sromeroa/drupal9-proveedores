@@ -1,0 +1,25 @@
+uuid: fd6436ef-afe9-4034-9c63-18b96b5e82c3
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.footer---politicas
+  module:
+    - system
+  theme:
+    - bimboprov
+id: footerpoliticas
+theme: bimboprov
+region: footer_second
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer---politicas'
+settings:
+  id: 'system_menu_block:footer---politicas'
+  label: 'Footer - Políticas'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

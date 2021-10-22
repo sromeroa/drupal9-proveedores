@@ -1,0 +1,19 @@
+uuid: b51858fe-d765-4daf-ba93-22bc9b77b1a0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dc_rfc
+    - node.type.user_revision
+id: node.user_revision.field_dc_rfc
+field_name: field_dc_rfc
+entity_type: node
+bundle: user_revision
+label: dc_rfc
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

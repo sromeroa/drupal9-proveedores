@@ -1,0 +1,16 @@
+uuid: 69b24ed3-1195-4950-bc0e-85ae04523ace
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.preguntas_frecuentes
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.preguntas_frecuentes
+target_entity_type_id: node
+target_bundle: preguntas_frecuentes
+default_langcode: site_default
+language_alterable: true

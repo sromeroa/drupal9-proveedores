@@ -1,0 +1,10 @@
+uuid: 1bad7582-2f3e-4cc3-be5f-92c0f789d92c
+langcode: es
+status: true
+dependencies: {  }
+id: ps_productos
+label: ps_productos
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

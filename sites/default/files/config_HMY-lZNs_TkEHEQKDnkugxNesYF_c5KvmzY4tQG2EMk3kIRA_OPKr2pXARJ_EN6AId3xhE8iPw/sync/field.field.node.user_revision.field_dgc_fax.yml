@@ -1,0 +1,19 @@
+uuid: 15db48b0-1ef6-4fe5-a716-135a57ba332e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dgc_fax
+    - node.type.user_revision
+id: node.user_revision.field_dgc_fax
+field_name: field_dgc_fax
+entity_type: node
+bundle: user_revision
+label: dgc_fax
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

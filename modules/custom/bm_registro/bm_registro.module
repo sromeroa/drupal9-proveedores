@@ -1,0 +1,84 @@
+<?php
+
+use Drupal\node\Entity\Node;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Component\Utility;
+
+function bm_registro_preprocess_radios(&$variables)
+{
+    $element = &$variables['element'];
+    \Drupal::logger('$element_name')->notice(print_r($element['#name'],true));
+    if ($element['#name'] == "dc_actividad_economica") {
+
+        if (count($element['#options']) > 0) {
+            $weight = 0;
+            foreach ($element['#options'] as $key => $choice) {
+      
+                \Drupal::logger('$element_name_op')->notice(print_r('options',true));
+              // Maintain order of options as defined in #options, in case the element
+              // defines custom option sub-elements, but does not define all option
+              // sub-elements.
+              $weight += 0.001;
+              $element += array(
+                $key => array(),
+              );
+      
+              // Generate the parents as the autogenerator does, so we will have a
+              // unique id for each radio button.
+              $parents_for_id = array_merge($element['#parents'], array(
+                $key,
+              ));
+              $element[$key] += array(
+                '#type' => 'radio',
+                '#title' => $choice,
+                '#weight' => $weight,
+                '#prefix' => '<div>Test</div>',
+              );
+            }
+          }
+          return $element;
+
+    } // end if
+}
+
+
+function bm_registro_preprocess_radio(&$variables)
+{
+    $element = &$variables['element'];
+    \Drupal::logger('$element_name_2')->notice(print_r($element['#name'],true));
+    /*
+    if ((isset($element['#name'])) && substr($element['#name'], 0, 18) == 'mymodule_imglayout') {
+        $variables['theme_hook_suggestion'] = 'radio__imglayout';
+    }
+    */
+}
+
+function bm_registro_radio__imglayout($variables)
+{
+    \Drupal::logger('$element_name')->notice('enter_radio_theme');  
+    /*
+    $element = $variables['element'];
+    $element['#attributes']['type'] = 'radio';
+    element_set_attributes($element, array('id', 'name', '#return_value' => 'value'));
+
+    if (isset($element['#return_value']) && $element['#value'] !== FALSE && $element['#value'] == $element['#return_value']) {
+        $element['#attributes']['checked'] = 'checked';
+    }
+    _form_set_class($element, array('form-radio'));
+
+    $output = '<input' . drupal_attributes($element['#attributes']) . ' />';
+    $id = $element['#id'];
+    $mydiv = "<div class = 'imglayout {$id}'></div>";
+    return   $mydiv . '<br/>' . $output;
+    */
+}
+
+
+function bm_registro_theme($existing, $type, $theme, $path)
+{
+    return array(
+        'radio__imglayout' => array(
+            'render element' => 'element',
+        ),
+    );
+}

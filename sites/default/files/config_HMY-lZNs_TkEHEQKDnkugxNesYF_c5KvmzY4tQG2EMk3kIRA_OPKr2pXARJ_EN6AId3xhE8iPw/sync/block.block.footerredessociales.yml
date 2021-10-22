@@ -1,0 +1,25 @@
+uuid: 059ff02c-27c2-4b02-8520-a0fda3f48a3b
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.footer---redes-sociales
+  module:
+    - system
+  theme:
+    - bimboprov
+id: footerredessociales
+theme: bimboprov
+region: footer_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer---redes-sociales'
+settings:
+  id: 'system_menu_block:footer---redes-sociales'
+  label: 'Footer - Redes Sociales'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

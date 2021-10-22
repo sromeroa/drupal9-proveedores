@@ -1,0 +1,22 @@
+uuid: e9c8e421-38f9-4201-a2fb-a58555b09055
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.preguntas_politicas
+id: node.preguntas_politicas.promote
+field_name: promote
+entity_type: node
+bundle: preguntas_politicas
+label: 'Promocionado a la página principal'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

@@ -1,0 +1,23 @@
+uuid: fc37033d-b625-4db2-9919-ed0985dab4eb
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.programas
+  module:
+    - text
+id: node.programas.body
+field_name: body
+entity_type: node
+bundle: programas
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

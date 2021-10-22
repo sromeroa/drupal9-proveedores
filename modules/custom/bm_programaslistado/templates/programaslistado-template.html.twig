@@ -1,0 +1,37 @@
+<section class="listado-programas"><a class="o-btn__enlace-link o-btn__enlace-link-regresar" href="../programas"
+    title="Regresar"> <span class="o-btn__enlace-icon icon leer-mas"></span>{{ 'Regresar'|t }}</a>
+  {% if programas[0].titulogeneral %}
+  <div class="c-title">
+    <div class="c-title__head">
+      <h1 class="c-title__head-titulo">{{ programas[0].titulogeneral}}</h1>
+    </div>
+  </div>
+  {% endif %}
+  <div class="c-catologo-programas-2">
+    {% for programa in programas %}
+      {% if programa.programaId %}
+        <div class="tarjeta tarjeta--imagen-full tarjeta--imagen-izquierda tarjeta--imagen-izquierda-larga">
+          {% if programa.imagen %}
+            <div class="tarjeta__imagen"><img class="tarjeta__imagen-img-normal lazy" src="#!" data-src="{{programa.imagen}}" alt="{{programa.titulo}}"></div>
+          {% endif %}
+          <div class="tarjeta__texto">
+            <h2>{{programa.titulo}}</h2>
+            <div class="tarjeta__texto-contenido">
+              {{programa.descripcion|raw}}
+            </div>
+            {% if programa.archivos|length >= 1 %}
+              {% for programasdesc in programa.archivos %}
+                <div class="tarjeta__descarga"><a href="{{programasdesc.url}}" title="{{programasdesc.titulo}}" download="#!">
+                    <h4>{{programasdesc.titulo}}</h4>
+                  </a>
+                  <p>Formato PDF</p><a class="btn btn-circulo btn-flecha" href="{{programasdesc.url}}"
+                    title="{{programasdesc.titulo}}" download="#!"><span class="icon flecha-derecha"></span></a>
+                </div>
+              {% endfor %}
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>

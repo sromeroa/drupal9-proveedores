@@ -1,0 +1,20 @@
+uuid: 5c3467dd-05e0-428c-b26e-7bf05cfea920
+langcode: es
+status: false
+dependencies:
+  theme:
+    - bimboprov
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: bimboprov_page_title
+theme: bimboprov
+region: content
+weight: -3
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Título de la página'
+  provider: core
+  label_display: '0'
+visibility: {  }

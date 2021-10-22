@@ -1,0 +1,19 @@
+uuid: 68ba4dbf-07b0-4062-af8a-8f0d15aaa179
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dc_numero_proveedor
+    - node.type.user_revision
+id: node.user_revision.field_dc_numero_proveedor
+field_name: field_dc_numero_proveedor
+entity_type: node
+bundle: user_revision
+label: dc_numero_proveedor
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

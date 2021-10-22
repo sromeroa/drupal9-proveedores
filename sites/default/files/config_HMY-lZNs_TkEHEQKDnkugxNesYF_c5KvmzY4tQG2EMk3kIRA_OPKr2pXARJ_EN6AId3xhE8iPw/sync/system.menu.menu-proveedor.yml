@@ -1,0 +1,8 @@
+uuid: de8a6c62-a40e-4045-8f90-19ac3c0bbd2c
+langcode: es
+status: true
+dependencies: {  }
+id: menu-proveedor
+label: 'Menú Proveedor'
+description: ''
+locked: false

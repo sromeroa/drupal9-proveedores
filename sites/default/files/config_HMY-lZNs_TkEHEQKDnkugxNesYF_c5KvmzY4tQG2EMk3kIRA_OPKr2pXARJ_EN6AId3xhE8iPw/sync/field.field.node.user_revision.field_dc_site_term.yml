@@ -1,0 +1,19 @@
+uuid: c745f9d5-f9b5-4aa1-a811-e5d9be9c261d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dc_site_term
+    - node.type.user_revision
+id: node.user_revision.field_dc_site_term
+field_name: field_dc_site_term
+entity_type: node
+bundle: user_revision
+label: dc_site_term
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

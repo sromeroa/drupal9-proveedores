@@ -1,0 +1,26 @@
+uuid: 720b1fa2-b170-4791-b775-cfb1fce8d8e7
+langcode: es
+status: true
+dependencies:
+  module:
+    - bm_breadcrumbs
+    - system
+  theme:
+    - bimboprov
+id: blockbreadcrumbsbimboproveedores
+theme: bimboprov
+region: content
+weight: -14
+provider: null
+plugin: breadcrumbs_block
+settings:
+  id: breadcrumbs_block
+  label: 'Block breadcrumbs - Bimbo Proveedores'
+  provider: bm_breadcrumbs
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /novedad-y-comunicacion
+    negate: false
+    context_mapping: {  }

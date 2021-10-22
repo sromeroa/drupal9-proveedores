@@ -1,0 +1,32 @@
+uuid: f22feee8-246a-4a44-9697-f7ee2aeb97f9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_descripcion
+    - paragraphs.paragraphs_type.elementos_descripciones
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    basic_html: '0'
+    html_code: '0'
+    html_estilos: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: paragraph.elementos_descripciones.field_descripcion
+field_name: field_descripcion
+entity_type: paragraph
+bundle: elementos_descripciones
+label: Descripción
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

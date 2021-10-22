@@ -1,0 +1,8 @@
+uuid: 15b5033a-d4a1-4774-8b50-5d19d1620a1f
+langcode: es
+status: true
+dependencies: {  }
+name: 'Clasificación tamaño de empresa'
+vid: clasificacion_tamano_de_empresa
+description: 'Clasificación tamaño de empresa'
+weight: 0

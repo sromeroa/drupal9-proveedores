@@ -1,0 +1,20 @@
+{% if titulo %}
+<div class="c-modal c-modal--denuncias">
+	<div class="c-modal__container">
+		<div class="c-modal__titulo">
+			<h3>
+				{{titulo}}
+			</h3>
+		</div>
+		<div class="c-modal__texto">
+			<span class="c-modal__blur"></span>
+			<div class="c-modal__texto-contenido">
+				{{descripcion|raw}}
+			</div>
+		</div>
+		<div class="c-modal__boton">
+			{{bloque}}
+		</div>
+	</div>
+</div>
+{% endif %}

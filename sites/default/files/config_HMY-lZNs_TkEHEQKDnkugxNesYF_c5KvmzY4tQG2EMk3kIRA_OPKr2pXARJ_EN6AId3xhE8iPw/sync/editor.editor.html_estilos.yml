@@ -1,0 +1,54 @@
+uuid: a58313fb-f33c-4e12-be7f-e8aef7496922
+langcode: es
+status: true
+dependencies:
+  config:
+    - filter.format.html_estilos
+  module:
+    - ckeditor
+format: html_estilos
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formato
+          items:
+            - Styles
+            - Bold
+            - Italic
+        -
+          name: Enlaces
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Listas
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Multimedia
+          items:
+            - Blockquote
+            - DrupalImage
+        -
+          name: Herramientas
+          items:
+            - Source
+  plugins:
+    stylescombo:
+      styles: "h1.h1-montserrat|Titulo Hero\r\na.btn.btn-primario.btn-pequeno|Boton principal\r\na.btn.btn-secundario.btn-pequeno|Boton secundario\r\nh1.c-form__titulo.h1-montserrat|Titulo h1\r\n"
+    language:
+      language_list: un
+    tokenbrowser:
+      token_types: {  }
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

@@ -1,0 +1,17 @@
+uuid: 20c1a455-1e4b-47b7-9caa-47687ebc07e4
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Facturacion
+type: facturacion
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

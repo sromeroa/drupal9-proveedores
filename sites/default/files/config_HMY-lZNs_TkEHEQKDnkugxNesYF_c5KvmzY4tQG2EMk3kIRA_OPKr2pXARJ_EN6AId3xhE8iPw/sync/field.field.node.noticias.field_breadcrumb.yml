@@ -1,0 +1,23 @@
+uuid: 32a7b47a-d5ac-4593-b1a2-f8d98310652a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_breadcrumb
+    - node.type.noticias
+  module:
+    - link
+id: node.noticias.field_breadcrumb
+field_name: field_breadcrumb
+entity_type: node
+bundle: noticias
+label: Breadcrumb
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

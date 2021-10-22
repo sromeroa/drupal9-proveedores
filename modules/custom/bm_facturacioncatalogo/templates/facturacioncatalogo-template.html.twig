@@ -1,0 +1,38 @@
+<section class="programas">
+  <div class="c-title">
+    <div class="c-title__head">
+      <h1 class="c-title__head-titulo">Facturacion</h1>
+    </div>
+  </div>
+
+ 
+      {% for fact in facturacion %}
+        {% if fact.facturacionId %}
+
+        <div class="c-catalogo-programas">
+          <div class="tarjeta tarjeta--imagen-full tarjeta--imagen-izquierda">
+            <div class="tarjeta__imagen"><a href="node/{{facturacion.facturacionId}}" title="{{facturacion.titulo}}"><img class="tarjeta__imagen-img-normal lazy" src="#!" data-src="{{fact.imagen}}" alt="{{fact.titulo}}"></a></div>
+            <div class="tarjeta__texto">
+              <h3> <a href="node/{{fact.facturacionId}}" title="{{fact.titulo}}">{{fact.titulo}}</a></h3>
+              <p>{{fact.subtitulo}}</p><a class="o-btn__enlace-link" href="node/{{fact.facturacionId}}" title="Conoce mas"> <span class="o-btn__enlace-icon icon leer-mas"></span>Conoce mas</a>
+            </div>
+          </div>
+        </div>
+
+
+        {% endif %}
+      {% endfor %}
+
+
+
+    <div class="c_paginador">
+      <ul class="c_paginador__lista">
+        <li class="c_paginador__item is-active">1</li>
+        <li class="c_paginador__item"><a href="#" title="2">2</a></li>
+        <li class="c_paginador__item"><a href="#" title="3">3</a></li>
+        <li class="c_paginador__item"><a href="#" title="...">...</a></li>
+        <li class="c_paginador__item"><a href="#" title="12">12</a></li>
+      </ul>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+uuid: 4fa6c650-bf68-4a97-bcfe-cb021cf6b1ff
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.facturacion
+  module:
+    - text
+id: node.facturacion.body
+field_name: body
+entity_type: node
+bundle: facturacion
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

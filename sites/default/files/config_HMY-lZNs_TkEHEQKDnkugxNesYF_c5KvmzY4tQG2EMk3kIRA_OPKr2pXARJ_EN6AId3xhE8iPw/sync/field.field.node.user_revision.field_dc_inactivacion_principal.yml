@@ -1,0 +1,19 @@
+uuid: a83e0e1c-4e38-44a3-b28b-bd34d3eb02fe
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dc_inactivacion_principal
+    - node.type.user_revision
+id: node.user_revision.field_dc_inactivacion_principal
+field_name: field_dc_inactivacion_principal
+entity_type: node
+bundle: user_revision
+label: dc_inactivacion_principal
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

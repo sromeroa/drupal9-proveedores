@@ -1,0 +1,6 @@
+name:  Bloque Perfil Proveedor - Bimbo Proveedores
+description: Modulo Para mostrar el perfil del proveedor
+package: Generales - Custom Bimbo Proveedores
+type: module
+version: 1.0
+core_version_requirement: ^9

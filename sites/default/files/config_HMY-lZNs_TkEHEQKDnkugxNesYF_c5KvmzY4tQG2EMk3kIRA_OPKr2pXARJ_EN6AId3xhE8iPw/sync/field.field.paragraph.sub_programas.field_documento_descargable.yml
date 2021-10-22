@@ -1,0 +1,46 @@
+uuid: 154e9a1a-4307-47fc-b136-6c692ad22048
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_documento_descargable
+    - paragraphs.paragraphs_type.documento_descargable
+    - paragraphs.paragraphs_type.sub_programas
+  module:
+    - entity_reference_revisions
+id: paragraph.sub_programas.field_documento_descargable
+field_name: field_documento_descargable
+entity_type: paragraph
+bundle: sub_programas
+label: 'Documento descargable'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      documento_descargable: documento_descargable
+    target_bundles_drag_drop:
+      actualizacion_politicas:
+        weight: 7
+        enabled: false
+      documento_descargable:
+        enabled: true
+        weight: 8
+      elementos_descripciones:
+        weight: 9
+        enabled: false
+      hero:
+        weight: 10
+        enabled: false
+      ps_productos:
+        weight: 11
+        enabled: false
+      sub_programas:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

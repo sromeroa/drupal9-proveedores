@@ -1,0 +1,22 @@
+{{ form.form_build_id }}
+{{ form.form_token }}
+{{ form.form_id }}
+
+<div class="c-modal">
+  <div class="c-modal__container">
+    <div class="c-modal__titulo">
+      <h3>
+        {{ form.titulo }}
+      </h3>
+    </div>
+    <div class="c-modal__texto">
+      <span class="c-modal__blur"></span>
+      <div class="c-modal__texto-contenido">
+        {{ form.descripcion }}
+      </div>
+    </div>
+    <div class="c-modal__boton">
+      {{ form.actions }}
+    </div>
+  </div>
+</div>

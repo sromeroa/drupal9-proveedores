@@ -1,0 +1,13 @@
+name: Viewport
+type: module
+description: 'Allows to add custom viewport settings for selected pages.'
+package: User interface
+# core: 8.x
+hidden: false
+configure: viewport.settings
+
+# Information added by Drupal.org packaging script on 2018-07-05
+version: '8.x-1.1'
+core: '8.x'
+project: 'viewport'
+datestamp: 1530807824

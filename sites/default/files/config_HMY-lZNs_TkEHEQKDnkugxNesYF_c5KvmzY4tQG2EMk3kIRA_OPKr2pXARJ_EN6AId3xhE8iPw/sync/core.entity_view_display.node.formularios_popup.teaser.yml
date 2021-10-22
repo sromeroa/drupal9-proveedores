@@ -1,0 +1,28 @@
+uuid: 03acf816-e7fd-4392-ad7f-aaf2e80caaaa
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.formularios_popup.field_bloques
+    - field.field.node.formularios_popup.field_descripcion
+    - field.field.node.formularios_popup.field_fecha_publicacion
+    - node.type.formularios_popup
+  module:
+    - user
+id: node.formularios_popup.teaser
+targetEntityType: node
+bundle: formularios_popup
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_bloques: true
+  field_descripcion: true
+  field_fecha_publicacion: true
+  langcode: true
+  search_api_excerpt: true

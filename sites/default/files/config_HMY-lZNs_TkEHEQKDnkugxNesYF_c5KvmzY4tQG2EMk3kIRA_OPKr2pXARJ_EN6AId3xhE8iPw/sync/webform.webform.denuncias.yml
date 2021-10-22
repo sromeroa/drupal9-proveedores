@@ -1,0 +1,206 @@
+uuid: 5354a62b-38b9-4b52-8ec8-30a13157d582
+langcode: es
+status: open
+dependencies:
+  module:
+    - bm_denunciamodal
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: denuncias
+title: Denuncias
+description: ''
+category: ''
+elements: "_declaras_tener_un_conflicto_de_interes_:\n  '#type': radios\n  '#title': '¿Declaras tener un conflicto de interés?'\n  '#options':\n    'no': 'no -- Manifiesto <strong>NO</strong> tener un conflicto de interés'\n    si: 'si -- <strong>SÍ</strong> tengo y manifiesto un posible conflicto de interés'\n_que_tipo_de_conflicto_tienes_:\n  '#type': radios\n  '#title': '¿Qué tipo de conflicto tienes?'\n  '#options':\n    parentesco: |\n      parentesco -- <strong>Parentesco y/o relaciones interpersonales con colaboradores de GB</strong>\n      Parentesco y/o relaciones interpersonales: Estos tipos de conflictos suceden cuando existe parentesco o relaciones interpersonales, sean o no de carácter legal, (parejas, noviazgos, concubinatos, compadrazgos, etc.) entre personas que trabajen en o para Grupo Bimbo, y sus proveedores.\n      \n    intereses: |\n      intereses -- <strong>Intereses en otras compañías que son proveedores de GB</strong>\n      \"Intereses en otras compañías que son proveedores de GB: Es cuando tienes propiedad o participación, directa o indirecta, en cualquier empresa ajena al Grupo con la que tiene una relación de negocio. \n      El proveedor no podrá ser propietario, socio o estar involucrado, directa o indirectamente, en alguna otra empresa proveedora, competidora o cliente de Grupo Bimbo.\"\n      \n    ex_colaborador: |\n      ex_colaborador -- <strong>Ex colaborador de Grupo Bimbo</strong>\n      Ex colaborador de Grupo Bimbo: Es cuando existe una relación comercial de cualquier tipo, con jubilados o ex colaboradores de Grupo Bimbo, y que ahora son representantes legales, socios, accionistas, o colaboradores de una empresa proveedora, competidora o cliente de Grupo Bimbo.\n      \n    otro_proveedor: |\n      otro_proveedor -- <strong>Ex colaborador de otro proveedor de GB</strong>\n      Ex colaborador de otro proveedor de Grupo Bimbo: Es cuando existe una relación comercial de cualquier tipo, con ex colaboradores de otro proveedor de Grupo Bimbo, y que ahora son representantes legales, socios, accionistas, o colaboradores de una empresa proveedora, competidora o cliente de Grupo Bimbo.\n      \n  '#states':\n    invisible:\n      ':input[name=\"_declaras_tener_un_conflicto_de_interes_\"]':\n        '!value': si\n      ':input[name=\"_quieres_enviar_tu_conflicto_\"]':\n        '!value': 'no'\nflexbox1:\n  '#type': container\n  '#states':\n    invisible:\n      ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n        '!value': parentesco\n  '#format_attributes':\n    style: contenedor-parentesco\n  encabezado_parentesco:\n    '#type': processed_text\n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': parentesco\n    '#text': |\n      <p><strong>Parentesco y/o relaciones interpersonales con colaboradores de GB</strong></p>\n      \n      <p><span>Parentesco y/o relaciones interpersonales: Estos tipos de conflictos suceden cuando existe parentesco o relaciones interpersonales, sean o no de carácter legal, (parejas, noviazgos, concubinatos, compadrazgos, etc.) entre personas que trabajen en o para Grupo Bimbo, y sus proveedores.</span></p>\n      \n    '#format': basic_html\n  _cual_es_el_tipo_de_parentesco_que_tienes_:\n    '#type': radios\n    '#title': '¿Cuál es el tipo de parentesco que tienes?'\n    '#options':\n      consanguineo: 'consanguineo -- Por consanguinidad, es decir; padres, hijos, abuelos, nietos, hermanos, tíos, sobrinos, primos, etc.'\n      afinidad: 'afinidad -- Por afinidad, es decir;  suegros, nueras y yernos, hijastros, cuñados, compadres, etc.'\n      relación_interpersonal: 'relación_interpersonal -- Relación interpersonal, es decir; cónyuge, concubino o concubina, novio o novia, etc.'\n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': parentesco\n  titulo_relacion_con_grupo:\n    '#type': processed_text\n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': parentesco\n    '#text': |\n      <p><strong>¿Quién tienen relación con Grupo Bimbo?</strong></p>\n      \n      <p><strong>A continuación, escríbeme el nombre completo del colaborador con el parentesco o relación </strong></p>\n      \n    '#format': basic_html\n  nombre_parentesco:\n    '#type': textfield\n    '#title': nombre_parentesco\n    '#description': '<span >(Nombre (s), apellido paterno, apellido materno)</span>'\n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': parentesco\n  puesto_parentesco:\n    '#type': textfield\n    '#title': puesto_parentesco\n    '#description': '<span>&iquest;Qu&eacute; puesto desempe&ntilde;a en Grupo Bimbo?</span>'\n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': parentesco\n  elige_la_organizacion_en_donde_trabaja:\n    '#type': select\n    '#title': 'Elige la organización en donde trabaja'\n    '#options':\n      'Bimbo México': 'Bimbo México'\n      Barcel: Barcel\n      Ricolino: Ricolino\n      'El Globo (Tradición en Pasteleria)': 'El Globo (Tradición en Pasteleria)'\n      Moldex: Moldex\n      'Corporativo | Global Services': 'Corporativo | Global Services'\n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': parentesco\n    '#attributes':\n      style: 'display:none'\n  lugar_de_trabajo:\n    '#type': textfield\n    '#title': lugar_de_trabajo\n    '#description': |\n      <strong> A continuación, escribe el nombre completo del lugar de trabajo (ej. Santa Fé, Bimbo Azcapotzalco, CeVe San Antonio, CEDIS Norte) del colaborador con el parentesco o relación &quot;}\" style=\"color:#000000; font-family:Calibri,Arial; font-size:11pt; font-style:normal; font-weight:bold\">A continuaci&oacute;n, escribe el nombre completo del lugar de trabajo (ej. Santa F&eacute;, Bimbo Azcapotzalco, CeVe San Antonio, CEDIS Norte) del colaborador con el parentesco o relaci&oacute;n </strong><br />\n      <br />\n      <span>(Nombre completo del lugar de trabajo)</span>\n      \n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': parentesco\n  area_de_trabajo:\n    '#type': textfield\n    '#title': area_de_trabajo\n    '#description': |\n      <strong>A continuaci&oacute;n, escribe el &aacute;rea/departamento y direcci&oacute;n en la que trabaja (ej. &Aacute;rea de Indirectos, Direcci&oacute;n de Compras | departamento de Transportes, Direcci&oacute;n de Log&iacute;stica) el colaborador con el parentesco o relaci&oacute;n </strong><br />\n      <br />\n      <span>(Nombre del &aacute;rea/departamento y direcci&oacute;n en la que trabaja)</span>\n      \n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': parentesco\n  tiempo_conflicto:\n    '#type': select\n    '#title': tiempo_conflicto\n    '#description': '<strong >Indica cu&aacute;nto tiempo tienes en este conflicto:</strong>'\n    '#options':\n      'Menos de un año': 'Menos de un año'\n      '1-3 años': '1-3 años'\n      '3-5 años': '3-5 años'\n      '5-10 años': '5-10 años'\n      'Más de 10 años': 'Más de 10 años'\n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': parentesco\n  describe_conflicto:\n    '#type': textarea\n    '#title': describe_conflicto\n    '#description': '<strong >A continuaci&oacute;n escribe en qu&eacute; consiste tu conflicto con el colaborador con el parentesco o relaci&oacute;n</strong>'\n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': parentesco\nflexbox2:\n  '#type': webform_flexbox\n  '#states':\n    invisible:\n      ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n        '!value': intereses\n  encabezado_intereses:\n    '#type': processed_text\n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': intereses\n    '#text': |\n      <p><span><span>Intereses en otras compañías que son proveedores de GB: Es cuando tienes propiedad o participación, directa o indirecta, en cualquier empresa ajena al Grupo con la que tiene una relación de negocio.<br />\n      El proveedor </span><strong>no</strong><span> podrá ser propietario, socio o estar involucrado, directa o indirectamente, en alguna otra empresa proveedora, competidora o cliente de Grupo Bimbo.</span></span></p>\n      \n    '#format': basic_html\n  vinculo_companias:\n    '#type': radios\n    '#title': vinculo_companias\n    '#description': '<strong >&iquest;Cu&aacute;l es el tipo de v&iacute;nculo que tienes en otras compa&ntilde;&iacute;as que son proveedores de GB?</strong>'\n    '#options':\n      propietario: 'propietario -- Propietario'\n      socio: 'socio -- Socio'\n      parentesco_relacion: 'parentesco_relacion -- Parentesco y/o relaciones interpersonales'\n      otro: 'otro -- Otro'\n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': intereses\n  nombre_otra_empresa:\n    '#type': textfield\n    '#title': nombre_otra_empresa\n    '#description': |\n      <strong >Ind&iacute;ca el nombre de la otra empresa en cuesti&oacute;n.</strong><br />\n      <span >(Escribe el nombre de la raz&oacute;n social y tambi&eacute;n el nombre comercial de la otra empresa)</span>\n      \n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': intereses\n  categoria_clasificacion:\n    '#type': textfield\n    '#title': categoria_clasificacion\n    '#description': |\n      <strong >Ind&iacute;ca la categor&iacute;a y/o clasificaci&oacute;n de la otra empresa con la que existe relaci&oacute;n de negocio.</strong><br />\n      <br />\n      <span >(Escribe el giro comercial y la categor&iacute;a con la que fue establecida la relaci&oacute;n de negocio con Grupo Bimbo de la otra empresa)</span>\n      \n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': intereses\n  organizaciones:\n    '#type': select\n    '#title': organizaciones\n    '#description': '<strong >Elige la organizaci&oacute;n u organizaciones en donde tiene la relaci&oacute;n de negocio:</strong>'\n    '#options':\n      'Bimbo México': 'Bimbo México'\n      Barcel: Barcel\n      Ricolino: Ricolino\n      'El Globo (Tradición en Pasteleria)': 'El Globo (Tradición en Pasteleria)'\n      Moldex: Moldex\n      'Corporativo | Global Services': 'Corporativo | Global Services'\n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': intereses\n  intereses_centro_trabajo:\n    '#type': textfield\n    '#title': intereses_centro_trabajo\n    '#description': |\n      <strong >A continuaci&oacute;n, escribe el nombre completo del centro de trabajo (ej. Santa F&eacute;, Bimbo Azcapotzalco, CeVe San Antonio, CEDIS Norte) en donce existe relaci&oacute;n de negocio de la otra empresa.</strong><br />\n      <br />\n      <span >(Nombre completo del lugar de trabajo)</span>\n      \n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': intereses\n  intereses_area_departamento:\n    '#type': textfield\n    '#title': intereses_area_departamento\n    '#description': |\n      <strong>A continuaci&oacute;n, escribe el &aacute;rea/departamento con en la que existe la relaci&oacute;n de negocio de la otra empresa (ej. &Aacute;rea de Mantenimiento, Transportes, Materias Primas, Despacho, etc.)</strong><br />\n      <br />\n      <span>(Nombre del &aacute;rea/departamento en la que existe relaci&oacute;n de negocio de la otra empresa)</span>\n      \n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': intereses\n  intereses_conflicto:\n    '#type': select\n    '#title': intereses_conflicto\n    '#description': '<strong >Indica cu&aacute;nto tiempo tienes en este conflicto:</strong>'\n    '#options':\n      'Menos de un año': 'Menos de un año'\n      '1-3 años': '1-3 años'\n      '3-5 años ': '3-5 años '\n      '5-10 años': '5-10 años'\n      'Más de 10 años': 'Más de 10 años'\n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': intereses\n_quieres_enviar_tu_conflicto_:\n  '#type': radios\n  '#title': '¿Quieres enviar tu conflicto?'\n  '#description': '<span >Recuerda que al enviar tu declaraci&oacute;n, aceptas que la informaci&oacute;n proporcionada es ver&iacute;dica.</span>'\n  '#options':\n    si: 'si -- Si'\n    'no': 'no -- No'\n  '#states':\n    invisible:\n      ':input[name=\"_declaras_tener_un_conflicto_de_interes_\"]':\n        '!value': si\nflexbox3:\n  '#type': webform_flexbox\n  '#states':\n    invisible:\n      ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n        '!value': ex_colaborador\n  encabezado_ex_colaborador:\n    '#type': processed_text\n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': ex_colaborador\n    '#text': |\n      <p><span>Ex colaborador de Grupo Bimbo: Es cuando existe una relación comercial de cualquier tipo, con jubilados o ex colaboradores de Grupo Bimbo, y que ahora son representantes legales, socios, accionistas, o colaboradores de una empresa proveedora, competidora o cliente de Grupo Bimbo.</span></p>\n      \n    '#format': basic_html\n  ex_colaborador_puesto:\n    '#type': textfield\n    '#title': ex_colaborador_puesto\n    '#description': |\n      <strong >A continuaci&oacute;n, escr&iacute;be el &uacute;ltimo puesto/cargo desempe&ntilde;ado en GB</strong><br />\n      <br />\n      <span >(Detalla el &uacute;ltimo puesto desempe&ntilde;ado en Grupo Bimbo)</span>\n      \n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': ex_colaborador\n  ex_colaborador_ultimo_trabajo:\n    '#type': textfield\n    '#title': ex_colaborador_ultimo_trabajo\n    '#description': |\n      <strong >A continuaci&oacute;n, escribe el nombre completo del &uacute;ltimo lugar de trabajo (ej. Santa F&eacute;, Bimbo Azcapotzalco, CeVe San Antonio, CEDIS Norte) en donde colaboraste para GB</strong><br />\n      <br />\n      <span >(Nombre completo del lugar de trabajo donde colaboraste)</span>\n      \n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': ex_colaborador\n  ex_colaborador_ultima_area:\n    '#type': textfield\n    '#title': ex_colaborador_ultima_area\n    '#description': |\n      <strong >A continuaci&oacute;n, escribe la &uacute;ltima &aacute;rea/departamento y direcci&oacute;n para la que trabajaste en GB (ej. &Aacute;rea de Indirectos, Direcci&oacute;n de Compras | departamento de Transportes, Direcci&oacute;n de Log&iacute;stica)</strong><br />\n      <br />\n      <span >(Nombre de la &uacute;ltima &aacute;rea/departamento y direcci&oacute;n en la que colaboraste)</span>\n      \n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': ex_colaborador\n  ex_colaborador_organizacion:\n    '#type': select\n    '#title': ex_colaborador_organizacion\n    '#description': '<strong >Elige la &uacute;ltima organizaci&oacute;n para la que trabajaste en GB:</strong>'\n    '#options':\n      'Bimbo México': 'Bimbo México'\n      Barcel: Barcel\n      Ricolino: Ricolino\n      'El Globo (Tradición en Pasteleria)': 'El Globo (Tradición en Pasteleria)'\n      Moldex: Moldex\n      'Corporativo | Global Services': 'Corporativo | Global Services'\n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': ex_colaborador\n  ex_colaborador_antiguedad:\n    '#type': textfield\n    '#title': ex_colaborador_antiguedad\n    '#description': |\n      <strong >A continuaci&oacute;n, escr&iacute;be la antig&uuml;edad laboral establecida con GB</strong><br />\n      <br />\n      <span >(Se&ntilde;ala la cantidad de tiempo de antig&uuml;edad laboral con Grupo Bimbo)</span>\n      \n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': ex_colaborador\n  ex_colaborador_ultimo_jefe:\n    '#type': textfield\n    '#title': ex_colaborador_ultimo_jefe\n    '#description': '<strong>A continuaci&oacute;n, escr&iacute;be el nombre completo de tu &uacute;ltimo jefe inmediato en GB</strong>'\n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': ex_colaborador\n  ex_colaborador_ultimo_cargo:\n    '#type': textfield\n    '#title': ex_colaborador_ultimo_cargo\n    '#description': '<strong >A continuaci&oacute;n, escr&iacute;be el cargo/puesto de tu &uacute;ltimo jefe inmediato en GB</strong>'\n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': ex_colaborador\n  ex_colaborador_fecha_salida:\n    '#type': textfield\n    '#title': ex_colaborador_fecha_salida\n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': ex_colaborador\n  ex_colaborador_motivo:\n    '#type': textfield\n    '#title': ex_colaborador_motivo\n    '#description': '<strong >A continuaci&oacute;n, escr&iacute;be el motivo de tu salida de GB</strong>'\n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': ex_colaborador\n  ex_colaborador_conflicto:\n    '#type': textarea\n    '#title': ex_colaborador_conflicto\n    '#description': |\n      <strong >A continuaci&oacute;n escribe en qu&eacute; consiste tu conflicto sobre el inter&eacute;s en otras compa&ntilde;&iacute;as que son proveedores de GB</strong><br />\n      <br />\n      <span >(Mientras m&aacute;s detallado lo hagas, ser&aacute; m&aacute;s f&aacute;cil darte una mejor soluci&oacute;n).</span>\n      \n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': ex_colaborador\nflexbox4:\n  '#type': webform_flexbox\n  '#states':\n    invisible:\n      ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n        '!value': otro_proveedor\n  otro_proveedor_puesto:\n    '#type': textfield\n    '#title': otro_proveedor_puesto\n    '#description': |\n      <strong >A continuaci&oacute;n, escr&iacute;be el &uacute;ltimo puesto/cargo desempe&ntilde;ado con el proveedor de GB</strong><br />\n      <br />\n      <span >(Detalla el &uacute;ltimo puesto desempe&ntilde;ado con el proveedor de Grupo Bimbo)</span>\n      \n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': otro_proveedor\n  otro_proveedor_ultimo_trabajo:\n    '#type': textfield\n    '#title': otro_proveedor_ultimo_trabajo\n    '#description': |\n      <strong >A continuaci&oacute;n, escribe el nombre o nombres completo del &uacute;ltimo lugar o lugares de trabajo (ej. Santa F&eacute;, Bimbo Azcapotzalco, CeVe San Antonio, CEDIS Norte) en donde colaboraste para el proveedor de GB</strong><br />\n      <br />\n      <span >(Nombre completo del lugar de trabajo donde colaboraste con el proveedor de GB)</span>\n      \n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': otro_proveedor\n  otro_proveedor_ultima_area:\n    '#type': textfield\n    '#title': otro_proveedor_ultima_area\n    '#description': |\n      <strong >A continuaci&oacute;n, escribe la &uacute;ltima &aacute;rea(s)/departamento(s) y direcci&oacute;n(es) para la que trabajaste en GB (ej. &Aacute;rea de Indirectos, Direcci&oacute;n de Compras | departamento de Transportes, Direcci&oacute;n de Log&iacute;stica)</strong><br />\n      <br />\n      <span >(Nombre de la &uacute;ltima &aacute;rea/departamento y direcci&oacute;n para la que colaboraste con el proveedor de GB)</span>\n      \n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': otro_proveedor\n  otro_proveedor_organizacion:\n    '#type': select\n    '#title': otro_proveedor_organizacion\n    '#options':\n      'Bimbo México': 'Bimbo México'\n      Barcel: Barcel\n      Ricolino: Ricolino\n      'El Globo (Tradición en Pasteleria)': 'El Globo (Tradición en Pasteleria)'\n      Moldex: Moldex\n      'Corporativo | Global Services': 'Corporativo | Global Services'\n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': otro_proveedor\n  otro_proveedor_antiguedad:\n    '#type': textfield\n    '#title': otro_proveedor_antiguedad\n    '#description': |\n      <strong >A continuaci&oacute;n, escr&iacute;be la antig&uuml;edad laboral establecida con el proveedor de GB</strong><br />\n      <br />\n      <span >(Se&ntilde;ala la cantidad de tiempo de antig&uuml;edad laboral con el proveedor Grupo Bimbo)</span>\n      \n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': otro_proveedor\n  otro_proveedor_ultimo_jefe:\n    '#type': textfield\n    '#title': otro_proveedor_ultimo_jefe\n    '#description': |\n      <strong >A continuaci&oacute;n, escr&iacute;be el nombre completo de tu &uacute;ltimo jefe inmediato con el proveedor de GB</strong><br />\n      <br />\n      <span >(Nombre (s), apellido paterno, apellido materno)</span>\n      \n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': otro_proveedor\n  otro_proveedor_ultimo_cargo:\n    '#type': textfield\n    '#title': otro_proveedor_ultimo_cargo\n    '#description': |\n      <strong >A continuaci&oacute;n, escr&iacute;be el cargo/puesto de tu &uacute;ltimo jefe inmediato con el proveedor de GB</strong><br />\n      <br />\n      <span >(Detalla el puesto desempe&ntilde;ado de tu &uacute;ltimo jefe inmediato con el proveedor de Grupo Bimbo)</span>\n      \n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': otro_proveedor\n  otro_proveedor_fecha_salida:\n    '#type': textfield\n    '#title': otro_proveedor_fecha_salida\n    '#description': |\n      <strong >A continuaci&oacute;n, escr&iacute;be la fecha de tu salida con el proveedor de GB</strong><br />\n      <br />\n      <span >(Se&ntilde;ala la fecha de tu salida con el proveedor de Grupo Bimbo)</span>\n      \n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': otro_proveedor\n  otro_proveedor_motivo:\n    '#type': textfield\n    '#title': otro_proveedor_motivo\n    '#description': |\n      <strong >A continuaci&oacute;n, escr&iacute;be el motivo de tu salida con el proveedor de GB</strong><br />\n      <br />\n      <span >(Se&ntilde;ala el motivo de tu salida con el proveedor de Grupo Bimbo)</span>\n      \n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': otro_proveedor\n  otro_proveedor_conflicto:\n    '#type': textfield\n    '#title': otro_proveedor_conflicto\n    '#description': |\n      <strong >A continuaci&oacute;n escribe en qu&eacute; consiste tu conflicto sobre el inter&eacute;s como ex colaborador de un proveedor de Grupo Bimbo</strong><br />\n      <br />\n      <span >(Mientras m&aacute;s detallado lo hagas, ser&aacute; m&aacute;s f&aacute;cil darte una mejor soluci&oacute;n).</span>\n      \n    '#states':\n      invisible:\n        ':input[name=\"_que_tipo_de_conflicto_tienes_\"]':\n          '!value': otro_proveedor"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: both
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_remote_addr: true
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: url
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: '<front>'
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  salvar_resultado_de_denuncias:
+    id: denuncias
+    label: 'Salvar resultado de denuncias'
+    notes: ''
+    handler_id: salvar_resultado_de_denuncias
+    status: true
+    conditions: {  }
+    weight: 0
+    settings: {  }
+variants: {  }

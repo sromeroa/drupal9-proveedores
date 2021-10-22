@@ -1,0 +1,18 @@
+<?php
+
+use Drupal\node\Entity\Node;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function bm_detallenoticia_theme($existing, $type, $theme, $path){
+  return [
+    'detallenoticia_template' => [
+      'variables' => [
+        'detallenoticia' => [],
+        'breadcrumbs' => [],
+      ],
+    ],
+  ];
+}

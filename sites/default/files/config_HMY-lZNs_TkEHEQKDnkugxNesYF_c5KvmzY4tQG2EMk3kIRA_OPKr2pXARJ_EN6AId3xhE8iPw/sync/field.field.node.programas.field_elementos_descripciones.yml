@@ -1,0 +1,43 @@
+uuid: c74c75fe-76de-4f7f-9dc3-8e5f3e415160
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_elementos_descripciones
+    - node.type.programas
+    - paragraphs.paragraphs_type.elementos_descripciones
+  module:
+    - entity_reference_revisions
+id: node.programas.field_elementos_descripciones
+field_name: field_elementos_descripciones
+entity_type: node
+bundle: programas
+label: 'Elementos descripciones'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      elementos_descripciones: elementos_descripciones
+    target_bundles_drag_drop:
+      actualizacion_politicas:
+        weight: 6
+        enabled: false
+      documento_descargable:
+        weight: 7
+        enabled: false
+      elementos_descripciones:
+        enabled: true
+        weight: 8
+      hero:
+        weight: 9
+        enabled: false
+      sub_programas:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

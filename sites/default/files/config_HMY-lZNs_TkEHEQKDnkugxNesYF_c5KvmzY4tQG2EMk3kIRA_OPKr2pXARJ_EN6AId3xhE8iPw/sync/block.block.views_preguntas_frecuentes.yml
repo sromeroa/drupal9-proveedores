@@ -1,0 +1,30 @@
+uuid: 297fb203-fe02-46c4-9b10-c719f67eca58
+langcode: es
+status: false
+dependencies:
+  config:
+    - views.view.bimbo_preguntas_frecuentes
+  module:
+    - system
+    - views
+  theme:
+    - bimboprov
+id: views_preguntas_frecuentes
+theme: bimboprov
+region: content
+weight: -7
+provider: null
+plugin: 'views_block:bimbo_preguntas_frecuentes-block_preguntas_frecuentes'
+settings:
+  id: 'views_block:bimbo_preguntas_frecuentes-block_preguntas_frecuentes'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /preguntas-frecuentes
+    negate: false
+    context_mapping: {  }

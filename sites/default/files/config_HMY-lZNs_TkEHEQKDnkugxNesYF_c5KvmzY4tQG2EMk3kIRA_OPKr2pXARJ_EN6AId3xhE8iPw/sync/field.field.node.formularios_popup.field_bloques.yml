@@ -1,0 +1,25 @@
+uuid: 89a68e2e-3686-4a38-b9d7-014b37414f8c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bloques
+    - node.type.formularios_popup
+  module:
+    - block_field
+id: node.formularios_popup.field_bloques
+field_name: field_bloques
+entity_type: node
+bundle: formularios_popup
+label: bloques
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: blocks
+  selection_settings:
+    plugin_ids:
+      webform_block: webform_block
+field_type: block_field

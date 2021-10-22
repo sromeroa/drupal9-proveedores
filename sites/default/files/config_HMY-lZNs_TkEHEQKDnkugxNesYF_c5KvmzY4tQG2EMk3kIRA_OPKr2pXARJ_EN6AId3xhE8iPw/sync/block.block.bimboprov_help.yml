@@ -1,0 +1,22 @@
+uuid: ba157cb3-ff1b-4964-96c4-749f2e20b50c
+langcode: es
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - bimboprov
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: bimboprov_help
+theme: bimboprov
+region: content
+weight: -2
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Ayuda
+  provider: help
+  label_display: '0'
+visibility: {  }

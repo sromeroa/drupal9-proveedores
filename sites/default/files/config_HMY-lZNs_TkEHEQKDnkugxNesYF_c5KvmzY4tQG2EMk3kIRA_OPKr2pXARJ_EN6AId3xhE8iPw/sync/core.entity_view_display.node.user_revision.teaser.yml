@@ -1,0 +1,162 @@
+uuid: 81fcc10b-80ac-4801-8f6f-ad459fd72bd2
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.user_revision.field_ct_apellido
+    - field.field.node.user_revision.field_ct_celular
+    - field.field.node.user_revision.field_ct_email
+    - field.field.node.user_revision.field_ct_lada
+    - field.field.node.user_revision.field_ct_materno
+    - field.field.node.user_revision.field_ct_nombre
+    - field.field.node.user_revision.field_ct_paterno
+    - field.field.node.user_revision.field_ct_prefijo
+    - field.field.node.user_revision.field_ct_profesion
+    - field.field.node.user_revision.field_ct_telefono
+    - field.field.node.user_revision.field_dc_actividad_economica
+    - field.field.node.user_revision.field_dc_anticipo
+    - field.field.node.user_revision.field_dc_calle_cont
+    - field.field.node.user_revision.field_dc_categoria
+    - field.field.node.user_revision.field_dc_centro_impresion
+    - field.field.node.user_revision.field_dc_certificaciones_vigente
+    - field.field.node.user_revision.field_dc_clasif_retencion
+    - field.field.node.user_revision.field_dc_clasificacion
+    - field.field.node.user_revision.field_dc_clasificacion_header
+    - field.field.node.user_revision.field_dc_clasificacion_tamano_em
+    - field.field.node.user_revision.field_dc_creation_date
+    - field.field.node.user_revision.field_dc_cuenta_bancaria
+    - field.field.node.user_revision.field_dc_distribucion
+    - field.field.node.user_revision.field_dc_especialidad
+    - field.field.node.user_revision.field_dc_fideicomiso
+    - field.field.node.user_revision.field_dc_genero_direccion
+    - field.field.node.user_revision.field_dc_giro_comercial
+    - field.field.node.user_revision.field_dc_inactivacion_principal
+    - field.field.node.user_revision.field_dc_inactivacion_site
+    - field.field.node.user_revision.field_dc_incorporado_fideicomiso
+    - field.field.node.user_revision.field_dc_marca
+    - field.field.node.user_revision.field_dc_metod_payment_site
+    - field.field.node.user_revision.field_dc_moneda
+    - field.field.node.user_revision.field_dc_monto_facturacion
+    - field.field.node.user_revision.field_dc_nivel_ventas_anuales
+    - field.field.node.user_revision.field_dc_nombre_banco
+    - field.field.node.user_revision.field_dc_nombre_comercial
+    - field.field.node.user_revision.field_dc_nombre_respresantante
+    - field.field.node.user_revision.field_dc_numero_colaboradores
+    - field.field.node.user_revision.field_dc_numero_duns
+    - field.field.node.user_revision.field_dc_numero_proveedor
+    - field.field.node.user_revision.field_dc_pais
+    - field.field.node.user_revision.field_dc_pay_group_site
+    - field.field.node.user_revision.field_dc_proyectos_mejora
+    - field.field.node.user_revision.field_dc_purchasing
+    - field.field.node.user_revision.field_dc_razon_social
+    - field.field.node.user_revision.field_dc_regimen_fiscal
+    - field.field.node.user_revision.field_dc_relacion_comercial
+    - field.field.node.user_revision.field_dc_rfc
+    - field.field.node.user_revision.field_dc_sistema_calidad
+    - field.field.node.user_revision.field_dc_site_term
+    - field.field.node.user_revision.field_dc_subcategoria
+    - field.field.node.user_revision.field_dc_termino_credito
+    - field.field.node.user_revision.field_dc_tipo_operacion
+    - field.field.node.user_revision.field_dc_vendor_site
+    - field.field.node.user_revision.field_dgc_codigo_fax
+    - field.field.node.user_revision.field_dgc_fax
+    - field.field.node.user_revision.field_dgc_lada
+    - field.field.node.user_revision.field_dgc_telefono
+    - field.field.node.user_revision.field_dm_calle
+    - field.field.node.user_revision.field_dm_ciudad
+    - field.field.node.user_revision.field_dm_colonia
+    - field.field.node.user_revision.field_dm_cp
+    - field.field.node.user_revision.field_dm_estado
+    - field.field.node.user_revision.field_dm_municipio
+    - field.field.node.user_revision.field_dm_no_exterior
+    - field.field.node.user_revision.field_dm_no_interior
+    - field.field.node.user_revision.field_informacion_valida
+    - field.field.node.user_revision.field_proveedor
+    - field.field.node.user_revision.field_ps_productos
+    - node.type.user_revision
+  module:
+    - user
+id: node.user_revision.teaser
+targetEntityType: node
+bundle: user_revision
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_ct_apellido: true
+  field_ct_celular: true
+  field_ct_email: true
+  field_ct_lada: true
+  field_ct_materno: true
+  field_ct_nombre: true
+  field_ct_paterno: true
+  field_ct_prefijo: true
+  field_ct_profesion: true
+  field_ct_telefono: true
+  field_dc_actividad_economica: true
+  field_dc_anticipo: true
+  field_dc_calle_cont: true
+  field_dc_categoria: true
+  field_dc_centro_impresion: true
+  field_dc_certificaciones_vigente: true
+  field_dc_clasif_retencion: true
+  field_dc_clasificacion: true
+  field_dc_clasificacion_header: true
+  field_dc_clasificacion_tamano_em: true
+  field_dc_creation_date: true
+  field_dc_cuenta_bancaria: true
+  field_dc_distribucion: true
+  field_dc_especialidad: true
+  field_dc_fideicomiso: true
+  field_dc_genero_direccion: true
+  field_dc_giro_comercial: true
+  field_dc_inactivacion_principal: true
+  field_dc_inactivacion_site: true
+  field_dc_incorporado_fideicomiso: true
+  field_dc_marca: true
+  field_dc_metod_payment_site: true
+  field_dc_moneda: true
+  field_dc_monto_facturacion: true
+  field_dc_nivel_ventas_anuales: true
+  field_dc_nombre_banco: true
+  field_dc_nombre_comercial: true
+  field_dc_nombre_respresantante: true
+  field_dc_numero_colaboradores: true
+  field_dc_numero_duns: true
+  field_dc_numero_proveedor: true
+  field_dc_pais: true
+  field_dc_pay_group_site: true
+  field_dc_proyectos_mejora: true
+  field_dc_purchasing: true
+  field_dc_razon_social: true
+  field_dc_regimen_fiscal: true
+  field_dc_relacion_comercial: true
+  field_dc_rfc: true
+  field_dc_sistema_calidad: true
+  field_dc_site_term: true
+  field_dc_subcategoria: true
+  field_dc_termino_credito: true
+  field_dc_tipo_operacion: true
+  field_dc_vendor_site: true
+  field_dgc_codigo_fax: true
+  field_dgc_fax: true
+  field_dgc_lada: true
+  field_dgc_telefono: true
+  field_dm_calle: true
+  field_dm_ciudad: true
+  field_dm_colonia: true
+  field_dm_cp: true
+  field_dm_estado: true
+  field_dm_municipio: true
+  field_dm_no_exterior: true
+  field_dm_no_interior: true
+  field_informacion_valida: true
+  field_proveedor: true
+  field_ps_productos: true
+  langcode: true
+  search_api_excerpt: true
